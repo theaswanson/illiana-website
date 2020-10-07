@@ -27,11 +27,9 @@ export class NavigationComponent implements OnInit {
     } else {
       this.renderer.removeClass(document.body, 'mobile-nav-active');
     }
-    console.log(this.navOpen);
   }
 
   collapse(event: any) {
-    console.log(event);
   }
 
 }

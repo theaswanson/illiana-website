@@ -57,7 +57,7 @@
         </li>
       </ul>
     </nav>
-    <nav id="mobile-nav">
+    <nav id="mobile-nav" (click)="toggleNav()">
       <ul>
         <li id="li-home">
           <a [routerLink]="['/']" fragment="intro">Home</a>
