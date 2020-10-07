@@ -11,9 +11,11 @@ import { OfficersComponent } from './officers/officers.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { ShowInfoComponent } from './show-info/show-info.component';
 
 const ROUTES = [
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'show-info', component: ShowInfoComponent }
 ]
 
 @NgModule({
@@ -24,7 +26,8 @@ const ROUTES = [
     OfficersComponent,
     FooterComponent,
     CarouselComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    ShowInfoComponent
   ],
   imports: [
     BrowserModule,
