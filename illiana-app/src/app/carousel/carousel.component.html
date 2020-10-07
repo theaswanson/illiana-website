@@ -1,0 +1,23 @@
+<div class="carousel-container">
+
+  <div class="carousel">
+    <ng-container *ngFor="let slide of slides; let i = index">
+      <div class="the-div">
+        <div @carouselAnimation class="carousel-content slide" *ngIf="i === currentSlide"
+          [ngStyle]="{'background': 'linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(' + slide.src + ')', 'background-size': 'cover', 'background-position': 'center'}">
+          <h3 class="text-illiana-green">Illiana Antique Power Association</h3>
+          <h2>{{slide.header}}</h2>
+          <p *ngIf="slide.body">{{slide.body}}</p>
+          <a *ngIf="slide.link" [href]="slide.link.href" class="btn-get-started scrollto">{{slide.link.text}}</a>
+        </div>
+      </div>
+    </ng-container>
+
+    <button class="control prev" (click)="onPreviousClick()">
+      <span class="arrow left"></span>
+    </button>
+    <button class="control next" (click)="onNextClick()">
+      <span class="arrow right"></span>
+    </button>
+  </div>
+</div>
