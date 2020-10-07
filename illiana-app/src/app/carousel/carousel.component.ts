@@ -15,7 +15,6 @@ import { fadeIn, fadeOut } from './carousel.animations';
 })
 export class CarouselComponent implements OnInit {
 
-  currentSlide = 0;
   public slides = [
     {
       src: "../../assets/img/intro-carousel/tom.jpg",
@@ -39,25 +38,48 @@ export class CarouselComponent implements OnInit {
       link: { href: "#about", text: "Learn More" }
     }
   ]
+  currentSlide = 0;
+  skipThisCycle = false;
+  autoscrollDelay = 5000;
 
   constructor() { }
 
   ngOnInit(): void {
     this.preloadImages();
+    this.autoScroll();
   }
 
-  preloadImages() {
+  onPreviousClick() {
+    this.skipThisCycle = true;
+    this.previousSlide();
+  }
+
+  onNextClick() {
+    this.skipThisCycle = true;
+    this.nextSlide();
+  }
+
+  private preloadImages() {
     for (const slide of this.slides) {
       new Image().src = slide.src;
     }
   }
 
-  onPreviousClick() {
+  private autoScroll() {
+    if (!this.skipThisCycle) {
+      this.nextSlide();
+    } else {
+      setTimeout(() => { this.skipThisCycle = false}, 1000);
+    }
+    setTimeout(() => { this.autoScroll() }, this.autoscrollDelay);
+  }
+
+  private previousSlide() {
     const previous = this.currentSlide - 1;
     this.currentSlide = previous < 0 ? this.slides.length - 1 : previous;
   }
 
-  onNextClick() {
+  private nextSlide() {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
   }
