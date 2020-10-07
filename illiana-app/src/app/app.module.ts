@@ -10,6 +10,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { OfficersComponent } from './officers/officers.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent }
@@ -22,7 +23,8 @@ const ROUTES = [
     NavigationComponent,
     OfficersComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
