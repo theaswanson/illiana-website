@@ -4,52 +4,108 @@
 <header id="header">
   <div class="container-fluid">
     <div id="logo" class="pull-left">
-      <h1><a href="index.html#intro" class="scrollto">Illiana</a></h1>
+      <h1><a [routerLink]="['/']" class="scrollto">Illiana</a></h1>
     </div>
     <nav #nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li id="li-home"><a href="index.html#intro">Home</a></li>
-        <li id="li-about"><a href="index.html#about">About Us</a></li>
-        <li id="li-showinfo"><a href="showinfo.html">Show Info</a></li>
-        <li id="li-newsletters"><a href="newsletters.html">Newsletters</a></li>
-        <li id="li-events"><a href="events.html">Events</a></li>
-        <li id="li-map"><a href="map.html">Map</a></li>
+        <li id="li-home">
+          <a [routerLink]="['/']">Home</a>
+        </li>
+        <li id="li-about">
+          <a [routerLink]="['/']" fragment="about">About Us</a>
+        </li>
+        <li id="li-showinfo">
+          <a [routerLink]="['/show-info']">Show Info</a>
+        </li>
+        <li id="li-newsletters">
+          <a [routerLink]="['/newsletters']">Newsletters</a>
+        </li>
+        <li id="li-events">
+          <a [routerLink]="['/events']">Events</a>
+        </li>
+        <li id="li-map">
+          <a [routerLink]="['/map']">Map</a>
+        </li>
         <li class="menu-has-children">
           <a href="#" class="sf-with-ul">Other</a>
           <ul>
-            <li><a href="grantinfo.html">Grant Info</a></li>
-            <li id="li-pictures"><a href="pictures.html">Pictures</a></li>
-            <li><a href="links.html">Links</a></li>
-            <li><a href="http://www.rockyforge.org/" target="_blank">Blacksmith Guild</a></li>
-            <li><a href="train.html">Train Collectors</a></li>
-            <li><a href="ladies.html">Lady's Activities</a></li>
-            <li><a href="old/index.htm">Old Site</a></li>
+            <li>
+              <a [routerLink]="['/grant-info']">Grant Info</a>
+            </li>
+            <li id="li-pictures">
+              <a [routerLink]="['/pictures']">Pictures</a>
+            </li>
+            <li>
+              <a [routerLink]="['/links']">Links</a>
+            </li>
+            <li>
+              <a href="http://www.rockyforge.org/" target="_blank">Blacksmith Guild</a>
+            </li>
+            <li>
+              <a [routerLink]="['/train']">Train Collectors</a>
+            </li>
+            <li>
+              <a [routerLink]="['/ladies']">Lady's Activities</a>
+            </li>
+            <li>
+              <a href="old/index.htm">Old Site</a>
+            </li>
           </ul>
         </li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a [routerLink]="['/']" fragment="contact">Contact</a>
+        </li>
       </ul>
     </nav>
-    <nav id="mobile-nav">
+    <nav id="mobile-nav" (click)="toggleNav()">
       <ul>
-        <li id="li-home"><a href="index.html#intro">Home</a></li>
-        <li id="li-about"><a href="index.html#about">About Us</a></li>
-        <li id="li-showinfo"><a href="showinfo.html">Show Info</a></li>
-        <li id="li-newsletters"><a href="newsletters.html">Newsletters</a></li>
-        <li id="li-events"><a href="events.html">Events</a></li>
-        <li id="li-map"><a href="map.html">Map</a></li>
+        <li id="li-home">
+          <a [routerLink]="['/']">Home</a>
+        </li>
+        <li id="li-about">
+          <a [routerLink]="['/']" fragment="about">About Us</a>
+        </li>
+        <li id="li-showinfo">
+          <a [routerLink]="['/show-info']">Show Info</a>
+        </li>
+        <li id="li-newsletters">
+          <a [routerLink]="['/newsletters']">Newsletters</a>
+        </li>
+        <li id="li-events">
+          <a [routerLink]="['/events']">Events</a>
+        </li>
+        <li id="li-map">
+          <a [routerLink]="['/map']">Map</a>
+        </li>
         <li class="menu-has-children">
           <a href="#" (click)="collapse($event)">Other</a>
           <ul>
-            <li><a href="grantinfo.html">Grant Info</a></li>
-            <li id="li-pictures"><a href="pictures.html">Pictures</a></li>
-            <li><a href="links.html">Links</a></li>
-            <li><a href="http://www.rockyforge.org/" target="_blank">Blacksmith Guild</a></li>
-            <li><a href="train.html">Train Collectors</a></li>
-            <li><a href="ladies.html">Lady's Activities</a></li>
-            <li><a href="old/index.htm">Old Site</a></li>
+            <li>
+              <a [routerLink]="['/grant-info']">Grant Info</a>
+            </li>
+            <li id="li-pictures">
+              <a [routerLink]="['/pictures']">Pictures</a>
+            </li>
+            <li>
+              <a [routerLink]="['/links']">Links</a>
+            </li>
+            <li>
+              <a href="http://www.rockyforge.org/" target="_blank">Blacksmith Guild</a>
+            </li>
+            <li>
+              <a [routerLink]="['/train']">Train Collectors</a>
+            </li>
+            <li>
+              <a [routerLink]="['/ladies']">Lady's Activities</a>
+            </li>
+            <li>
+              <a href="old/index.htm">Old Site</a>
+            </li>
           </ul>
         </li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a [routerLink]="['/']" fragment="contact">Contact</a>
+        </li>
       </ul>
     </nav>
     <div id="mobile-body-overly" [style.display]="navOpen ? 'block' : 'none'"></div>

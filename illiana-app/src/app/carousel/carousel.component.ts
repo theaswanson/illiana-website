@@ -19,7 +19,7 @@ export class CarouselComponent implements OnInit {
     {
       src: "../../assets/img/intro-carousel/tom.jpg",
       header: "A Message from the President",
-      link: { href: "letter-september-2020.html", text: "Read Now" }
+      link: { href: "/letter-september-2020", text: "Read Now" }
     },
     {
       src: "../../assets/img/history-day.jpg",
@@ -29,17 +29,17 @@ export class CarouselComponent implements OnInit {
     {
       src: "../../assets/img/show/1.jpg",
       header: "Annual Show: Cancelled",
-      link: { href: "showinfo.html", text: "View Details" }
+      link: { href: "/show-info", text: "View Details" }
     },
     {
       src: "../../assets/img/intro-carousel/1.jpg",
       header: "Where the Past has a Future!",
       body: "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",
-      link: { href: "#about", text: "Learn More" }
+      link: { href: "/", fragment: "about", text: "Learn More" }
     }
   ]
   currentSlide = 0;
-  skipThisCycle = false;
+  skipThisCycle = true;
   autoscrollDelay = 5000;
 
   constructor() { }

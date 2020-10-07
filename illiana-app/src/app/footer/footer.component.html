@@ -1,73 +1,54 @@
-<!--==========================
-    Footer
-============================-->
 <footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-4 col-md-8 footer-info">
-                    <h3>Illiana Antique Power Association</h3>
-                    <p>
-                        The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.
-                        The Power Show is held every year during the 3rd weekend of July.
-                    </p>
-                </div>
-
-                <div class="col-lg-4 col-md-8 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="ion-ios-arrow-right"></i> <a href="index.html">Home</a></li>
-                        <li><i class="ion-ios-arrow-right"></i> <a href="index.html#about">About Us</a></li>
-                        <li><i class="ion-ios-arrow-right"></i> <a href="showinfo.html">Show Information</a></li>
-                        <li><i class="ion-ios-arrow-right"></i> <a href="newsletters.html">Newsletters</a></li>
-                        <li><i class="ion-ios-arrow-right"></i> <a href="events.html">Events</a></li>
-                        <li><i class="ion-ios-arrow-right"></i> <a href="map.html">Map</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-8 footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>
-                        Rainsville, IN<br>
-                        <strong>President:</strong> Tom Swanson<br>
-                        <strong>Phone:</strong> (765) 585-8371<br>
-                        <strong>Email: </strong><a href="mailto:cfswanson12@aol.com">cfswanson12@aol.com</a><br>
-                    </p>
-
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/illianaantiquepower/" class="facebook"><i class="fa fa-facebook"></i></a>
-                    </div>
-
-                </div>
-                <!--
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                    <h4>Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-                    <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
-                    </form>
-                </div>
-                    -->
-
-
-            </div>
-        </div>
-    </div>
-
+  <div class="footer-top">
     <div class="container">
-        <div class="copyright">
-            &copy; Copyright 2020 <strong>Illiana Antique Power Association</strong>. All Rights Reserved.
+      <div class="row">
+        <div class="col-lg-4 col-md-8 footer-info">
+          <h3>Illiana Antique Power Association</h3>
+          <p>
+            The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our
+            early rural way of life and the mechanical marvels that changed farming forever.
+            The Power Show is held every year during the 3rd weekend of July.
+          </p>
         </div>
-        <div class="credits">
-            <!--
+        <div class="col-lg-4 col-md-8 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="ion-ios-arrow-right"></i> <a [routerLink]="['/']">Home</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a [routerLink]="['/']" fragment="about">About Us</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a [routerLink]="['/show-info']">Show Information</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a [routerLink]="['/newsletters']">Newsletters</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a [routerLink]="['/events']">Events</a></li>
+            <li><i class="ion-ios-arrow-right"></i> <a [routerLink]="['/map']">Map</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-8 footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            Rainsville, IN<br>
+            <strong>President:</strong> Tom Swanson<br>
+            <strong>Phone:</strong> (765) 585-8371<br>
+            <strong>Email: </strong><a href="mailto:cfswanson12@aol.com">cfswanson12@aol.com</a><br>
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/illianaantiquepower/" class="facebook"><i class="fa fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright 2020 <strong>Illiana Antique Power Association</strong>. All Rights Reserved.
+    </div>
+    <div class="credits">
+      <!--
                 All the links in the footer should remain intact.
                 You can delete the links only if you purchased the pro version.
                 Licensing information: https://bootstrapmade.com/license/
                 Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
             -->
-            <p style="margin: 0;">Webmaster: Adam Swanson</p>
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+      <p style="margin: 0;">Webmaster: Adam Swanson</p>
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
-</footer><!-- #footer -->
+  </div>
+</footer>
