@@ -4,12 +4,12 @@
 <header id="header">
   <div class="container-fluid">
     <div id="logo" class="pull-left">
-      <h1><a [routerLink]="['/']" fragment="intro" class="scrollto">Illiana</a></h1>
+      <h1><a [routerLink]="['/']" class="scrollto">Illiana</a></h1>
     </div>
     <nav #nav id="nav-menu-container">
       <ul class="nav-menu">
         <li id="li-home">
-          <a [routerLink]="['/']" fragment="intro">Home</a>
+          <a [routerLink]="['/']">Home</a>
         </li>
         <li id="li-about">
           <a [routerLink]="['/']" fragment="about">About Us</a>
@@ -60,7 +60,7 @@
     <nav id="mobile-nav" (click)="toggleNav()">
       <ul>
         <li id="li-home">
-          <a [routerLink]="['/']" fragment="intro">Home</a>
+          <a [routerLink]="['/']">Home</a>
         </li>
         <li id="li-about">
           <a [routerLink]="['/']" fragment="about">About Us</a>
