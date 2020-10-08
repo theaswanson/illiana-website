@@ -13,11 +13,13 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { ShowInfoComponent } from './show-info/show-info.component';
 import { NewslettersComponent } from './newsletters/newsletters.component';
+import { EventsComponent } from './events/events.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent },
   { path: 'show-info', component: ShowInfoComponent },
-  { path: 'newsletters', component: NewslettersComponent }
+  { path: 'newsletters', component: NewslettersComponent },
+  { path: 'events', component: EventsComponent }
 ] as Routes;
 
 const ROUTER_OPTIONS = {
@@ -35,7 +37,8 @@ const ROUTER_OPTIONS = {
     CarouselComponent,
     ScrollToTopComponent,
     ShowInfoComponent,
-    NewslettersComponent
+    NewslettersComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
