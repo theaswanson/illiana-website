@@ -16,6 +16,7 @@ import { NewslettersComponent } from './newsletters/newsletters.component';
 import { EventsComponent } from './events/events.component';
 import { MapComponent } from './map/map.component';
 import { GrantInfoComponent } from './grant-info/grant-info.component';
+import { PicturesComponent } from './pictures/pictures.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent },
@@ -23,7 +24,8 @@ const ROUTES = [
   { path: 'newsletters', component: NewslettersComponent },
   { path: 'events', component: EventsComponent },
   { path: 'map', component: MapComponent },
-  { path: 'grant-info', component: GrantInfoComponent }
+  { path: 'grant-info', component: GrantInfoComponent },
+  { path: 'pictures', component: PicturesComponent },
 ] as Routes;
 
 const ROUTER_OPTIONS = {
@@ -44,7 +46,8 @@ const ROUTER_OPTIONS = {
     NewslettersComponent,
     EventsComponent,
     MapComponent,
-    GrantInfoComponent
+    GrantInfoComponent,
+    PicturesComponent
   ],
   imports: [
     BrowserModule,
