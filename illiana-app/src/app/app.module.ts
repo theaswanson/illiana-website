@@ -17,6 +17,7 @@ import { EventsComponent } from './events/events.component';
 import { MapComponent } from './map/map.component';
 import { GrantInfoComponent } from './grant-info/grant-info.component';
 import { PicturesComponent } from './pictures/pictures.component';
+import { LinksComponent } from './links/links.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent },
@@ -26,6 +27,7 @@ const ROUTES = [
   { path: 'map', component: MapComponent },
   { path: 'grant-info', component: GrantInfoComponent },
   { path: 'pictures', component: PicturesComponent },
+  { path: 'links', component: LinksComponent },
 ] as Routes;
 
 const ROUTER_OPTIONS = {
@@ -47,7 +49,8 @@ const ROUTER_OPTIONS = {
     EventsComponent,
     MapComponent,
     GrantInfoComponent,
-    PicturesComponent
+    PicturesComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
