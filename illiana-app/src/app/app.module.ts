@@ -14,12 +14,14 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { ShowInfoComponent } from './show-info/show-info.component';
 import { NewslettersComponent } from './newsletters/newsletters.component';
 import { EventsComponent } from './events/events.component';
+import { MapComponent } from './map/map.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent },
   { path: 'show-info', component: ShowInfoComponent },
   { path: 'newsletters', component: NewslettersComponent },
-  { path: 'events', component: EventsComponent }
+  { path: 'events', component: EventsComponent },
+  { path: 'map', component: MapComponent }
 ] as Routes;
 
 const ROUTER_OPTIONS = {
@@ -38,7 +40,8 @@ const ROUTER_OPTIONS = {
     ScrollToTopComponent,
     ShowInfoComponent,
     NewslettersComponent,
-    EventsComponent
+    EventsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
