@@ -18,6 +18,7 @@ import { MapComponent } from './map/map.component';
 import { GrantInfoComponent } from './grant-info/grant-info.component';
 import { PicturesComponent } from './pictures/pictures.component';
 import { LinksComponent } from './links/links.component';
+import { TrainComponent } from './train/train.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent },
@@ -28,6 +29,7 @@ const ROUTES = [
   { path: 'grant-info', component: GrantInfoComponent },
   { path: 'pictures', component: PicturesComponent },
   { path: 'links', component: LinksComponent },
+  { path: 'train', component: TrainComponent },
 ] as Routes;
 
 const ROUTER_OPTIONS = {
@@ -50,7 +52,8 @@ const ROUTER_OPTIONS = {
     MapComponent,
     GrantInfoComponent,
     PicturesComponent,
-    LinksComponent
+    LinksComponent,
+    TrainComponent
   ],
   imports: [
     BrowserModule,
