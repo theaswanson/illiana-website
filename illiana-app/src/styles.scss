@@ -14,6 +14,20 @@ $navigation-height: 72px;
   color: $illiana-green !important;
 }
 
+.page-content {
+  color: black;
+  text-align: center;
+}
+
+.img-wall {
+  img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    padding-bottom: 50px;
+  }
+}
+
 /*--------------------------------------------------------------
   # General
   --------------------------------------------------------------*/

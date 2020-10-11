@@ -8,7 +8,8 @@
           <h3 class="text-illiana-green">Illiana Antique Power Association</h3>
           <h2>{{slide.header}}</h2>
           <p *ngIf="slide.body">{{slide.body}}</p>
-          <a *ngIf="slide.link" [routerLink]="[slide.link.href]" [fragment]="slide.link.fragment" class="btn-get-started scrollto">{{slide.link.text}}</a>
+          <a *ngIf="slide.link" [routerLink]="[slide.link.href]" [fragment]="slide.link.fragment"
+            class="btn-get-started scrollto">{{slide.link.text}}</a>
         </div>
       </div>
     </ng-container>

@@ -1,0 +1,17 @@
+.grant-img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  img {
+    max-height: 200px;
+  }
+}
+
+.grant-info {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
