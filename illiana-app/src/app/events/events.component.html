@@ -4,13 +4,16 @@
       <header class="section-header">
         <h3>Events</h3>
       </header>
-      <div style="color: black;">
-        <p style="text-align: center;">Monthly meetings are held on the third Monday of each month. All
+      <div class="page-content">
+        <p>Monthly meetings are held on the third Monday of each month. All
           interested persons may attend. The annual family membership fee is $20.00. Most meetings are
           held at the <a [routerLink]="['/map']">showgrounds</a>.</p>
-        <h1>2020</h1>
-        <div class="table-responsive">
-          <table class="table table-striped" style="width: 100%;">
+      </div>
+
+      <div class="events" *ngFor="let events of eventsMap | keyvalue">
+        <h1>{{events.key}}</h1>
+        <div class="events-table table-responsive">
+          <table class="table table-striped">
             <thead class="thead-light">
               <tr>
                 <th scope="col">Event</th>
@@ -19,11 +22,11 @@
                 <th scope="col">Location</th>
               </tr>
             </thead>
-            <tr>
-              <th scope="row">History Day</th>
-              <td>TBD</td>
-              <td></td>
-              <td>Online</td>
+            <tr *ngFor="let event of events.value">
+              <td>{{event.title}}</td>
+              <td>{{event.date}}</td>
+              <td>{{event.time}}</td>
+              <td>{{event.location}}</td>
             </tr>
           </table>
         </div>
