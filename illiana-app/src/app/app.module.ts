@@ -21,6 +21,7 @@ import { LinksComponent } from './links/links.component';
 import { TrainComponent } from './train/train.component';
 import { LadiesComponent } from './ladies/ladies.component';
 import { LetterSeptember2020Component } from './letter-september2020/letter-september2020.component';
+import { ChristmasComponent } from './christmas/christmas.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent },
@@ -34,6 +35,7 @@ const ROUTES = [
   { path: 'train', component: TrainComponent },
   { path: 'ladies', component: LadiesComponent },
   { path: 'letter-september2020', component: LetterSeptember2020Component },
+  { path: 'christmas-in-the-village', component: ChristmasComponent },
 ] as Routes;
 
 const ROUTER_OPTIONS = {
@@ -59,7 +61,8 @@ const ROUTER_OPTIONS = {
     LinksComponent,
     TrainComponent,
     LadiesComponent,
-    LetterSeptember2020Component
+    LetterSeptember2020Component,
+    ChristmasComponent
   ],
   imports: [
     BrowserModule,
