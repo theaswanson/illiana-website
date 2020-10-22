@@ -8,19 +8,19 @@
     </div>
     <nav #nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li id="li-home">
+        <li routerLinkActive="menu-active" [routerLinkActiveOptions]="{ exact: true }">
           <a [routerLink]="['/']">Home</a>
         </li>
-        <li id="li-showinfo">
+        <li routerLinkActive="menu-active">
           <a [routerLink]="['/show-info']">Show Info</a>
         </li>
-        <li id="li-newsletters">
+        <li routerLinkActive="menu-active">
           <a [routerLink]="['/newsletters']">Newsletters</a>
         </li>
-        <li id="li-events">
+        <li routerLinkActive="menu-active">
           <a [routerLink]="['/events']">Events</a>
         </li>
-        <li id="li-map">
+        <li routerLinkActive="menu-active">
           <a [routerLink]="['/map']">Map</a>
         </li>
         <li class="menu-has-children">
@@ -29,7 +29,7 @@
             <li>
               <a [routerLink]="['/grant-info']">Grant Info</a>
             </li>
-            <li id="li-pictures">
+            <li>
               <a [routerLink]="['/pictures']">Pictures</a>
             </li>
             <li>
@@ -53,19 +53,19 @@
     </nav>
     <nav id="mobile-nav" (click)="toggleNav()">
       <ul>
-        <li id="li-home">
+        <li>
           <a [routerLink]="['/']">Home</a>
         </li>
-        <li id="li-showinfo">
+        <li>
           <a [routerLink]="['/show-info']">Show Info</a>
         </li>
-        <li id="li-newsletters">
+        <li>
           <a [routerLink]="['/newsletters']">Newsletters</a>
         </li>
-        <li id="li-events">
+        <li>
           <a [routerLink]="['/events']">Events</a>
         </li>
-        <li id="li-map">
+        <li>
           <a [routerLink]="['/map']">Map</a>
         </li>
         <li class="menu-has-children">
@@ -74,7 +74,7 @@
             <li>
               <a [routerLink]="['/grant-info']">Grant Info</a>
             </li>
-            <li id="li-pictures">
+            <li>
               <a [routerLink]="['/pictures']">Pictures</a>
             </li>
             <li>

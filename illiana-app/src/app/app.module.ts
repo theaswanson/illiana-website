@@ -25,7 +25,7 @@ import { ChristmasComponent } from './christmas/christmas.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const ROUTES = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'show-info', component: ShowInfoComponent },
   { path: 'newsletters', component: NewslettersComponent },
   { path: 'events', component: EventsComponent },
