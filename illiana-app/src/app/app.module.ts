@@ -20,6 +20,7 @@ import { PicturesComponent } from './pictures/pictures.component';
 import { LinksComponent } from './links/links.component';
 import { TrainComponent } from './train/train.component';
 import { LadiesComponent } from './ladies/ladies.component';
+import { LetterSeptember2020Component } from './letter-september2020/letter-september2020.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent },
@@ -32,6 +33,7 @@ const ROUTES = [
   { path: 'links', component: LinksComponent },
   { path: 'train', component: TrainComponent },
   { path: 'ladies', component: LadiesComponent },
+  { path: 'letter-september2020', component: LetterSeptember2020Component },
 ] as Routes;
 
 const ROUTER_OPTIONS = {
@@ -56,7 +58,8 @@ const ROUTER_OPTIONS = {
     PicturesComponent,
     LinksComponent,
     TrainComponent,
-    LadiesComponent
+    LadiesComponent,
+    LetterSeptember2020Component
   ],
   imports: [
     BrowserModule,
