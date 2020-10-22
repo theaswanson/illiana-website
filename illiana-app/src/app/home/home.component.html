@@ -13,60 +13,17 @@
           of our early rural way of life and the mechanical marvels that changed farming forever.</p>
       </header>
       <div class="row about-cols">
-        <div class="col-md-3">
-          <div class="about-col">
-            <div class="img" [routerLink]="['/show-info']">
-              <a [routerLink]="['/show-info']">
-                <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-information-outline"></i></div>
-              </a>
-            </div>
-            <h2 class="title"><a [routerLink]="['/show-info']">Show Information</a></h2>
-            <p>
-              Click here to view more information about this year's Power Show. The Power Show is held
-              every year during the 3rd weekend of July.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-3" *ngFor="let usInfo of aboutUsInfo">
           <div class="about-col">
             <div class="img">
-              <a [routerLink]="['/newsletters']">
-                <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+              <a [routerLink]="usInfo.link">
+                <img [attr.src]="usInfo.img" alt="" class="img-fluid">
+                <div class="icon"><i [ngClass]="usInfo.icon"></i></div>
               </a>
             </div>
-            <h2 class="title"><a [routerLink]="['/newsletters']">Newsletters</a></h2>
+            <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
             <p>
-              Click here to view our monthly newsletters.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="about-col">
-            <div class="img">
-              <a [routerLink]="['/map']">
-                <img src="assets/img/about-vision.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-map"></i></div>
-              </a>
-            </div>
-            <h2 class="title"><a [routerLink]="['/map']">Map</a></h2>
-            <p>
-              Click here for directions to the Illiana Antique Power Association showgrounds.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="about-col">
-            <div class="img">
-              <a [routerLink]="['/grant-info']">
-                <img src="assets/img/grant.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-cash"></i></div>
-              </a>
-            </div>
-            <h2 class="title"><a [routerLink]="['/grant-info']">Grant Information</a></h2>
-            <p>
-              Click here for more information about our projects that have been funded by grants from our community.
+              {{usInfo.description}}
             </p>
           </div>
         </div>
@@ -90,31 +47,9 @@
         </div>
       </header>
       <div class="row">
-        <div class="col-lg-4 col-md-6 box">
-          <h4 class="title"><a [routerLink]="['/show-info']">Antique Tractors</a></h4>
-          <p class="description">John Deere, Case IH, Ford, Allis Chalmers, and more!</p>
-        </div>
-        <div class="col-lg-4 col-md-6 box">
-          <h4 class="title"><a [routerLink]="['/show-info']">Blacksmithing</a></h4>
-          <p class="description">Live blacksmiths working metal with anvils and forges!</p>
-        </div>
-        <div class="col-lg-4 col-md-6 box">
-          <h4 class="title"><a [routerLink]="['/show-info']">Threshing</a></h4>
-          <p class="description">Live threshing demonstrations!</p>
-        </div>
-        <div class="col-lg-4 col-md-6 box">
-          <h4 class="title"><a [routerLink]="['/show-info']">Sawmill</a></h4>
-          <p class="description">Watch the crew cut logs using the old sawmill!</p>
-        </div>
-        <div class="col-lg-4 col-md-6 box">
-          <h4 class="title"><a [routerLink]="['/show-info']">Flea Market</a></h4>
-          <p class="description">A large flea market with antiques, tools, clothing, toys...they've got
-            everything, really!</p>
-        </div>
-        <div class="col-lg-4 col-md-6 box">
-          <h4 class="title"><a [routerLink]="['/show-info']">Train Station</a></h4>
-          <p class="description">Stop by one of the train stations to take a ride around the fairgrounds!
-          </p>
+        <div class="col-lg-4 col-md-6 box" *ngFor="let showInfo of aboutShowInfo">
+          <h4 class="title"><a [routerLink]="['/show-info']">{{showInfo.title}}</a></h4>
+          <p class="description">{{showInfo.description}}</p>
         </div>
       </div>
     </div>
@@ -165,3 +100,4 @@
     </div>
   </section>
 </main>
+<app-officers></app-officers>

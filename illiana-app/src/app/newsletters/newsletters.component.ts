@@ -252,7 +252,6 @@ export class NewslettersComponent implements OnInit {
   }
 
   getColor(num: number): string {
-    console.log('getting color');
     let colorIndex = 0;
     for (let i = 0; i < 10; i++) {
       if (num % i === 0) {

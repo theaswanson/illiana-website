@@ -20,9 +20,12 @@ import { PicturesComponent } from './pictures/pictures.component';
 import { LinksComponent } from './links/links.component';
 import { TrainComponent } from './train/train.component';
 import { LadiesComponent } from './ladies/ladies.component';
+import { LetterSeptember2020Component } from './letter-september2020/letter-september2020.component';
+import { ChristmasComponent } from './christmas/christmas.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const ROUTES = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'show-info', component: ShowInfoComponent },
   { path: 'newsletters', component: NewslettersComponent },
   { path: 'events', component: EventsComponent },
@@ -32,6 +35,10 @@ const ROUTES = [
   { path: 'links', component: LinksComponent },
   { path: 'train', component: TrainComponent },
   { path: 'ladies', component: LadiesComponent },
+  { path: 'letter-september2020', component: LetterSeptember2020Component },
+  { path: 'christmas-in-the-village', component: ChristmasComponent },
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 ] as Routes;
 
 const ROUTER_OPTIONS = {
@@ -56,7 +63,10 @@ const ROUTER_OPTIONS = {
     PicturesComponent,
     LinksComponent,
     TrainComponent,
-    LadiesComponent
+    LadiesComponent,
+    LetterSeptember2020Component,
+    ChristmasComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
