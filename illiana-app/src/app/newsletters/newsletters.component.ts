@@ -14,6 +14,7 @@ export class NewslettersComponent implements OnInit {
     { month: 7, year: 2020, ext: 'pdf' },
     { month: 8, year: 2020, ext: 'pdf' },
     { month: 9, year: 2020, ext: 'pdf' },
+    { month: 11, year: 2020, ext: 'pdf' },
     { month: 1, year: 2019, ext: 'pdf' },
     { month: 2, year: 2019, ext: 'pdf' },
     { month: 3, year: 2019, ext: 'pdf' },
@@ -207,14 +208,14 @@ export class NewslettersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.newsletters = this.sortNewsletters();
+    this.newsletters = this.sortNewslettersByDateDescending();
     this.latestNewsletter = this.newsletters[0];
     this.years = this.getYears();
     this.populateNewslettersMap(this.years);
     this.populateColorsMap(this.years);
   }
 
-  private sortNewsletters(): any[] {
+  private sortNewslettersByDateDescending(): any[] {
     return this.newsletters.sort((a, b) => {
       if (a.year > b.year) return -1;
       if (a.year < b.year) return 1;

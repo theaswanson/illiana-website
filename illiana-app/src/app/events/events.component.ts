@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EventsComponent implements OnInit {
 
   events = [
+    { year: 2020, title: 'Clean-up Day', date: 'December 5', time: '1:00 PM', location: 'Showgrounds' },
     { year: 2020, title: 'History Day', date: 'TBD', time: '', location: 'Online' },
   ];
   years: number[];

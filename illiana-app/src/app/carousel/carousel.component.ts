@@ -17,6 +17,12 @@ export class CarouselComponent implements OnInit {
 
   public slides = [
     {
+      src: "../../assets/img/rake.jpg",
+      header: "Showgrounds Clean-Up Day",
+      body: 'Saturday, December 5 @ 1:00 PM. Bring your rakes and leaf blowers to help clean up the grounds.',
+      link: { href: "/events", text: "View Events" }
+    },
+    {
       src: "../../assets/img/intro-carousel/tom.jpg",
       header: "A Message from the President",
       link: { href: "/letter-september2020", text: "Read Now" }
