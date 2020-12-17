@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
@@ -23,6 +22,15 @@ import { LadiesComponent } from './ladies/ladies.component';
 import { LetterSeptember2020Component } from './letter-september2020/letter-september2020.component';
 import { ChristmasComponent } from './christmas/christmas.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HistoryDayComponent } from './history-day/history-day.component';
+import { PostOfficeComponent } from './history-day/post-office/post-office.component';
+import { QuiltingAndSpinningComponent } from './history-day/quilting-and-spinning/quilting-and-spinning.component';
+import { SawmillComponent } from './history-day/sawmill/sawmill.component';
+import { PrintingPressComponent } from './history-day/printing-press/printing-press.component';
+import { LogCabinComponent } from './history-day/log-cabin/log-cabin.component';
+import { BlacksmithingComponent } from './history-day/blacksmithing/blacksmithing.component';
+import { MakingButterComponent } from './history-day/making-butter/making-butter.component';
+import { MakingCornBreadComponent } from './history-day/making-corn-bread/making-corn-bread.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -37,6 +45,19 @@ const ROUTES = [
   { path: 'ladies', component: LadiesComponent },
   { path: 'letter-september2020', component: LetterSeptember2020Component },
   { path: 'christmas-in-the-village', component: ChristmasComponent },
+  {
+    path: 'history-day', children: [
+      { path: '', component: HistoryDayComponent, pathMatch: 'full' },
+      { path: 'post-office', component: PostOfficeComponent },
+      { path: 'quilting-and-spinning', component: QuiltingAndSpinningComponent },
+      { path: 'sawmill', component: SawmillComponent },
+      { path: 'printing-press', component: PrintingPressComponent },
+      { path: 'log-cabin', component: LogCabinComponent },
+      { path: 'blacksmithing', component: BlacksmithingComponent },
+      { path: 'making-butter', component: MakingButterComponent },
+      { path: 'making-corn-bread', component: MakingCornBreadComponent },
+    ]
+  },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }
 ] as Routes;
@@ -66,7 +87,16 @@ const ROUTER_OPTIONS = {
     LadiesComponent,
     LetterSeptember2020Component,
     ChristmasComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HistoryDayComponent,
+    PostOfficeComponent,
+    QuiltingAndSpinningComponent,
+    SawmillComponent,
+    PrintingPressComponent,
+    LogCabinComponent,
+    BlacksmithingComponent,
+    MakingButterComponent,
+    MakingCornBreadComponent
   ],
   imports: [
     BrowserModule,

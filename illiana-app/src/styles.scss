@@ -28,6 +28,30 @@ $navigation-height: 72px;
   }
 }
 
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.history-day-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /*--------------------------------------------------------------
   # General
   --------------------------------------------------------------*/
@@ -678,14 +702,17 @@ body.mobile-nav-active {
   --------------------------------*/
 
 .section-header {
-  h3 {
-    font-size: 32px;
+  h3, h4 {
     color: #111;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
     position: relative;
     padding-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 32px;
 
     &::before {
       content: '';
@@ -709,6 +736,12 @@ body.mobile-nav-active {
       left: calc(50% - 20px);
     }
   }
+
+  h4 {
+    font-size: 20px;
+    margin: 0;
+  }
+
 
   p {
     text-align: center;

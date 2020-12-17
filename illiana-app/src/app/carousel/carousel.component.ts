@@ -17,20 +17,21 @@ export class CarouselComponent implements OnInit {
 
   public slides = [
     {
+      src: "../../assets/img/history-day-2.jpg",
+      header: "Virtual History Day is Now Live!",
+      body: "Step back in time and learn about life during the early rural days. Learn about the post office, sawmill, printing press, and more in our interactive tour or on our YouTube channel.",
+      link: { href: "/history-day", text: "Watch Now"}
+    },
+    {
       src: "../../assets/img/intro-carousel/1.jpg",
       header: "Where the Past has a Future!",
       body: "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",
       link: { href: "/", fragment: "about", text: "Learn More" }
-    },
-    {
-      src: "../../assets/img/history-day.jpg",
-      header: "History Day is Going Virtual!",
-      body: "This year, we're making History Day into an entirely virtual event where all activities will be done online! More details to come."
     }
   ]
   currentSlide = 0;
   skipThisCycle = true;
-  autoscrollDelay = 5000;
+  autoscrollDelay = 10000;
 
   constructor() { }
 
