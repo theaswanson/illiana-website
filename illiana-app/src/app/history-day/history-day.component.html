@@ -1,0 +1,45 @@
+<main id="main">
+  <section id="about">
+    <div class="container">
+      <header class="section-header">
+        <h3>Welcome to History Day!</h3>
+      </header>
+      <div class="page-content">
+        <p>
+          We here at Illiana are excited to present to you our first ever Virtual History Day!
+          We have created 8 online videos for you to watch at your own pace and learn about key areas of our early ways
+          of life, ranging from the Post Office and Sawmill to the Printing Press and Blacksmithing.
+          Each video was filmed on location at the showgrounds. If you enjoy what you see, come visit us at one of our
+          next events!
+        </p>
+        <p>
+          <b>
+            To start, simply click the "Begin" button below.
+          </b>
+          You can also view the History Day videos on our
+          <a
+            href="https://www.youtube.com/watch?v=L_C8svTrSv0&list=PL0DiJlI4as94ji_U3NxdTst-fWTzpLwwG&index=1&ab_channel=IllianaAntiquePowerAssociation">YouTube
+            channel.</a>
+        </p>
+        <a [routerLink]="['/history-day/post-office']" class="my-btn">Begin</a>
+        <br>
+        <br>
+        <h3>History Day Photos</h3>
+        <br>
+        <div class="img-wall">
+          <a [routerLink]="['/history-day/post-office']"><img src="assets/img/history-day/post-office.jpg" /></a>
+          <a [routerLink]="['/history-day/quilting-and-spinning']"><img
+              src="assets/img/history-day/quilting-and-spinning.jpg" /></a>
+          <a [routerLink]="['/history-day/sawmill']"><img src="assets/img/history-day/sawmill.jpg" /></a>
+          <a [routerLink]="['/history-day/printing-press']"><img src="assets/img/history-day/printing-press.jpg" /></a>
+          <a [routerLink]="['/history-day/log-cabin']"><img src="assets/img/history-day/log-cabin.jpg" /></a>
+          <a [routerLink]="['/history-day/blacksmithing']"><img src="assets/img/history-day/blacksmithing.jpg" /></a>
+          <a [routerLink]="['/history-day/making-butter']"><img src="assets/img/history-day/making-butter.jpg" /></a>
+          <a [routerLink]="['/history-day/making-corn-bread']"><img
+              src="assets/img/history-day/making-corn-bread.jpg" /></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>

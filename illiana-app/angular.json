@@ -29,7 +29,6 @@
             ],
             "styles": [
               "src/assets/lib/bootstrap/css/bootstrap.min.css",
-              "src/assets/lib/font-awesome/css/font-awesome.min.css",
               "src/assets/lib/animate/animate.min.css",
               "src/assets/lib/ionicons/css/ionicons.min.css",
               "src/assets/lib/owlcarousel/assets/owl.carousel.min.css",
