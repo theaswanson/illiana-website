@@ -3,17 +3,17 @@
     <div class="container">
       <header class="section-header">
         <h4>History Day</h4>
-        <h3>The Sawmill</h3>
+        <h3>{{video.title}}</h3>
       </header>
       <div class="page-content">
-        <p>Presented by: Owen Moudy and Guy</p>
+        <p>Presented by: {{video.presenters}}</p>
         <div class="history-day-navigation">
-          <a [routerLink]="['/history-day/quilting-and-spinning']" class="my-btn">&lt; Quilting and Spinning</a>
-          <a [routerLink]="['/history-day/printing-press']" class="my-btn">The Printing Press &gt;</a>
+          <a [routerLink]="['/history-day/' + previousVideo.id]" class="my-btn">&lt; {{previousVideo.title}}</a>
+          <a [routerLink]="['/history-day/' + nextVideo.id]" class="my-btn">{{nextVideo.title}} &gt;</a>
         </div>
         <div class="iframe-container">
           <iframe class="responsive-iframe"
-            src="https://www.youtube.com/embed/tzZje4Zn8DY?list=PL0DiJlI4as94ji_U3NxdTst-fWTzpLwwG" frameborder="0"
+            [src]="videoSafeUrl" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
