@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { HistoryDayService, Video } from './history-day.service';
 
 export class Credit {
@@ -28,10 +27,9 @@ export class HistoryDayComponent implements OnInit {
     { what: 'Special Thanks', who: 'The Beheler Family (Liam, Callum, Phoebe, Amanda, and Mom)' } as Credit,
   ];
 
-  constructor(private router: Router, private videoService: HistoryDayService) { }
+  constructor(private videoService: HistoryDayService) { }
 
   ngOnInit(): void {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => { return false; }
 
     this.videos = this.videoService.getVideos();
     if (this.videos.length > 0) {
