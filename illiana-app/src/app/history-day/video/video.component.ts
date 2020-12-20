@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HistoryDayService, Video } from '../history-day.service';
 
 @Component({
@@ -19,12 +19,15 @@ export class VideoComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private videoService: HistoryDayService,
     private sanitizer: DomSanitizer) {
     this.videoId = this.route.snapshot.params.id;
   }
 
   ngOnInit(): void {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => { return false; }
+
     this.video = this.videoService.getVideo(this.videoId);
     this.videoSafeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.video.url);
 
