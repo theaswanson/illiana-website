@@ -17,10 +17,16 @@ export class CarouselComponent implements OnInit {
 
   public slides = [
     {
+      src: "../../assets/img/about-plan.jpg",
+      header: "Board Meeting",
+      body: "Tuesday, March 9 @ 6:30 PM. Held at the showgrounds.",
+      link: { href: "/events", text: "View Events" }
+    },
+    {
       src: "../../assets/img/history-day-2.jpg",
       header: "Virtual History Day is Now Live!",
       body: "Step back in time and learn about life during the early rural days. Learn about the post office, sawmill, printing press, and more in our interactive tour or on our YouTube channel.",
-      link: { href: "/history-day", text: "Watch Now"}
+      link: { href: "/history-day", text: "Watch Now" }
     },
     {
       src: "../../assets/img/intro-carousel/1.jpg",
@@ -60,7 +66,7 @@ export class CarouselComponent implements OnInit {
     if (!this.skipThisCycle) {
       this.nextSlide();
     } else {
-      setTimeout(() => { this.skipThisCycle = false}, 1000);
+      setTimeout(() => { this.skipThisCycle = false }, 1000);
     }
     setTimeout(() => { this.autoScroll() }, this.autoscrollDelay);
   }
