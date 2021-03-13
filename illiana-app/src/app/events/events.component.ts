@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class EventsComponent implements OnInit {
 
   events = [
-    { year: 2021, title: 'Board Meeting', date: 'March 9', time: '6:30 PM', location: 'Showgrounds' },
+    { year: 2021, title: 'Illiana Quilters Meeting', date: 'Monday, March 22', time: '9:00 AM', location: 'Assembly Hall - Showgrounds' },
+    { year: 2021, title: 'Illiana Antique Power Show', date: 'Friday, July 16 - Sunday, July 18', time: '', location: 'Showgrounds' },
   ];
   years: number[];
   eventsMap = new Map<number, any[]>();

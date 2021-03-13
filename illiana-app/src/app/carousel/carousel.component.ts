@@ -15,13 +15,7 @@ import { fadeIn, fadeOut } from './carousel.animations';
 })
 export class CarouselComponent implements OnInit {
 
-  public slides = [
-    {
-      src: "../../assets/img/about-plan.jpg",
-      header: "Board Meeting",
-      body: "Tuesday, March 9 @ 6:30 PM. Held at the showgrounds.",
-      link: { href: "/events", text: "View Events" }
-    },
+  slides = [
     {
       src: "../../assets/img/history-day-2.jpg",
       header: "Virtual History Day is Now Live!",
