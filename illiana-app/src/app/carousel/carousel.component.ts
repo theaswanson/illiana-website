@@ -17,6 +17,13 @@ export class CarouselComponent implements OnInit {
 
   slides = [
     {
+      // src: "../../assets/img/intro-carousel/show2019.jpg",
+      src: "../../assets/img/intro-carousel/plowing.jpg",
+      header: "Annual Show: July 16-18",
+      body: "We are excited to host our 39th annual Antique Power Exhibition this year, featuring J.I. Case Tractors and Ohio MFG. engines! Click the button below to find out more.",
+      link: { href: "/show-info", text: "View Details" }
+    },
+    {
       src: "../../assets/img/history-day-2.jpg",
       header: "Virtual History Day is Now Live!",
       body: "Step back in time and learn about life during the early rural days. Learn about the post office, sawmill, printing press, and more in our interactive tour or on our YouTube channel.",

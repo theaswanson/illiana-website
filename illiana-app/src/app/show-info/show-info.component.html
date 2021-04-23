@@ -4,17 +4,45 @@
       <header class="section-header">
         <h3>Show Information</h3>
       </header>
-      <div class="page-content">
-        <h1>40th Annual Antique Power Exhibition</h1>
-        <h2><b>Friday, July 16th - Sunday, July 18th</b></h2>
-        <p>
-          Plans are underway for the 40th annual antique power show, currently scheduled for July 16-18.
-        </p>
-        <p>
-          We will post more details here as they become available, and also through email. You can join our mailing list by clicking the button below.
-        </p>
-        <a class="my-btn" href="http://eepurl.com/hgJBeP" target="_blank">Join Our Mailing List</a>
-        <a [routerLink]="['/pictures']" class="my-btn">View Show Photos</a>
+      <div class="page-content show-info">
+        <div class="show-header">
+          <h1>39th Annual Antique Power Exhibition</h1>
+          <h2><b>Friday, July 16th - Sunday, July 18th, 2021</b></h2>
+          <h2>Featuring: J.I. Case Tractors & Ohio MFG. Engines</h2>
+        </div>
+        <div class="showcase">
+          <img class="img-responsive" src="assets/img/show/ji-case.jpg" />
+          <a href="assets/flyers/Illiana-Power-Show-2021.pdf">
+            <img class="img-responsive" src="assets/flyers/Illiana-Power-Show-2021.jpg" />
+          </a>
+        </div>
+        <a href="assets/flyers/Illiana-Power-Show-2021.pdf" class="my-btn">View the Flyer</a>
+        <h1>Daily Activities</h1>
+        <ul>
+          <li>Steam engines, tractors, and gas engines</li>
+          <li>Daily Parade</li>
+          <li>Binding, threshing, and combining</li>
+          <li>Blacksmithing</li>
+          <li>Corn shelling and plowing</li>
+          <li>Sawmill</li>
+          <li>Miniature Trains</li>
+          <li>Old Cars & Trucks</li>
+          <li>Ladies Activities</li>
+          <li>Sunday Church Service</li>
+          <li>Food on the grounds</li>
+          <li>Raffle</li>
+          <li>Flea Market</li>
+        </ul>
+        <div class="img-wall">
+          <img src="assets/img/show/show2019.jpg" />
+          <img src="assets/img/show/fountainco.jpg" />
+          <img src="assets/img/show/plowing.jpg" />
+          <img src="assets/img/show/1.jpg" />
+          <img src="assets/img/show/2.jpg" />
+          <img src="assets/img/show/3.jpg" />
+          <img src="assets/img/show/4.jpg" />
+        </div>
+        <a [routerLink]="['/pictures']" class="my-btn">View More Photos</a>
       </div>
     </div>
   </section>
