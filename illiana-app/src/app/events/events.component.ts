@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class EventsComponent implements OnInit {
 
   events = [
+    { year: 2021, title: 'Member Meeting', date: 'Monday, May 17', time: '6:30 PM', location: 'Showgrounds' },
     { year: 2021, title: 'Illiana Antique Power Show', date: 'Friday, July 16 - Sunday, July 18', time: '', location: 'Showgrounds' },
+    { year: 2021, title: 'History Day', date: 'Friday, September 17', time: '', location: 'Showgrounds' },
     { year: 2021, title: 'Illiana Craft Fair and Swap Meet (Fall Festival)', date: 'Saturday, September 25', time: '', location: 'Showgrounds' },
     { year: 2021, title: 'Christmas in the Village', date: 'Friday, December 3 - Saturday, December 4', time: '', location: 'Showgrounds' },
   ];
