@@ -19,7 +19,7 @@ import { PicturesComponent } from './pictures/pictures.component';
 import { LinksComponent } from './links/links.component';
 import { TrainComponent } from './train/train.component';
 import { LadiesComponent } from './ladies/ladies.component';
-import { LetterSeptember2020Component } from './letter-september2020/letter-september2020.component';
+import { LetterComponent } from './letter/letter.component';
 import { ChristmasComponent } from './christmas/christmas.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HistoryDayComponent } from './history-day/history-day.component';
@@ -36,7 +36,7 @@ const ROUTES = [
   { path: 'links', component: LinksComponent },
   { path: 'train', component: TrainComponent },
   { path: 'ladies', component: LadiesComponent },
-  { path: 'letter-september2020', component: LetterSeptember2020Component },
+  { path: 'letter-may-2021', component: LetterComponent },
   { path: 'christmas-in-the-village', component: ChristmasComponent },
   {
     path: 'history-day', children: [
@@ -71,7 +71,7 @@ const ROUTER_OPTIONS = {
     LinksComponent,
     TrainComponent,
     LadiesComponent,
-    LetterSeptember2020Component,
+    LetterComponent,
     ChristmasComponent,
     NotFoundComponent,
     HistoryDayComponent,
