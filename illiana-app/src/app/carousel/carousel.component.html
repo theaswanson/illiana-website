@@ -1,5 +1,4 @@
 <div class="carousel-container">
-
   <div class="carousel">
     <ng-container *ngFor="let slide of slides; let i = index">
       <div class="the-div">
@@ -8,12 +7,15 @@
           <h3 class="text-illiana-green">Illiana Antique Power Association</h3>
           <h2>{{slide.header}}</h2>
           <p *ngIf="slide.body">{{slide.body}}</p>
-          <a *ngIf="slide.link" [routerLink]="[slide.link.href]" [fragment]="slide.link.fragment"
-            class="btn-get-started scrollto">{{slide.link.text}}</a>
+          <ng-container *ngIf="slide.link">
+            <a *ngIf="!slide.link.external" [routerLink]="[slide.link.href]" [fragment]="slide.link.fragment"
+              class="btn-get-started scrollto">{{slide.link.text}}</a>
+            <a *ngIf="slide.link.external" [href]="[slide.link.href]" target="_blank"
+              class="btn-get-started scrollto">{{slide.link.text}}</a>
+          </ng-container>
         </div>
       </div>
     </ng-container>
-
     <button class="control prev" (click)="onPreviousClick()">
       <span class="arrow left"></span>
     </button>
