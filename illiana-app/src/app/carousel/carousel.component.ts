@@ -17,6 +17,12 @@ export class CarouselComponent implements OnInit {
 
   slides = [
     {
+      src: "../../assets/img/intro-carousel/crowd.jpg",
+      header: "Ed Grubb: 1933 - 2021",
+      body: "Illiana sends condolences to the family of long-time Illiana member Ed Grubb.",
+      link: { href: "https://www.shelbyfuneralhome.com/obituary/edward-grubb", text: "Read More", external: true }
+    },
+    {
       src: "../../assets/img/intro-carousel/tom.jpg",
       header: "Letter from the President",
       link: { href: "/letter-may-2021", text: "Read Now" }
