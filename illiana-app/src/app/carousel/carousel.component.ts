@@ -17,21 +17,15 @@ export class CarouselComponent implements OnInit {
 
   slides = [
     {
-      src: "../../assets/img/intro-carousel/crowd.jpg",
-      header: "Ed Grubb: 1933 - 2021",
-      body: "Illiana sends condolences to the family of long-time Illiana member Ed Grubb.",
-      link: { href: "https://www.shelbyfuneralhome.com/obituary/edward-grubb", text: "Read More", external: true }
+      src: "../../assets/img/intro-carousel/plowing.jpg",
+      header: "Annual Show: July 16-18",
+      body: "We are excited to host our 39th annual Antique Power Exhibition this year, featuring J.I. Case Tractors and Ohio MFG. engines! Click the button below to find out more.",
+      link: { href: "/show-info", text: "View Details" }
     },
     {
       src: "../../assets/img/intro-carousel/tom.jpg",
       header: "Letter from the President",
       link: { href: "/letter-may-2021", text: "Read Now" }
-    },
-    {
-      src: "../../assets/img/intro-carousel/plowing.jpg",
-      header: "Annual Show: July 16-18",
-      body: "We are excited to host our 39th annual Antique Power Exhibition this year, featuring J.I. Case Tractors and Ohio MFG. engines! Click the button below to find out more.",
-      link: { href: "/show-info", text: "View Details" }
     },
     {
       src: "../../assets/img/history-day-2.jpg",
