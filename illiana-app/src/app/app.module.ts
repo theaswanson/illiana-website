@@ -26,6 +26,7 @@ import { HistoryDayComponent } from './history-day/history-day.component';
 import { VideoComponent } from './history-day/video/video.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ImagesComponent } from './images/images.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -78,7 +79,8 @@ const ROUTER_OPTIONS = {
     ChristmasComponent,
     NotFoundComponent,
     HistoryDayComponent,
-    VideoComponent
+    VideoComponent,
+    ImagesComponent
   ],
   imports: [
     BrowserModule,
