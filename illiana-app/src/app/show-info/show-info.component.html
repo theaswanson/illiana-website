@@ -17,22 +17,6 @@
           </a>
         </div>
         <a href="assets/flyers/Illiana-Power-Show-2021.pdf" class="my-btn">View the Flyer</a>
-        <h1>Daily Activities</h1>
-        <ul>
-          <li>Steam engines, tractors, and gas engines</li>
-          <li>Daily Parade</li>
-          <li>Binding, threshing, and combining</li>
-          <li>Blacksmithing</li>
-          <li>Corn shelling and plowing</li>
-          <li>Sawmill</li>
-          <li>Miniature Trains</li>
-          <li>Old Cars & Trucks</li>
-          <li>Ladies Activities</li>
-          <li>Sunday Church Service</li>
-          <li>Food on the grounds</li>
-          <li>Raffle</li>
-          <li>Flea Market</li>
-        </ul>
         <div class="img-wall">
           <img src="assets/img/show/show2019.jpg" />
           <img src="assets/img/show/fountainco.jpg" />
@@ -43,6 +27,11 @@
           <img src="assets/img/show/4.jpg" />
         </div>
         <a [routerLink]="['/pictures']" class="my-btn">View More Photos</a>
+        <h1 id="updates"><b>Updates</b></h1>
+        <div style="text-align: left;">
+          <markdown [src]="'assets/letters/show-invite-2021.md'"></markdown>
+          <markdown [src]="'assets/letters/may-2021.md'"></markdown>
+        </div>
       </div>
     </div>
   </section>
