@@ -7,7 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LadiesComponent implements OnInit {
 
-  constructor() { }
+  images: string[];
+
+  constructor() {
+    this.images = [
+      'assets/img/quilters.jpg',
+      'assets/img/quilters2.jpg',
+      'assets/img/quilters3.jpg',
+      'assets/img/quilters4.jpg',
+      'assets/img/sewlongago.jpg',
+      'assets/img/sewlongago2.jpg',
+      'assets/img/kitchen.jpg',
+      'assets/img/kitchen2.jpg',
+      'assets/img/kitchen3.jpg'
+    ]
+  }
 
   ngOnInit(): void {
   }

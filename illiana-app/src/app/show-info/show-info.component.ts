@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowInfoComponent implements OnInit {
 
-  constructor() { }
+  images: string[];
+
+  constructor() {
+    this.images = [
+      'assets/img/show/show2019.jpg',
+      'assets/img/show/fountainco.jpg',
+      'assets/img/show/plowing.jpg',
+      'assets/img/show/1.jpg',
+      'assets/img/show/2.jpg',
+      'assets/img/show/3.jpg',
+      'assets/img/show/4.jpg'
+    ];
+  }
 
   ngOnInit(): void {
   }

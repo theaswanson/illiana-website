@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChristmasComponent implements OnInit {
 
-  constructor() { }
+  images: string[];
+
+  constructor() {
+    this.images = [
+      'assets/img/christmas/general-store.jpg',
+      'assets/img/christmas/general-store-2.jpg',
+      'assets/img/christmas/village.jpg',
+      'assets/img/christmas/schoolhouse.jpg',
+      'assets/img/christmas/train.jpg'
+    ];
+  }
 
   ngOnInit(): void {
   }

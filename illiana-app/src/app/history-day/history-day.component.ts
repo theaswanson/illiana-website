@@ -14,6 +14,7 @@ export class Credit {
 export class HistoryDayComponent implements OnInit {
 
   videos: Video[];
+  images: string[];
   firstVideo: Video;
   credits: Credit[] = [
     { what: 'Cameraman, Video Editor, and Drone Operator', who: 'Dave Hobbs' } as Credit,
@@ -35,6 +36,8 @@ export class HistoryDayComponent implements OnInit {
     if (this.videos.length > 0) {
       this.firstVideo = this.videos[0];
     }
+
+    this.images = this.videos.map(v => `/assets/img/history-day/${v.id}.jpg`);
   }
 
 }

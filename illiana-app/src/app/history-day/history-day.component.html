@@ -62,11 +62,7 @@
       <div class="page-content" *ngIf="videos">
         <h3>History Day Photos</h3>
         <br>
-        <div class="img-wall">
-          <a [routerLink]="['/history-day/' + video.id]" *ngFor="let video of videos">
-            <img [src]="'assets/img/history-day/' + video.id + '.jpg'" [title]="video.title" />
-          </a>
-        </div>
+        <app-images [images]="images"></app-images>
       </div>
     </div>
   </section>
