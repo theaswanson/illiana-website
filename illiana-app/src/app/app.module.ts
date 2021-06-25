@@ -24,6 +24,8 @@ import { ChristmasComponent } from './christmas/christmas.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HistoryDayComponent } from './history-day/history-day.component';
 import { VideoComponent } from './history-day/video/video.component';
+import { MarkdownModule } from 'ngx-markdown';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -36,7 +38,7 @@ const ROUTES = [
   { path: 'links', component: LinksComponent },
   { path: 'train', component: TrainComponent },
   { path: 'ladies', component: LadiesComponent },
-  { path: 'letter-may-2021', component: LetterComponent },
+  { path: 'letter/:id', component: LetterComponent },
   { path: 'christmas-in-the-village', component: ChristmasComponent },
   {
     path: 'history-day', children: [
@@ -49,9 +51,9 @@ const ROUTES = [
 ] as Routes;
 
 const ROUTER_OPTIONS = {
-    anchorScrolling: 'enabled',
-    scrollPositionRestoration: 'enabled',
-    relativeLinkResolution: 'legacy'
+  anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled',
+  relativeLinkResolution: 'legacy'
 } as ExtraOptions;
 
 @NgModule({
@@ -81,6 +83,8 @@ const ROUTER_OPTIONS = {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
     RouterModule.forRoot(ROUTES, ROUTER_OPTIONS)
   ],
   providers: [],
