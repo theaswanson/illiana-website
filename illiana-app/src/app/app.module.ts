@@ -49,8 +49,9 @@ const ROUTES = [
 ] as Routes;
 
 const ROUTER_OPTIONS = {
-  anchorScrolling: 'enabled',
-  scrollPositionRestoration: 'enabled'
+    anchorScrolling: 'enabled',
+    scrollPositionRestoration: 'enabled',
+    relativeLinkResolution: 'legacy'
 } as ExtraOptions;
 
 @NgModule({
