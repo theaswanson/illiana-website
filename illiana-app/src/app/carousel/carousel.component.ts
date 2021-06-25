@@ -25,7 +25,7 @@ export class CarouselComponent implements OnInit {
     {
       src: "../../assets/img/intro-carousel/tom.jpg",
       header: "Letter from the President",
-      link: { href: "/letter-may-2021", text: "Read Now" }
+      link: { href: "/letter/may-2021", text: "Read Now" }
     },
     {
       src: "../../assets/img/history-day-2.jpg",
