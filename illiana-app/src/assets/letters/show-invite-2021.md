@@ -1,4 +1,4 @@
-# A Letter From Our President
+# Power Show Invitation
 
 ## June 25, 2021
 
