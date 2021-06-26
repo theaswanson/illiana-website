@@ -27,6 +27,7 @@ import { VideoComponent } from './history-day/video/video.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ImagesComponent } from './images/images.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -85,6 +86,7 @@ const ROUTER_OPTIONS = {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    LightboxModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
     RouterModule.forRoot(ROUTES, ROUTER_OPTIONS)
