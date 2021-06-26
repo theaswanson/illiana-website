@@ -12,7 +12,7 @@ export class TrainComponent implements OnInit {
   constructor() {
     this.images = [
       'assets/img/railroad1.jpg',
-      'assets/img/railroad2.jpg',
+      'assets/img/railroad2.png',
       'assets/img/railroad3.jpg',
       'assets/img/railroad4.jpg'
     ]
