@@ -28,10 +28,12 @@ import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ImagesComponent } from './images/images.component';
 import { LightboxModule } from 'ngx-lightbox';
+import { BlogComponent } from './blog/blog.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'show-info', component: ShowInfoComponent },
+  { path: 'blog', component: BlogComponent },
   { path: 'newsletters', component: NewslettersComponent },
   { path: 'events', component: EventsComponent },
   { path: 'map', component: MapComponent },
@@ -81,7 +83,8 @@ const ROUTER_OPTIONS = {
     NotFoundComponent,
     HistoryDayComponent,
     VideoComponent,
-    ImagesComponent
+    ImagesComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
