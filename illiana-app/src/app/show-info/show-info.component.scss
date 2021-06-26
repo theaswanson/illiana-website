@@ -17,8 +17,6 @@
     width: fit-content;
     margin: auto;
 
-    padding-bottom: 30px;
-
     @media (min-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
 
@@ -35,10 +33,5 @@
         max-width: 100%;
       }
     }
-
-  }
-
-  .my-btn {
-    margin-bottom: 30px;
   }
 }
