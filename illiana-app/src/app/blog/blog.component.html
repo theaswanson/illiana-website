@@ -1,0 +1,17 @@
+<main id="main">
+  <section id="about">
+    <div class="container">
+      <header class="section-header">
+        <h3>Blog</h3>
+      </header>
+      <div class="page-content">
+        <div style="text-align: left;">
+          <div *ngFor="let post of posts">
+            <markdown [src]="post.filePath"></markdown>
+            <div class="gap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

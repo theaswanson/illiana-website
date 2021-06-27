@@ -10,21 +10,28 @@
   }
 
   .showcase {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    justify-items: center;
+    width: fit-content;
+    margin: auto;
 
-    img {
-      max-height: 300px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      a {
+        margin-left: 50px;
+      }
     }
 
-    a {
-      margin-left: 50px;
-    }
-  }
+    .showcase-img {
+      height: 300px;
 
-  .my-btn {
-    margin-bottom: 30px;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
   }
 }

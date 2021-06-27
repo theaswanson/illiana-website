@@ -10,39 +10,26 @@
           <h2><b>Friday, July 16th - Sunday, July 18th, 2021</b></h2>
           <h2>Featuring: J.I. Case Tractors & Ohio MFG. Engines</h2>
         </div>
-        <div class="showcase">
-          <img class="img-responsive" src="assets/img/show/ji-case.jpg" />
+        <div class="showcase pb-5">
+          <div class="showcase-img">
+            <img class="box-shadow" src="assets/img/show/ji-case.jpg" />
+          </div>
           <a href="assets/flyers/Illiana-Power-Show-2021.pdf">
-            <img class="img-responsive" src="assets/flyers/Illiana-Power-Show-2021.jpg" />
+            <div class="showcase-img">
+              <img class="box-shadow" src="assets/flyers/Illiana-Power-Show-2021.jpg" />
+            </div>
           </a>
         </div>
-        <a href="assets/flyers/Illiana-Power-Show-2021.pdf" class="my-btn">View the Flyer</a>
-        <h1>Daily Activities</h1>
-        <ul>
-          <li>Steam engines, tractors, and gas engines</li>
-          <li>Daily Parade</li>
-          <li>Binding, threshing, and combining</li>
-          <li>Blacksmithing</li>
-          <li>Corn shelling and plowing</li>
-          <li>Sawmill</li>
-          <li>Miniature Trains</li>
-          <li>Old Cars & Trucks</li>
-          <li>Ladies Activities</li>
-          <li>Sunday Church Service</li>
-          <li>Food on the grounds</li>
-          <li>Raffle</li>
-          <li>Flea Market</li>
-        </ul>
-        <div class="img-wall">
-          <img src="assets/img/show/show2019.jpg" />
-          <img src="assets/img/show/fountainco.jpg" />
-          <img src="assets/img/show/plowing.jpg" />
-          <img src="assets/img/show/1.jpg" />
-          <img src="assets/img/show/2.jpg" />
-          <img src="assets/img/show/3.jpg" />
-          <img src="assets/img/show/4.jpg" />
+        <div class="row justify-content-center pb-2">
+          <a href="assets/flyers/Illiana-Power-Show-2021.pdf" class="my-btn">View the Flyer</a>
         </div>
-        <a [routerLink]="['/pictures']" class="my-btn">View More Photos</a>
+        <div class="row justify-content-center pb-5">
+          <a [routerLink]="['/blog']" class="my-btn">Read More</a>
+        </div>
+        <app-images [images]="images"></app-images>
+        <div class="row justify-content-center pt-5">
+          <a [routerLink]="['/pictures']" class="my-btn">View More Photos</a>
+        </div>
       </div>
     </div>
   </section>

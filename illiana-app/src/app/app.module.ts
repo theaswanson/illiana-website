@@ -26,10 +26,14 @@ import { HistoryDayComponent } from './history-day/history-day.component';
 import { VideoComponent } from './history-day/video/video.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ImagesComponent } from './images/images.component';
+import { LightboxModule } from 'ngx-lightbox';
+import { BlogComponent } from './blog/blog.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'show-info', component: ShowInfoComponent },
+  { path: 'blog', component: BlogComponent },
   { path: 'newsletters', component: NewslettersComponent },
   { path: 'events', component: EventsComponent },
   { path: 'map', component: MapComponent },
@@ -78,11 +82,14 @@ const ROUTER_OPTIONS = {
     ChristmasComponent,
     NotFoundComponent,
     HistoryDayComponent,
-    VideoComponent
+    VideoComponent,
+    ImagesComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    LightboxModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
     RouterModule.forRoot(ROUTES, ROUTER_OPTIONS)

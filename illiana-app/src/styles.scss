@@ -9,6 +9,11 @@
 /* Custom */
 $illiana-green: #18d26e;
 $navigation-height: 72px;
+$shadow: 5px 5px 5px grey;
+
+.box-shadow {
+  box-shadow: $shadow;
+}
 
 .text-illiana-green {
   color: $illiana-green !important;
@@ -17,15 +22,6 @@ $navigation-height: 72px;
 .page-content {
   color: black;
   text-align: center;
-}
-
-.img-wall {
-  img {
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    padding-bottom: 50px;
-  }
 }
 
 .iframe-container {
@@ -398,6 +394,7 @@ h6 {
   margin: 10px;
   background: $illiana-green;
   color: #fff;
+  box-shadow: $shadow;
 
   &:hover {
     background: #000;

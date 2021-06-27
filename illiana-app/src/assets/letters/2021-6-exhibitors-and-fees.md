@@ -1,4 +1,4 @@
-# A Letter From Our President
+# Regarding Membership Fees for Exhibitors
 
 ## May 2021
 
@@ -28,4 +28,4 @@ to our show. We are very proud of what we do and the various activities that we 
 However, in our litigous world we live in today we must take every precaution to protect you and our club from
 liability in case of an unfortunate accident.
 
-*Tom Swanson, President*
+***Tom Swanson, President***

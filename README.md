@@ -1,4 +1,7 @@
 # Illiana Antique Power Association
+
+![Website screenshot](screenshot.jpg "Illiana Antique Power Association homepage")
+
 Hey there! This repo has the code for the Illiana Antique Power Association's website, built in Angular 10.
 It also contains all the newsletters that have been published, dating back to 2004. These can be found under `illiana-app/src/assets/newsletters`.
 
