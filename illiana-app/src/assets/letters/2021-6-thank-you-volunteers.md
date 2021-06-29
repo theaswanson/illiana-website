@@ -8,7 +8,7 @@ After missing a year without a show, I am really looking forward to our show thi
 
 I want to thank all of those wonderful volunteers that have stepped up and mowed our grounds and filled in for Jim after the mower broke down. We now have it back and thank you to Maurice Foster, Foster's Small Engine Repair, for repairing it for us.
 
-A big thank you to Steve Butrum, club member, for completing the showers, and finishing the trim in the Assembly Hall.
+A big thank you to Steve Butram, club member, for completing the showers, and finishing the trim in the Assembly Hall.
 
 Also, thanks to Dave Summitt, Totally Foam Installations, in Boswell for insulating the roof on our Illiana Grain Museum bin. I have already put several old seed sacks, signs, grain cleaners, etc. in it for display and am not finished just yet.
 
