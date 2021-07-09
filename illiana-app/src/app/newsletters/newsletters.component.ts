@@ -13,6 +13,7 @@ export class NewslettersComponent implements OnInit {
     { month: 4, year: 2021, ext: 'pdf' },
     { month: 5, year: 2021, ext: 'pdf' },
     { month: 6, year: 2021, ext: 'pdf' },
+    { month: 7, year: 2021, ext: 'pdf' },
     { month: 3, year: 2020, ext: 'pdf' },
     { month: 5, year: 2020, ext: 'pdf' },
     { month: 6, year: 2020, ext: 'pdf' },
