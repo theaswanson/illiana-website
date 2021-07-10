@@ -29,7 +29,7 @@ jobs:
         run: npm i
         
       - name: Install Angular CLI
-        run: sudo npm i -g @angular/cli@12.1.0 > /dev/null
+        run: sudo npm i -g @angular/cli@12.1.0 > /dev/null && ng version
   
       - name: Build for production
         working-directory: ./illiana-app
