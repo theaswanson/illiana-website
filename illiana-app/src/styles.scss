@@ -55,6 +55,7 @@ $shadow: 5px 5px 5px grey;
   --------------------------------------------------------------*/
 
 body {
+  min-width: auto !important;
   background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;
