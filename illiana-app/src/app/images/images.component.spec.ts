@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LightboxModule } from 'ngx-lightbox';
 
 import { ImagesComponent } from './images.component';
 
@@ -8,9 +9,10 @@ describe('ImagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImagesComponent ]
+      declarations: [ImagesComponent],
+      imports: [LightboxModule]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

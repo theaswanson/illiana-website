@@ -11,7 +11,7 @@
           <a [routerLink]="['/history-day/' + previousVideo.id]" class="my-btn">&lt; {{previousVideo.title}}</a>
           <a [routerLink]="['/history-day/' + nextVideo.id]" class="my-btn">{{nextVideo.title}} &gt;</a>
         </div>
-        <div class="iframe-container">
+        <div class="iframe-container" *ngIf="videoSafeUrl">
           <iframe class="responsive-iframe"
             [src]="videoSafeUrl" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

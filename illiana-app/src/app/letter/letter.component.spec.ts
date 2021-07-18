@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
 import { LetterComponent } from './letter.component';
 
@@ -8,9 +9,10 @@ describe('LetterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LetterComponent ]
+      declarations: [LetterComponent],
+      imports: [RouterModule.forRoot([])]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

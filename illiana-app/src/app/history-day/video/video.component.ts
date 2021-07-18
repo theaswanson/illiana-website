@@ -23,12 +23,20 @@ export class VideoComponent implements OnInit {
     private videoService: HistoryDayService,
     private sanitizer: DomSanitizer) {
     this.videoId = this.route.snapshot.params.id;
+    this.video = new Video();
+    this.nextVideo = new Video();
+    this.previousVideo = new Video();
   }
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => { return false; }
 
-    this.video = this.videoService.getVideo(this.videoId);
+    const video = this.videoService.getVideo(this.videoId);
+    if (!video) {
+      return;
+    }
+    
+    this.video = video;
     this.videoSafeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.video.url);
 
     let previousVideo = this.videoService.getPreviousVideo(this.videoId);

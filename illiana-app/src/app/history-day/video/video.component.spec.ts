@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
 import { VideoComponent } from './video.component';
 
@@ -8,9 +9,10 @@ describe('VideoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VideoComponent ]
+      declarations: [VideoComponent],
+      imports: [RouterModule.forRoot([])]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
