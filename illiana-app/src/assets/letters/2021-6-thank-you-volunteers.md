@@ -2,6 +2,8 @@
 
 ## June 25, 2021
 
+---
+
 Hello to all,
 
 After missing a year without a show, I am really looking forward to our show this July.

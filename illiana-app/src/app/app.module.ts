@@ -29,10 +29,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ImagesComponent } from './images/images.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { BlogComponent } from './blog/blog.component';
+import { FallFestivalComponent } from './fall-festival/fall-festival.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'show-info', component: ShowInfoComponent },
+  { path: 'fall-festival', component: FallFestivalComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'newsletters', component: NewslettersComponent },
   { path: 'events', component: EventsComponent },
@@ -84,7 +86,8 @@ const ROUTER_OPTIONS = {
     HistoryDayComponent,
     VideoComponent,
     ImagesComponent,
-    BlogComponent
+    BlogComponent,
+    FallFestivalComponent
   ],
   imports: [
     BrowserModule,
