@@ -2,6 +2,8 @@
 
 ## September 2020
 
+---
+
 Hello to everyone,
 
 September has really been a whirlwind, it seems.

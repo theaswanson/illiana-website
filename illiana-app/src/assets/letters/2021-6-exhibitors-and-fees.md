@@ -2,6 +2,8 @@
 
 ## May 2021
 
+---
+
 Hello to one and all,
 
 I was informed at our May meeting that there were some concerns and questions from non-member exhibitors about
