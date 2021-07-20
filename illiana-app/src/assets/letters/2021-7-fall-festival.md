@@ -12,7 +12,7 @@ Our very first Fall Festival is quickly approaching! We are inviting crafters, q
 
 Mark your calendars for Saturday, September 25 from 9:00 AM - 4:00 PM.
 
-If you are interested in participating as a vendor, check out our [Fall Festival page](/fall-festival) for the vendor application. Additional event details and contact information are also available on that page.
+If you are interested in participating as a vendor, check out our [Fall Festival page](/fall-festival) for the vendor application. The deadline to apply as a vendor is **August 1**. Additional event details and contact information are also available on that page.
 
 Please join us for a fun-filled day! We hope to see you there.
 
