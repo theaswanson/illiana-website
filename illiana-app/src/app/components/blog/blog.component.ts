@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post, PostsService } from '../posts.service';
+import { Post, PostsService } from '../../services/posts/posts.service';
 
 @Component({
   selector: 'app-blog',
