@@ -1,0 +1,13 @@
+.history-day-navigation {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  
+  .my-btn {
+    width: fit-content;
+  }
+  
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
