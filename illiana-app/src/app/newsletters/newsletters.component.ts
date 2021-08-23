@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import newsletters from './newsletters.json';
+
+class Newsletter {
+  month: number;
+  year: number;
+  ext: string;
+}
 
 @Component({
   selector: 'app-newsletters',
@@ -7,180 +14,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewslettersComponent implements OnInit {
 
-  newsletters = [
-    { month: 2, year: 2021, ext: 'pdf' },
-    { month: 3, year: 2021, ext: 'pdf' },
-    { month: 4, year: 2021, ext: 'pdf' },
-    { month: 5, year: 2021, ext: 'pdf' },
-    { month: 6, year: 2021, ext: 'pdf' },
-    { month: 7, year: 2021, ext: 'pdf' },
-    { month: 8, year: 2021, ext: 'pdf' },
-    { month: 3, year: 2020, ext: 'pdf' },
-    { month: 5, year: 2020, ext: 'pdf' },
-    { month: 6, year: 2020, ext: 'pdf' },
-    { month: 7, year: 2020, ext: 'pdf' },
-    { month: 8, year: 2020, ext: 'pdf' },
-    { month: 9, year: 2020, ext: 'pdf' },
-    { month: 11, year: 2020, ext: 'pdf' },
-    { month: 12, year: 2020, ext: 'pdf' },
-    { month: 1, year: 2019, ext: 'pdf' },
-    { month: 2, year: 2019, ext: 'pdf' },
-    { month: 3, year: 2019, ext: 'pdf' },
-    { month: 4, year: 2019, ext: 'pdf' },
-    { month: 5, year: 2019, ext: 'pdf' },
-    { month: 6, year: 2019, ext: 'pdf' },
-    { month: 7, year: 2019, ext: 'pdf' },
-    { month: 8, year: 2019, ext: 'pdf' },
-    { month: 9, year: 2019, ext: 'pdf' },
-    { month: 10, year: 2019, ext: 'pdf' },
-    { month: 11, year: 2019, ext: 'pdf' },
-    { month: 12, year: 2019, ext: 'pdf' },
-    { month: 3, year: 2018, ext: 'docx' },
-    { month: 4, year: 2018, ext: 'pdf' },
-    { month: 5, year: 2018, ext: 'docx' },
-    { month: 6, year: 2018, ext: 'docx' },
-    { month: 7, year: 2018, ext: 'pdf' },
-    { month: 8, year: 2018, ext: 'pdf' },
-    { month: 9, year: 2018, ext: 'pdf' },
-    { month: 10, year: 2018, ext: 'pdf' },
-    { month: 11, year: 2018, ext: 'pdf' },
-    { month: 1, year: 2017, ext: 'docx' },
-    { month: 2, year: 2017, ext: 'pdf' },
-    { month: 3, year: 2017, ext: 'pdf' },
-    { month: 4, year: 2017, ext: 'pdf' },
-    { month: 5, year: 2017, ext: 'docx' },
-    { month: 6, year: 2017, ext: 'pdf' },
-    { month: 7, year: 2017, ext: 'pdf' },
-    { month: 8, year: 2017, ext: 'pdf' },
-    { month: 9, year: 2017, ext: 'pdf' },
-    { month: 10, year: 2017, ext: 'docx' },
-    { month: 11, year: 2017, ext: 'docx' },
-    { month: 1, year: 2016, ext: 'jpg' },
-    { month: 2, year: 2016, ext: 'docx' },
-    { month: 3, year: 2016, ext: 'pdf' },
-    { month: 4, year: 2016, ext: 'pdf' },
-    { month: 5, year: 2016, ext: 'pdf' },
-    { month: 6, year: 2016, ext: 'docx' },
-    { month: 7, year: 2016, ext: 'docx' },
-    { month: 8, year: 2016, ext: 'pdf' },
-    { month: 9, year: 2016, ext: 'docx' },
-    { month: 11, year: 2016, ext: 'pdf' },
-    { month: 2, year: 2015, ext: 'htm' },
-    { month: 3, year: 2015, ext: 'htm' },
-    { month: 4, year: 2015, ext: 'pdf' },
-    { month: 5, year: 2015, ext: 'pdf' },
-    { month: 6, year: 2015, ext: 'pdf' },
-    { month: 7, year: 2015, ext: 'pdf' },
-    { month: 8, year: 2015, ext: 'pdf' },
-    { month: 9, year: 2015, ext: 'JPG' },
-    { month: 10, year: 2015, ext: 'pdf' },
-    { month: 11, year: 2015, ext: 'pdf' },
-    { month: 1, year: 2014, ext: 'htm' },
-    { month: 2, year: 2014, ext: 'htm' },
-    { month: 3, year: 2014, ext: 'htm' },
-    { month: 4, year: 2014, ext: 'pdf' },
-    { month: 5, year: 2014, ext: 'htm' },
-    { month: 6, year: 2014, ext: 'htm' },
-    { month: 8, year: 2014, ext: 'pdf' },
-    { month: 9, year: 2014, ext: 'pdf' },
-    { month: 10, year: 2014, ext: 'pdf' },
-    { month: 11, year: 2014, ext: 'pdf' },
-    { month: 3, year: 2013, ext: 'htm' },
-    { month: 4, year: 2013, ext: 'pdf' },
-    { month: 5, year: 2013, ext: 'pdf' },
-    { month: 6, year: 2013, ext: 'htm' },
-    { month: 7, year: 2013, ext: 'pdf' },
-    { month: 8, year: 2013, ext: 'pdf' },
-    { month: 9, year: 2013, ext: 'pdf' },
-    { month: 10, year: 2013, ext: 'pdf' },
-    { month: 11, year: 2013, ext: 'htm' },
-    { month: 3, year: 2012, ext: 'htm' },
-    { month: 4, year: 2012, ext: 'htm' },
-    { month: 5, year: 2012, ext: 'htm' },
-    { month: 6, year: 2012, ext: 'htm' },
-    { month: 7, year: 2012, ext: 'htm' },
-    { month: 8, year: 2012, ext: 'htm' },
-    { month: 9, year: 2012, ext: 'htm' },
-    { month: 10, year: 2012, ext: 'pdf' },
-    { month: 11, year: 2012, ext: 'htm' },
-    { month: 12, year: 2012, ext: 'jpg' },
-    { month: 3, year: 2011, ext: 'htm' },
-    { month: 4, year: 2011, ext: 'htm' },
-    { month: 5, year: 2011, ext: 'htm' },
-    { month: 6, year: 2011, ext: 'htm' },
-    { month: 7, year: 2011, ext: 'htm' },
-    { month: 8, year: 2011, ext: 'htm' },
-    { month: 9, year: 2011, ext: 'htm' },
-    { month: 10, year: 2011, ext: 'htm' },
-    { month: 12, year: 2011, ext: 'htm' },
-    { month: 1, year: 2010, ext: 'htm' },
-    { month: 3, year: 2010, ext: 'htm' },
-    { month: 4, year: 2010, ext: 'htm' },
-    { month: 5, year: 2010, ext: 'htm' },
-    { month: 6, year: 2010, ext: 'htm' },
-    { month: 7, year: 2010, ext: 'htm' },
-    { month: 8, year: 2010, ext: 'htm' },
-    { month: 9, year: 2010, ext: 'htm' },
-    { month: 10, year: 2010, ext: 'htm' },
-    { month: 11, year: 2010, ext: 'htm' },
-    { month: 1, year: 2009, ext: 'htm' },
-    { month: 2, year: 2009, ext: 'htm' },
-    { month: 3, year: 2009, ext: 'htm' },
-    { month: 4, year: 2009, ext: 'htm' },
-    { month: 5, year: 2009, ext: 'htm' },
-    { month: 6, year: 2009, ext: 'htm' },
-    { month: 7, year: 2009, ext: 'htm' },
-    { month: 8, year: 2009, ext: 'htm' },
-    { month: 9, year: 2009, ext: 'htm' },
-    { month: 10, year: 2009, ext: 'htm' },
-    { month: 11, year: 2009, ext: 'htm' },
-    { month: 1, year: 2008, ext: 'htm' },
-    { month: 2, year: 2008, ext: 'htm' },
-    { month: 3, year: 2008, ext: 'htm' },
-    { month: 4, year: 2008, ext: 'htm' },
-    { month: 5, year: 2008, ext: 'htm' },
-    { month: 6, year: 2008, ext: 'htm' },
-    { month: 7, year: 2008, ext: 'htm' },
-    { month: 8, year: 2008, ext: 'htm' },
-    { month: 9, year: 2008, ext: 'htm' },
-    { month: 10, year: 2008, ext: 'htm' },
-    { month: 11, year: 2008, ext: 'htm' },
-    { month: 1, year: 2007, ext: 'htm' },
-    { month: 2, year: 2007, ext: 'htm' },
-    { month: 3, year: 2007, ext: 'htm' },
-    { month: 4, year: 2007, ext: 'htm' },
-    { month: 5, year: 2007, ext: 'htm' },
-    { month: 6, year: 2007, ext: 'htm' },
-    { month: 7, year: 2007, ext: 'htm' },
-    { month: 8, year: 2007, ext: 'htm' },
-    { month: 9, year: 2007, ext: 'htm' },
-    { month: 10, year: 2007, ext: 'htm' },
-    { month: 11, year: 2007, ext: 'htm' },
-    { month: 2, year: 2006, ext: 'htm' },
-    { month: 3, year: 2006, ext: 'htm' },
-    { month: 4, year: 2006, ext: 'htm' },
-    { month: 5, year: 2006, ext: 'htm' },
-    { month: 6, year: 2006, ext: 'htm' },
-    { month: 7, year: 2006, ext: 'htm' },
-    { month: 8, year: 2006, ext: 'htm' },
-    { month: 9, year: 2006, ext: 'htm' },
-    { month: 10, year: 2006, ext: 'htm' },
-    { month: 11, year: 2006, ext: 'htm' },
-    { month: 12, year: 2006, ext: 'htm' },
-    { month: 2, year: 2005, ext: 'pdf' },
-    { month: 3, year: 2005, ext: 'htm' },
-    { month: 4, year: 2005, ext: 'htm' },
-    { month: 5, year: 2005, ext: 'htm' },
-    { month: 6, year: 2005, ext: 'htm' },
-    { month: 7, year: 2005, ext: 'htm' },
-    { month: 8, year: 2005, ext: 'htm' },
-    { month: 9, year: 2005, ext: 'htm' },
-    { month: 10, year: 2005, ext: 'htm' },
-    { month: 11, year: 2005, ext: 'htm' },
-    { month: 1, year: 2004, ext: 'pdf' },
-    { month: 9, year: 2004, ext: 'htm' },
-    { month: 11, year: 2004, ext: 'html' }
-  ];
+  newsletters: Newsletter[];
   latestNewsletter: any;
   years: number[];
   colors = [
@@ -216,6 +50,7 @@ export class NewslettersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.newsletters = newsletters;
     this.newsletters = this.sortNewslettersByDateDescending();
     this.latestNewsletter = this.newsletters[0];
     this.years = this.getYears();
@@ -235,16 +70,16 @@ export class NewslettersComponent implements OnInit {
 
   private getYears(): number[] {
     let years = [];
-    this.newsletters.map(x => {
-      if (years.findIndex(year => year === x.year) === -1) {
-        years.push(x.year);
+    this.newsletters.forEach(n => {
+      if (years.findIndex(year => year === n.year) === -1) {
+        years.push(n.year);
       }
     });
     return years;
   }
 
   private populateNewslettersMap(years: number[]) {
-    years.map(year => {
+    years.forEach(year => {
       for (let i = 1; i <= 12; i++) {
         this.newslettersMap.set(
           `${year}_${i}`,
@@ -255,7 +90,7 @@ export class NewslettersComponent implements OnInit {
   }
 
   private populateColorsMap(years: number[]) {
-    years.map(year => {
+    years.forEach(year => {
       this.colorsMap.set(year, this.getColor(year));
     })
   }
