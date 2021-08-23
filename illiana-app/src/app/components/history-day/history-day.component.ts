@@ -18,7 +18,7 @@ export class HistoryDayComponent implements OnInit {
   firstVideo: Video;
   credits: Credit[] = [
     { what: 'Cameraman, Video Editor, and Drone Operator', who: 'Dave Hobbs' } as Credit,
-    { what: 'Main Character', who: 'Dave Sims' } as Credit,
+    { what: 'Lead Character', who: 'Dave Sims' } as Credit,
     { what: 'Sawmill Preparer', who: 'Owen Moudy' } as Credit,
     { what: 'Blacksmithing Preparers', who: 'Dominick Andrisani and assistant' } as Credit,
     { what: 'Blacksmithing Organizer', who: 'Ted Stout' } as Credit,
@@ -31,7 +31,6 @@ export class HistoryDayComponent implements OnInit {
   constructor(private videoService: HistoryDayService) { }
 
   ngOnInit(): void {
-
     this.videos = this.videoService.getVideos();
     if (this.videos.length > 0) {
       this.firstVideo = this.videos[0];
@@ -39,5 +38,4 @@ export class HistoryDayComponent implements OnInit {
 
     this.images = this.videos.map(v => `/assets/img/history-day/${v.id}.jpg`);
   }
-
 }

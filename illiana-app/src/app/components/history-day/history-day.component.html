@@ -6,63 +6,66 @@
       </header>
       <div class="page-content">
         <p>
-          We here at Illiana are excited to present to you our first ever Virtual History Day!
-          We have created 8 online videos (with more to come) for you to watch at your own pace and learn about key
-          areas of our early ways
-          of life, ranging from the Post Office and Sawmill to the Printing Press and Blacksmithing.
-          Each video was filmed on location at the showgrounds. If you enjoy what you see, come visit us at one of our
+          We here at the Illiana Antique Power Association are excited to present to you our first ever Virtual History Day!
+          We have created several online videos for you to watch at your own pace to learn about key
+          areas of our early ways of life, ranging from the Post Office and Sawmill to the Printing Press
+          and Blacksmithing.
+          Each video was filmed on location at the showgrounds by members of our club. If you enjoy what you see, come visit us at one of our
           next events!
         </p>
-        <p>
-          <b>
-            To start, simply click the "Begin" button below.
-          </b>
-          You can also view the History Day videos on our
-          <a
-            href="https://www.youtube.com/watch?v=L_C8svTrSv0&list=PL0DiJlI4as94ji_U3NxdTst-fWTzpLwwG&index=1&ab_channel=IllianaAntiquePowerAssociation">YouTube
-            channel.</a>
+        <a *ngIf="firstVideo" [routerLink]="['/history-day/' + firstVideo.id]" class="my-btn">Watch Now</a>
+        <p class="mt-3 mb-3 font-italic">
+          Also available on <a
+            href="https://www.youtube.com/watch?v=L_C8svTrSv0&list=PL0DiJlI4as94ji_U3NxdTst-fWTzpLwwG&index=1&ab_channel=IllianaAntiquePowerAssociation"
+            target="_blank">YouTube <i class="fa fa-youtube"></i></a>
         </p>
-        <a *ngIf="firstVideo" [routerLink]="['/history-day/' + firstVideo.id]" class="my-btn">Begin</a>
         <br>
         <br>
-      </div>
-      <div>
-        <div *ngIf="credits">
-          <h3>Credits</h3>
-          <div class="events">
-            <div class="events-table table-responsive">
-              <table class="table table-striped">
-                <tr *ngFor="let credit of credits">
-                  <td>{{credit.what}}</td>
-                  <td>{{credit.who}}</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div *ngIf="videos">
-          <div class="events">
-            <div class="events-table table-responsive">
-              <table class="table table-striped">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Video</th>
-                    <th scope="col">Presenters</th>
-                  </tr>
-                </thead>
-                <tr *ngFor="let video of videos">
-                  <td>{{video.title}}</td>
-                  <td>{{video.presenters}}</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="page-content" *ngIf="videos">
         <h3>History Day Photos</h3>
         <br>
         <app-images [images]="images"></app-images>
+      </div>
+      <br>
+      <br>
+      <div *ngIf="videos">
+        <h3>Videos</h3>
+        <div class="events">
+          <div class="events-table table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Video</th>
+                  <th scope="col">Presenters</th>
+                </tr>
+              </thead>
+              <tr *ngFor="let video of videos">
+                <td><a [routerLink]="['/history-day/' + video.id]">{{video.title}}</a></td>
+                <td>{{video.presenters}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="credits">
+        <h3>Credits</h3>
+        <div class="events">
+          <div class="events-table table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Role</th>
+                  <th scope="col">Member(s)</th>
+                </tr>
+              </thead>
+              <tr *ngFor="let credit of credits">
+                <td>{{credit.what}}</td>
+                <td>{{credit.who}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </section>

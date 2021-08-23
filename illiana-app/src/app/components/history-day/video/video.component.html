@@ -9,6 +9,7 @@
         <p>Presented by: {{video.presenters}}</p>
         <div class="history-day-navigation">
           <a [routerLink]="['/history-day/' + previousVideo.id]" class="my-btn">&lt; {{previousVideo.title}}</a>
+          <a routerLink="/history-day" class="my-btn">Back to Start</a>
           <a [routerLink]="['/history-day/' + nextVideo.id]" class="my-btn">{{nextVideo.title}} &gt;</a>
         </div>
         <div class="iframe-container">

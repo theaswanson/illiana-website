@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import events from './events.json';
+
+class Event {
+  year: number;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+}
 
 @Component({
   selector: 'app-events',
@@ -7,17 +16,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  events = [
-    { year: 2021, title: 'History Day', date: 'Friday, September 17', time: '', location: 'Showgrounds' },
-    { year: 2021, title: 'Illiana Fall Festival: Craft Fair and Swap Meet', date: 'Saturday, September 25', time: '9:00 AM - 4:00 PM', location: 'Showgrounds' },
-    { year: 2021, title: 'Christmas in the Village', date: 'Friday, December 3 - Saturday, December 4', time: '', location: 'Showgrounds' },
-  ];
+  events: Event[];
   years: number[];
   eventsMap = new Map<number, any[]>();
 
   constructor() { }
 
   ngOnInit(): void {
+    this.events = events;
     this.events = this.sortEvents(this.events);
     this.years = this.getYears(this.events);
     this.populateEventsMap(this.years, this.eventsMap, this.events);
