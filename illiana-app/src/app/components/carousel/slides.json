@@ -1,20 +1,20 @@
 [
   {
-    "src": "/assets/img/history-day/model-t.jpg",
-    "header": "New History Day Videos Now Available!",
-    "body": "Learn more about antique vehicles in \"Model T Ford Car\" and how laundry was done by hand in \"Washing Clothes\", now available to watch!",
-    "link": {
-      "href": "/history-day",
-      "text": "Watch Now"
-    }
-  },
-  {
     "src": "/assets/img/intro-carousel/fall.jpg",
     "header": "Fall Festival: September 25",
     "body": "We are hosting our first Fall Festival: Swap Meet and Craft Fair! Crafters featuring quality homemade items are welcome, along with old iron enthusiasts, engine swappers, and train collectors. Come join us for a fun-filled day!",
     "link": {
       "href": "/fall-festival",
       "text": "View Details"
+    }
+  },
+  {
+    "src": "/assets/img/history-day/model-t.jpg",
+    "header": "New History Day Videos Now Available!",
+    "body": "Learn more about antique vehicles in \"Model T Ford Car\" and how laundry was done by hand in \"Washing Clothes\", now available to watch!",
+    "link": {
+      "href": "/history-day",
+      "text": "Watch Now"
     }
   },
   {
