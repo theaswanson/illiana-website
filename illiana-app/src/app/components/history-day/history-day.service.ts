@@ -21,10 +21,12 @@ export class HistoryDayService {
     { id: 'blacksmithing', title: 'Blacksmithing', url: 'https://www.youtube.com/embed/Gpjxf04dJfc', presenters: 'Dominick Andrisani' } as Video,
     { id: 'making-butter', title: 'Making Butter', url: 'https://www.youtube.com/embed/ipT9AEgiR10', presenters: 'Peggy Brenner and Phoebe Beheler' } as Video,
     { id: 'making-corn-bread', title: 'Making Cornbread', url: 'https://www.youtube.com/embed/CoNXkb6XHNo', presenters: 'Joan Fry' } as Video,
-    { id: 'model-t', title: 'Model T Ford Car', url: 'https://www.youtube.com/embed/zhbSMc0cB2o', presenters: 'Doc Fontaine and Dennis' } as Video,
+    { id: 'shelling-corn', title: 'Shelling Corn', url: 'https://www.youtube.com/embed/KU9tcpd1fVc', presenters: 'Joe Fry' } as Video,
     { id: 'washing-clothes', title: 'Washing Clothes', url: 'https://www.youtube.com/embed/K2szSONV6kc', presenters: 'Kenny Short' } as Video,
+    { id: 'model-t', title: 'Model T Ford Car', url: 'https://www.youtube.com/embed/zhbSMc0cB2o', presenters: 'Doc Fontaine and Dennis' } as Video,
+    { id: 'plows-and-planters', title: 'Plows and Planters', url: 'https://www.youtube.com/embed/oqJ5HugH75g', presenters: 'Tom Swanson' } as Video,
   ];
-
+  
   constructor() { }
 
   getVideos(): Video[] {
