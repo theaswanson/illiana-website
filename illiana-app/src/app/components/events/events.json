@@ -1,23 +1,58 @@
 [
   {
-    "year": 2021,
-    "title": "Board of Directors Meeting",
-    "date": "Tuesday, November 9",
-    "time": "5:30 PM",
+    "year": 2022,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, January 24",
+    "time": "9:00 AM",
     "location": "Assembly Hall"
   },
   {
-    "year": 2021,
-    "title": "Monthly Meeting",
-    "date": "Monday, November 15",
+    "year": 2022,
+    "title": "Board of Directors Meeting",
+    "date": "Tuesday, February 1",
     "time": "",
     "location": "Assembly Hall"
   },
   {
-    "year": 2021,
+    "year": 2022,
+    "title": "Rocky Forge Meeting",
+    "date": "Saturday, February 12",
+    "time": "",
+    "location": "Ted's Shop"
+  },
+  {
+    "year": 2022,
+    "title": "Monthly Club Meeting",
+    "date": "Monday, March 21",
+    "time": "6:30 PM",
+    "location": "Assembly Hall"
+  },
+  {
+    "year": 2022,
+    "title": "History Day #1",
+    "date": "Friday, May 13 (tentative)",
+    "time": "",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2022,
+    "title": "Fall Festival/Craft Fair/Swap Meet",
+    "date": "Saturday, September 17",
+    "time": "",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2022,
+    "title": "History Day #2",
+    "date": "Friday, September 23",
+    "time": "",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2022,
     "title": "Christmas in the Village",
-    "date": "Friday, December 3 - Saturday, December 4",
-    "time": "5:00 PM - 8:00 PM",
+    "date": "Friday, December 2 - Saturday, December 3",
+    "time": "",
     "location": "Showgrounds"
   }
 ]
