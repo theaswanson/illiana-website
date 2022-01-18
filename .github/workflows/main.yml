@@ -32,7 +32,6 @@ jobs:
         run: sudo npm i -g @angular/cli@12.1.0 > /dev/null && ng version
   
       - name: Build for production
-        working-directory: ./illiana-app
         run: ng build --configuration production
       
       - name: Deploy to S3
