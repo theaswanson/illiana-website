@@ -30,6 +30,9 @@ jobs:
         
       - name: Install Angular CLI
         run: sudo npm i -g @angular/cli@12.1.0 > /dev/null && ng version
+
+      - name: Debug info
+        run: pwd && ls -l
   
       - name: Build for production
         run: ng build --configuration production
