@@ -1,17 +1,8 @@
 [
   {
-    "src": "/assets/img/christmas/general-store.jpg",
-    "header": "Christmas in the Village, December 3-4",
-    "body": "Come join us for our annual Christmas tradition! We'll have toy trains, crafts, popcorn and cookies, Santa, and more!",
-    "link": {
-      "href": "/christmas-in-the-village",
-      "text": "More Info"
-    }
-  },
-  {
     "src": "/assets/img/intro-carousel/tom.jpg",
-    "header": "A Letter from Our President",
-    "body": "Read our monthly update for October regarding our Fall Festival and those who helped make it happen!",
+    "header": "Our President's Final Letter",
+    "body": "Read our monthly update for January regarding funding for our Assembly Hall and Tom's final words.",
     "link": {
       "href": "/blog",
       "text": "Read Now"
