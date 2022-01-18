@@ -28,9 +28,6 @@ jobs:
         with:
           node-version: '14'
       
-      - name: Node version
-        run: node -v
-        
       - name: Install npm packages
         working-directory: ./illiana-app
         run: npm i
@@ -40,7 +37,7 @@ jobs:
   
       - name: Build for production
         working-directory: ./illiana-app
-        run: pwd && ls -l && ng build --configuration production
+        run: ng build --configuration production
       
       - name: Deploy to S3
         uses: shallwefootball/s3-upload-action@master
