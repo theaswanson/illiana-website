@@ -27,7 +27,7 @@
           <a [routerLink]="['/map']">Map</a>
         </li>
         <li class="menu-has-children">
-          <a [routerLink]="" class="sf-with-ul">Other</a>
+          <a [routerLink]="[]" class="sf-with-ul">Other</a>
           <ul>
             <li>
               <a [routerLink]="['/grant-info']">Grant Info</a>
@@ -75,7 +75,7 @@
           <a [routerLink]="['/map']">Map</a>
         </li>
         <li class="menu-has-children">
-          <a [routerLink]="" (click)="collapse($event)">Other</a>
+          <a [routerLink]="[]" (click)="collapse($event)">Other</a>
           <ul>
             <li>
               <a [routerLink]="['/grant-info']">Grant Info</a>
