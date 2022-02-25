@@ -1,20 +1,11 @@
 [
   {
-    "src": "/assets/img/intro-carousel/tom.jpg",
-    "header": "Our President's Final Letter",
-    "body": "Read our monthly update for January regarding funding for our Assembly Hall and Tom's final words.",
+    "src": "/assets/img/about-mission.jpg",
+    "header": "Greetings From Our New President",
+    "body": "David Hobbs joins us as our new president! Read his introduction and more in our latest newsletter.",
     "link": {
-      "href": "/blog",
+      "href": "/newsletters",
       "text": "Read Now"
-    }
-  },
-  {
-    "src": "/assets/img/history-day/plows-and-planters.jpg",
-    "header": "New History Day Videos Now Available!",
-    "body": "\"Shelling Corn\" and \"Plows and Planters\" are now available to watch!",
-    "link": {
-      "href": "/history-day",
-      "text": "Watch Now"
     }
   },
   {
