@@ -1,11 +1,12 @@
 [
   {
-    "src": "/assets/img/about-mission.jpg",
-    "header": "Greetings From Our New President",
-    "body": "David Hobbs joins us as our new president! Read his introduction and more in our latest newsletter.",
+    "src": "/assets/img/intro-carousel/1.jpg",
+    "header": "Where the Past has a Future!",
+    "body": "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",
     "link": {
-      "href": "/newsletters",
-      "text": "Read Now"
+      "href": "/",
+      "fragment": "about",
+      "text": "Learn More"
     }
   },
   {
@@ -24,16 +25,6 @@
     "link": {
       "href": "/history-day",
       "text": "Watch Now"
-    }
-  },
-  {
-    "src": "/assets/img/intro-carousel/1.jpg",
-    "header": "Where the Past has a Future!",
-    "body": "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",
-    "link": {
-      "href": "/",
-      "fragment": "about",
-      "text": "Learn More"
     }
   }
 ]
