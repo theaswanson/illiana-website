@@ -1,4 +1,13 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import routes from './routes.json';
+import otherRoutes from './other-routes.json';
+
+class NavigationRoute {
+  label: string;
+  route?: string;
+  fragment?: string;
+  href?: string;
+}
 
 @Component({
   selector: 'app-navigation',
@@ -15,7 +24,13 @@ export class NavigationComponent implements OnInit {
 
   navOpen = false;
 
-  constructor(private renderer: Renderer2) { }
+  routes: NavigationRoute[];
+  otherRoutes: NavigationRoute[];
+
+  constructor(private renderer: Renderer2) {
+    this.routes = routes;
+    this.otherRoutes = otherRoutes;
+  }
 
   ngOnInit(): void {
   }
@@ -27,9 +42,6 @@ export class NavigationComponent implements OnInit {
     } else {
       this.renderer.removeClass(document.body, 'mobile-nav-active');
     }
-  }
-
-  collapse(event: any) {
   }
 
 }

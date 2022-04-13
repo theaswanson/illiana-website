@@ -1,54 +1,27 @@
 <button type="button" id="mobile-nav-toggle" (click)="toggleNav()">
   <i [className]="navOpen ? 'fa fa-times' : 'fa fa-bars'"></i>
 </button>
+
 <header id="header">
   <div class="container-fluid">
     <div id="logo" class="pull-left">
       <h1><a [routerLink]="['/']" class="scrollto">Illiana</a></h1>
     </div>
+
     <nav #nav id="nav-menu-container">
       <ul class="nav-menu">
         <li routerLinkActive="menu-active" [routerLinkActiveOptions]="{ exact: true }">
           <a [routerLink]="['/']">Home</a>
         </li>
-        <li routerLinkActive="menu-active">
-          <a [routerLink]="['/blog']">Blog</a>
-        </li>
-        <li routerLinkActive="menu-active">
-          <a [routerLink]="['/show-info']">Show Info</a>
-        </li>
-        <li routerLinkActive="menu-active">
-          <a [routerLink]="['/newsletters']">Newsletters</a>
-        </li>
-        <li routerLinkActive="menu-active">
-          <a [routerLink]="['/events']">Events</a>
-        </li>
-        <li routerLinkActive="menu-active">
-          <a [routerLink]="['/history-day']">History Day</a>
-        </li>
-        <li routerLinkActive="menu-active">
-          <a [routerLink]="['/map']">Map</a>
+        <li *ngFor="let route of routes" routerLinkActive="menu-active">
+          <a [routerLink]="[route.route]" [fragment]="route.fragment">{{route.label}}</a>
         </li>
         <li class="menu-has-children">
           <a [routerLink]="[]" class="sf-with-ul">Other</a>
           <ul>
-            <li>
-              <a [routerLink]="['/grant-info']">Grant Info</a>
-            </li>
-            <li>
-              <a [routerLink]="['/pictures']">Pictures</a>
-            </li>
-            <li>
-              <a [routerLink]="['/links']">Links</a>
-            </li>
-            <li>
-              <a href="http://www.rockyforge.org/" target="_blank">Blacksmith Guild</a>
-            </li>
-            <li>
-              <a [routerLink]="['/train']">Train Collectors</a>
-            </li>
-            <li>
-              <a [routerLink]="['/ladies']">Ladies Activities</a>
+            <li *ngFor="let route of otherRoutes">
+              <a *ngIf="route.route" [routerLink]="[route.route]" [fragment]="route.fragment">{{route.label}}</a>
+              <a *ngIf="route.href" [href]="route.href" target="_blank">{{route.label}}</a>
             </li>
           </ul>
         </li>
@@ -57,49 +30,21 @@
         </li>
       </ul>
     </nav>
+
     <nav id="mobile-nav" (click)="toggleNav()">
       <ul>
         <li>
           <a [routerLink]="['/']">Home</a>
         </li>
-        <li>
-          <a [routerLink]="['/blog']">Blog</a>
-        </li>
-        <li routerLinkActive="menu-active">
-          <a [routerLink]="['/show-info']">Show Info</a>
-        </li>
-        <li>
-          <a [routerLink]="['/newsletters']">Newsletters</a>
-        </li>
-        <li>
-          <a [routerLink]="['/events']">Events</a>
-        </li>
-        <li>
-          <a [routerLink]="['/history-day']">History Day</a>
-        </li>
-        <li>
-          <a [routerLink]="['/map']">Map</a>
+        <li *ngFor="let route of routes">
+          <a [routerLink]="[route.route]">{{route.label}}</a>
         </li>
         <li class="menu-has-children">
-          <a [routerLink]="[]" (click)="collapse($event)">Other</a>
+          <a [routerLink]="[]">Other</a>
           <ul>
-            <li>
-              <a [routerLink]="['/grant-info']">Grant Info</a>
-            </li>
-            <li>
-              <a [routerLink]="['/pictures']">Pictures</a>
-            </li>
-            <li>
-              <a [routerLink]="['/links']">Links</a>
-            </li>
-            <li>
-              <a href="http://www.rockyforge.org/" target="_blank">Blacksmith Guild</a>
-            </li>
-            <li>
-              <a [routerLink]="['/train']">Train Collectors</a>
-            </li>
-            <li>
-              <a [routerLink]="['/ladies']">Ladies Activities</a>
+            <li *ngFor="let route of otherRoutes">
+              <a *ngIf="route.route" [routerLink]="[route.route]">{{route.label}}</a>
+              <a *ngIf="route.href" [href]="route.href" target="_blank">{{route.label}}</a>
             </li>
           </ul>
         </li>
@@ -108,6 +53,7 @@
         </li>
       </ul>
     </nav>
+    
     <div id="mobile-body-overly" [style.display]="navOpen ? 'block' : 'none'"></div>
   </div>
 </header>
