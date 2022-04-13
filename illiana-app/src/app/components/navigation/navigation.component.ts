@@ -44,7 +44,4 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-  collapse(event: any) {
-  }
-
 }

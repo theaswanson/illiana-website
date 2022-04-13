@@ -40,7 +40,7 @@
           <a [routerLink]="[route.route]">{{route.label}}</a>
         </li>
         <li class="menu-has-children">
-          <a [routerLink]="[]" (click)="collapse($event)">Other</a>
+          <a [routerLink]="[]">Other</a>
           <ul>
             <li *ngFor="let route of otherRoutes">
               <a *ngIf="route.route" [routerLink]="[route.route]">{{route.label}}</a>
