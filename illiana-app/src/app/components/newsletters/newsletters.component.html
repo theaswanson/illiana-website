@@ -6,19 +6,19 @@
       </header>
       <div class="page-content">
         <p>Here are our past newsletters from over the years.</p>
-        <a href="assets/newsletters/Illiana-News-{{months[latestNewsletter.month - 1]}}-{{latestNewsletter.year}}.{{latestNewsletter.ext}}" class="my-btn">View our Latest Newsletter ({{months[latestNewsletter.month - 1]}} {{latestNewsletter.year}})</a>
+        <a [href]="getNewsletterHref(latestNewsletter)" class="my-btn">View our Latest Newsletter ({{monthNames[latestNewsletter.month - 1]}} {{latestNewsletter.year}})</a>
       </div>
 
       <div class="newsletters" *ngFor="let year of years">
         <h1>{{year}}</h1>
-        <table [style.backgroundColor]="colorsMap.get(year)">
-          <tr *ngFor="let a of [1, 2, 3]">
-            <td *ngFor="let b of [1, 2, 3, 4]">
-              <div *ngIf="!newslettersMap.get(year + '_' + (4*(a-1)+b))">
-                No {{months[(4*(a-1)+b) - 1]}} letter
+        <table [style.backgroundColor]="colorsByYear.get(year)">
+          <tr *ngFor="let row of [1, 2, 3]">
+            <td *ngFor="let column of [1, 2, 3, 4]">
+              <div *ngIf="!getNewsletter(year, row, column)">
+                No {{monthNames[getMonth(row, column) - 1]}} letter
               </div>
-              <a *ngIf="newslettersMap.get(year + '_' + (4*(a-1)+b))" href="assets/newsletters/Illiana-News-{{months[newslettersMap.get(year + '_' + (4*(a-1)+b)).month - 1]}}-{{year}}.{{newslettersMap.get(year + '_' + (4*(a-1)+b)).ext}}">
-                {{months[newslettersMap.get(year + '_' + (4*(a-1)+b)).month - 1]}} {{year}}
+              <a *ngIf="getNewsletter(year, row, column)" [href]="getNewsletterHref(getNewsletter(year, row, column))">
+                {{monthNames[getNewsletter(year, row, column).month - 1]}} {{year}}
               </a>
             </td>
           </tr>
