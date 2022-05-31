@@ -30,7 +30,7 @@ export class NewslettersComponent implements OnInit {
     '#33cc33',
     '#cc3333'
   ];
-  months = [
+  monthNames = [
     'January',
     'February',
     'March',
@@ -44,8 +44,8 @@ export class NewslettersComponent implements OnInit {
     'November',
     'December'
   ];
-  newslettersMap = new Map<string, any>();
-  colorsMap = new Map<number, string>();
+  newslettersByYearAndMonth = new Map<string, Newsletter>();
+  colorsByYear = new Map<number, string>();
 
   constructor() { }
 
@@ -81,7 +81,7 @@ export class NewslettersComponent implements OnInit {
   private populateNewslettersMap(years: number[]) {
     years.forEach(year => {
       for (let i = 1; i <= 12; i++) {
-        this.newslettersMap.set(
+        this.newslettersByYearAndMonth.set(
           `${year}_${i}`,
           this.newsletters.find(newsletter => newsletter.year === year && newsletter.month === i)
         );
@@ -91,7 +91,7 @@ export class NewslettersComponent implements OnInit {
 
   private populateColorsMap(years: number[]) {
     years.forEach(year => {
-      this.colorsMap.set(year, this.getColor(year));
+      this.colorsByYear.set(year, this.getColor(year));
     })
   }
 
@@ -103,6 +103,18 @@ export class NewslettersComponent implements OnInit {
       }
     }
     return this.colors[colorIndex];
+  }
+
+  getMonth(row: number, column: number): number {
+    return 4 * (row - 1) + column;
+  }
+
+  getNewsletter(year: number, row: number, column: number): Newsletter {
+    return this.newslettersByYearAndMonth.get(year + '_' + this.getMonth(row, column));
+  }
+
+  getNewsletterHref(newsletter: Newsletter): string {
+    return `assets/newsletters/Illiana-News-${this.monthNames[newsletter.month - 1]}-${newsletter.year}.${newsletter.ext}`;
   }
 
 }
