@@ -1,5 +1,14 @@
 [
   {
+    "src": "/assets/img/intro-carousel/plowing.jpg",
+    "header": "Annual Show: July 15-17",
+    "body": "We are excited to host our 40th annual Antique Power Exhibition this year, featuring International Harvester! Click the button below to find out more.",
+    "link": { 
+      "href": "/show-info",
+      "text": "View Details"
+    }
+  },
+  {
     "src": "/assets/img/intro-carousel/fall.jpg",
     "header": "Fall Festival - September 17",
     "body": "Join us for our second annual Fall Festival, featuring crafters, engine swappers, train collectors, and more!",
