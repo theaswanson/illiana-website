@@ -1,14 +1,5 @@
 [
   {
-    "src": "/assets/img/intro-carousel/fall.jpg",
-    "header": "Fall Festival - September 17",
-    "body": "Join us for our second annual Fall Festival, featuring crafters, engine swappers, train collectors, and more!",
-    "link": {
-      "href": "/fall-festival",
-      "text": "Learn More"
-    }
-  },
-  {
     "src": "/assets/img/history-day-2.jpg",
     "header": "Virtual History Day is Live!",
     "body": "Step back in time and learn about life during the early rural days. Learn about the post office, sawmill, printing press, and more in our interactive tour or on our YouTube channel.",
