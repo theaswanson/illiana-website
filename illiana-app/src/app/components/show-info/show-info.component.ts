@@ -21,10 +21,10 @@ export class ShowInfoComponent implements OnInit {
       'assets/img/show/4.jpg'
     ];
     this.aboutShowInfo = [
-      { title: 'Antique Tractors', description: 'Case IH, John Deere, Ford, Allis Chalmers, and more!' },
+      { title: 'Antique Tractors', description: 'John Deere, Case IH, Ford, Allis Chalmers, and more!' },
       { title: 'Blacksmithing', description: 'Live blacksmiths working metal with anvils and forges!' },
-      { title: 'Sawmill', description: 'Watch the crew cut logs using the old sawmill!' },
-      { title: 'Flea Market', description: 'A large flea market with antiques, tools, clothing, toys...they\'ve got everything, really!' },
+      { title: 'Sawmill', description: 'Watch the crew cut logs at the old sawmill!' },
+      { title: 'Flea Market', description: 'A large flea market with antiques, tools, clothing, toys, and more!' },
       { title: 'Train Station', description: 'Stop by one of the train stations to take a ride around the showgrounds!' },
       { title: 'Raffle', description: 'Enter our raffle for a chance to win a variety of prizes!' },
       { title: 'Steam & Gas Engines' },
@@ -33,6 +33,7 @@ export class ShowInfoComponent implements OnInit {
       { title: 'Threshing' },
       { title: 'Plowing' },
       { title: 'Corn Shelling' },
+      { title: 'Model/Scale Engines' },
     ];
   }
 

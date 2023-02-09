@@ -10,15 +10,13 @@ $illiana-green: #18d26e;
 
   .showcase {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 15px;
     justify-items: center;
     width: fit-content;
     margin: auto;
 
     @media (min-width: 768px) {
-      // grid-template-columns: repeat(2, 1fr);
-
       a {
         margin-left: 50px;
       }
