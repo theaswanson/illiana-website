@@ -30,6 +30,7 @@ import { ImagesComponent } from './components/images/images.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { BlogComponent } from './components/blog/blog.component';
 import { FallFestivalComponent } from './components/fall-festival/fall-festival.component';
+import { DonateComponent } from './components/donate/donate.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -46,6 +47,7 @@ const ROUTES = [
   { path: 'ladies', component: LadiesComponent },
   { path: 'letter/:id', component: LetterComponent },
   { path: 'christmas-in-the-village', component: ChristmasComponent },
+  { path: 'donate', component: DonateComponent },
   {
     path: 'history-day', children: [
       { path: '', component: HistoryDayComponent, pathMatch: 'full' },
@@ -87,7 +89,8 @@ const ROUTER_OPTIONS = {
     VideoComponent,
     ImagesComponent,
     BlogComponent,
-    FallFestivalComponent
+    FallFestivalComponent,
+    DonateComponent
   ],
   imports: [
     BrowserModule,

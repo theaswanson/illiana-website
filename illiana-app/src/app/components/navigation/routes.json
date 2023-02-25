@@ -22,5 +22,9 @@
   {
     "label": "Map",
     "route": "/map"
+  },
+  {
+    "label": "Donate",
+    "route": "/donate"
   }
 ]
