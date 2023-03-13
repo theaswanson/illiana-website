@@ -5,8 +5,9 @@ class Event {
   year: number;
   title: string;
   date: string;
-  time: string;
+  time?: string;
   location: string;
+  special?: boolean;
 }
 
 @Component({
