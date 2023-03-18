@@ -26,7 +26,6 @@ export class ShowInfoComponent implements OnInit {
       { title: 'Sawmill', description: 'Watch the crew cut logs at the old sawmill!' },
       { title: 'Flea Market', description: 'A large flea market with antiques, tools, clothing, toys, and more!' },
       { title: 'Train Station', description: 'Stop by one of the train stations to take a ride around the showgrounds!' },
-      { title: 'Raffle', description: 'Enter our raffle for a chance to win a variety of prizes!' },
       { title: 'Steam & Gas Engines' },
       { title: 'Miniature Trains' },
       { title: 'Binding' },
