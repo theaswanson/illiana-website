@@ -1,6 +1,13 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import routes from './routes.json';
 import otherRoutes from './other-routes.json';
+import eventRoutes from './event-routes.json';
 
 class NavigationRoute {
   label: string;
@@ -12,10 +19,9 @@ class NavigationRoute {
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit {
-
   @ViewChild('nav')
   navigation: ElementRef;
 
@@ -26,14 +32,15 @@ export class NavigationComponent implements OnInit {
 
   routes: NavigationRoute[];
   otherRoutes: NavigationRoute[];
+  eventRoutes: NavigationRoute[];
 
   constructor(private renderer: Renderer2) {
     this.routes = routes;
     this.otherRoutes = otherRoutes;
+    this.eventRoutes = eventRoutes;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   toggleNav() {
     this.navOpen = !this.navOpen;
@@ -43,5 +50,4 @@ export class NavigationComponent implements OnInit {
       this.renderer.removeClass(document.body, 'mobile-nav-active');
     }
   }
-
 }

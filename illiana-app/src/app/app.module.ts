@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -46,22 +46,23 @@ const ROUTES = [
   { path: 'train', component: TrainComponent },
   { path: 'ladies', component: LadiesComponent },
   { path: 'letter/:id', component: LetterComponent },
-  { path: 'christmas-in-the-village', component: ChristmasComponent },
+  { path: 'christmas', component: ChristmasComponent },
   { path: 'donate', component: DonateComponent },
   {
-    path: 'history-day', children: [
+    path: 'history-day',
+    children: [
       { path: '', component: HistoryDayComponent, pathMatch: 'full' },
       { path: ':id', component: VideoComponent },
-    ]
+    ],
   },
   { path: '404', component: NotFoundComponent },
-  { path: '**', redirectTo: '/404' }
+  { path: '**', redirectTo: '/404' },
 ] as Routes;
 
 const ROUTER_OPTIONS = {
   anchorScrolling: 'enabled',
   scrollPositionRestoration: 'enabled',
-  relativeLinkResolution: 'legacy'
+  relativeLinkResolution: 'legacy',
 } as ExtraOptions;
 
 @NgModule({
@@ -90,7 +91,7 @@ const ROUTER_OPTIONS = {
     ImagesComponent,
     BlogComponent,
     FallFestivalComponent,
-    DonateComponent
+    DonateComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,9 +99,9 @@ const ROUTER_OPTIONS = {
     LightboxModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
-    RouterModule.forRoot(ROUTES, ROUTER_OPTIONS)
+    RouterModule.forRoot(ROUTES, ROUTER_OPTIONS),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

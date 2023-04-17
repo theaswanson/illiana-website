@@ -8,10 +8,6 @@
     "route": "/pictures"
   },
   {
-    "label": "Links",
-    "route": "/links"
-  },
-  {
     "label": "Blacksmith Guild",
     "href": "http://www.rockyforge.org/"
   },

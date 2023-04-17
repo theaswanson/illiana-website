@@ -17,11 +17,20 @@
           <a [routerLink]="[route.route]" [fragment]="route.fragment">{{route.label}}</a>
         </li>
         <li class="menu-has-children">
+          <a [routerLink]="[]" class="sf-with-ul">Events</a>
+          <ul>
+            <li *ngFor="let route of eventRoutes">
+              <a *ngIf="route.route" [routerLink]="[route.route]" [fragment]="route.fragment">{{route.label}}</a>
+              <a *ngIf="route.href" [href]="route.href" target="_blank">{{route.label}}</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-has-children">
           <a [routerLink]="[]" class="sf-with-ul">Other</a>
           <ul>
             <li *ngFor="let route of otherRoutes">
               <a *ngIf="route.route" [routerLink]="[route.route]" [fragment]="route.fragment">{{route.label}}</a>
-              <a *ngIf="route.href" [href]="route.href" target="_blank">{{route.label}}</a>
+              <a *ngIf="route.href" [href]="route.href" target="_blank">{{route.label}} <i class="ion-android-open"></i></a>
             </li>
           </ul>
         </li>
@@ -44,7 +53,12 @@
           <ul>
             <li *ngFor="let route of otherRoutes">
               <a *ngIf="route.route" [routerLink]="[route.route]">{{route.label}}</a>
-              <a *ngIf="route.href" [href]="route.href" target="_blank">{{route.label}}</a>
+              <a *ngIf="route.href" [href]="route.href" target="_blank">
+                <div style="display: flex; align-items: center;">
+                  {{route.label}}
+                  <i class="ion-android-open"></i>
+                </div>
+              </a>
             </li>
           </ul>
         </li>
