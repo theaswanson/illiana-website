@@ -12,6 +12,11 @@ export class ShowInfoComponent implements OnInit {
 
   constructor() {
     this.images = [
+      'assets/img/show/aerial.jpg',
+      'assets/img/show/aerial-sawmill.jpg',
+      'assets/img/show/aerial-showgrounds-1.jpg',
+      'assets/img/show/aerial-showgrounds-2.jpg',
+      'assets/img/show/aerial-showgrounds-3.jpg',
       'assets/img/show/show2019.jpg',
       'assets/img/show/fountainco.jpg',
       'assets/img/show/plowing.jpg',
