@@ -8,15 +8,15 @@
     "route": "/pictures"
   },
   {
-    "label": "Blacksmith Guild",
-    "href": "http://www.rockyforge.org/"
-  },
-  {
     "label": "Train Collectors",
     "route": "/train"
   },
   {
     "label": "Ladies Activities",
     "route": "/ladies"
+  },
+  {
+    "label": "Blacksmith Guild",
+    "href": "http://www.rockyforge.org/"
   }
 ]
