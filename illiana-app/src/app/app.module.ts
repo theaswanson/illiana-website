@@ -31,6 +31,7 @@ import { LightboxModule } from 'ngx-lightbox';
 import { BlogComponent } from './components/blog/blog.component';
 import { FallFestivalComponent } from './components/fall-festival/fall-festival.component';
 import { DonateComponent } from './components/donate/donate.component';
+import { ContactComponent } from './contact/contact.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -48,6 +49,7 @@ const ROUTES = [
   { path: 'letter/:id', component: LetterComponent },
   { path: 'christmas', component: ChristmasComponent },
   { path: 'donate', component: DonateComponent },
+  { path: 'contact', component: ContactComponent },
   {
     path: 'history-day',
     children: [
@@ -92,6 +94,7 @@ const ROUTER_OPTIONS = {
     BlogComponent,
     FallFestivalComponent,
     DonateComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
