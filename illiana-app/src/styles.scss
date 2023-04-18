@@ -30,7 +30,8 @@ $shadow: 5px 5px 5px grey;
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 /* Then style the iframe to fit in the container div with full height and width */
@@ -167,7 +168,7 @@ h6 {
 
 #header {
   background: rgba(0, 0, 0, 0.9);
-//   padding: 20px 0;
+  //   padding: 20px 0;
   height: $navigation-height;
   position: fixed;
   left: 0;
@@ -177,12 +178,12 @@ h6 {
   z-index: 997;
   display: flex;
 
-  > .container-fluid {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      height: 100%;
+  >.container-fluid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
   }
 
   #logo {
@@ -696,7 +697,9 @@ body.mobile-nav-active {
   --------------------------------*/
 
 .section-header {
-  h3, h4 {
+
+  h3,
+  h4 {
     color: #111;
     text-transform: uppercase;
     text-align: center;
@@ -1337,7 +1340,7 @@ body.mobile-nav-active {
     position: relative;
 
     .member-info {
-      opacity: 0;
+      background: rgba(0, 0, 0, 0.7);
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1356,24 +1359,6 @@ body.mobile-nav-active {
       left: 0;
       right: 0;
       transition: 0.2s;
-    }
-
-    .member-info-content {
-      margin-top: -50px;
-      transition: margin 0.2s;
-    }
-
-    &:hover {
-      .member-info {
-        background: rgba(0, 0, 0, 0.7);
-        opacity: 1;
-        transition: 0.4s;
-      }
-
-      .member-info-content {
-        margin-top: 0;
-        transition: margin 0.4s;
-      }
     }
 
     h4 {
