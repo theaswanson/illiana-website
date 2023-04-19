@@ -8,6 +8,10 @@
     "route": "/pictures"
   },
   {
+    "label": "Assembly Hall",
+    "route": "/assembly-hall"
+  },
+  {
     "label": "Train Collectors",
     "route": "/train"
   },

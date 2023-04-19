@@ -32,6 +32,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { FallFestivalComponent } from './components/fall-festival/fall-festival.component';
 import { DonateComponent } from './components/donate/donate.component';
 import { ContactComponent } from './contact/contact.component';
+import { AssemblyHallComponent } from './assembly-hall/assembly-hall.component';
 
 const ROUTES = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -50,6 +51,7 @@ const ROUTES = [
   { path: 'christmas', component: ChristmasComponent },
   { path: 'donate', component: DonateComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'assembly-hall', component: AssemblyHallComponent },
   {
     path: 'history-day',
     children: [
@@ -95,6 +97,7 @@ const ROUTER_OPTIONS = {
     FallFestivalComponent,
     DonateComponent,
     ContactComponent,
+    AssemblyHallComponent,
   ],
   imports: [
     BrowserModule,
