@@ -12,6 +12,17 @@ export class Credit {
   styleUrls: ['./history-day.component.scss'],
 })
 export class HistoryDayComponent implements OnInit {
+  activities = [
+    { title: 'Cooking' },
+    { title: 'Quilting & Sewing' },
+    { title: 'Washing Clothes' },
+    { title: 'Corn Shelling' },
+    { title: 'Blacksmithing' },
+    { title: 'Post Office' },
+    { title: 'Log Cabin' },
+    { title: 'Sawmill' },
+    { title: 'And More!' },
+  ];
   videos: Video[];
   images: string[];
   firstVideo: Video;
