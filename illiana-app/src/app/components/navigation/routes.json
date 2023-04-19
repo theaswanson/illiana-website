@@ -1,27 +1,19 @@
 [
   {
-    "label": "Blog",
-    "route": "/blog"
-  },
-  {
-    "label": "Show Info",
-    "route": "/show-info"
+    "label": "Event Calendar",
+    "route": "/events"
   },
   {
     "label": "Newsletters",
     "route": "/newsletters"
   },
   {
-    "label": "Events",
-    "route": "/events"
-  },
-  {
-    "label": "History Day",
-    "route": "/history-day"
-  },
-  {
     "label": "Map",
     "route": "/map"
+  },
+  {
+    "label": "Blog",
+    "route": "/blog"
   },
   {
     "label": "Donate",

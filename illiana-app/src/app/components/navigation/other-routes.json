@@ -1,26 +1,26 @@
 [
   {
-    "label": "Grant Info",
-    "route": "/grant-info"
-  },
-  {
     "label": "Pictures",
     "route": "/pictures"
   },
   {
-    "label": "Links",
-    "route": "/links"
+    "label": "Assembly Hall",
+    "route": "/assembly-hall"
   },
   {
-    "label": "Blacksmith Guild",
-    "href": "http://www.rockyforge.org/"
+    "label": "Ladies Activities",
+    "route": "/ladies"
   },
   {
     "label": "Train Collectors",
     "route": "/train"
   },
   {
-    "label": "Ladies Activities",
-    "route": "/ladies"
+    "label": "Blacksmith Guild",
+    "href": "http://www.rockyforge.org/"
+  },
+  {
+    "label": "Grant Info",
+    "route": "/grant-info"
   }
 ]

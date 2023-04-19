@@ -5,6 +5,7 @@
 </section>
 
 <main id="main">
+
   <section id="about">
     <div class="container">
       <header class="section-header">
@@ -13,23 +14,48 @@
           of our early rural way of life and the mechanical marvels that changed farming forever.</p>
       </header>
       <div class="row about-cols">
-        <div class="col-md-3" *ngFor="let usInfo of aboutUsInfo">
-          <div class="about-col">
-            <div class="img">
-              <a [routerLink]="usInfo.link">
+        <div class="col-lg-4" *ngFor="let usInfo of aboutUsInfo">
+          <a [routerLink]="usInfo.link">
+            <div class="about-col">
+              <div class="img">
                 <img [attr.src]="usInfo.img" alt="" class="img-fluid">
                 <div class="icon"><i [ngClass]="usInfo.icon"></i></div>
-              </a>
+              </div>
+              <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
+              <p>
+                {{usInfo.description}}
+              </p>
             </div>
-            <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
-            <p>
-              {{usInfo.description}}
-            </p>
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
+
+  <section id="about">
+    <div class="container">
+      <header class="section-header">
+        <h3>What do we do?</h3>
+        <p>We host a variety of events and activities every year! Click on each event to learn more.</p>
+      </header>
+      <div class="row about-cols">
+        <div class="col-lg-6" *ngFor="let usInfo of eventInfo">
+          <a [routerLink]="usInfo.link">
+            <div class="about-col">
+              <div class="img">
+                <img [attr.src]="usInfo.img" alt="" class="img-fluid">
+              </div>
+              <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
+              <p>
+                {{usInfo.description}}
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="call-to-action">
     <div class="container text-center">
       <h3>Join our mailing list!</h3>
@@ -39,10 +65,11 @@
       <a class="cta-btn" href="http://eepurl.com/hgJBeP" target="_blank">Subscribe</a>
     </div>
   </section>
+
   <section id="services">
     <div class="container">
       <header class="about-the-show section-header">
-        <h3>About the Show</h3>
+        <h3>About our Annual Show</h3>
         <p>
           Every year, we have exhibitors from around the area come to show their antique farm equipment,
           ranging from tractors and mowers to threshers and steam engines.
@@ -56,13 +83,14 @@
         </div>
       </header>
       <div class="row">
-        <div class="col-lg-4 col-md-6 box" *ngFor="let showInfo of aboutShowInfo">
+        <div class="col-lg-3 col-md-6 box" *ngFor="let showInfo of aboutShowInfo">
           <h4 class="title"><a [routerLink]="['/show-info']">{{showInfo.title}}</a></h4>
           <p class="description">{{showInfo.description}}</p>
         </div>
       </div>
     </div>
   </section>
+
   <section id="call-to-action">
     <div class="container text-center">
       <h3>Follow us on Facebook!</h3>
@@ -71,34 +99,21 @@
       <a class="cta-btn" href="https://www.facebook.com/illianaantiquepower/" target="_blank">Follow Us</a>
     </div>
   </section>
-  <section id="contact" class="section-bg">
+
+  <section id="membership" class="section-bg">
     <div class="container">
       <div class="section-header">
-        <h3>Contact Us</h3>
-        <p class="p-0">For questions about our club or the annual show, please contact our president, Adam Krichbaum, using the information below.</p>
-        <p class="p-0">For questions about the website, please contact our webmaster, Adam Swanson:
-          &#097;&#100;&#097;&#109;&#046;&#115;&#119;&#097;&#110;&#115;&#111;&#110;&#046;&#057;&#056;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
+        <h3>Club Membership</h3>
+        <p class="p-0">
+          Interested in preserving the history of farming, machinery, engines, and more? Become a member
+          today and be a part of a group that's passionate about doing this work. <a [routerLink]="['/contact']">Contact
+            us</a> or join us at our next club meeting and
+          let us know of your interest in membership!
         </p>
-        <p class="p-0">We will get back with you as soon as possible!</p>
-      </div>
-      <div class="row contact-info">
-        <div class="col-md-6">
-          <div class="contact-address">
-            <i class="ion-ios-location-outline"></i>
-            <h3>Showgrounds</h3>
-            <address>
-              Rainsville, IN
-            </address>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="contact-email">
-            <i class="ion-ios-email-outline"></i>
-            <h3>Email</h3>
-            <p><a href="mailto:iapa944w@gmail.com">iapa944w@gmail.com</a></p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
+
 </main>
+
+<app-officers></app-officers>

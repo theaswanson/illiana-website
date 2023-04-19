@@ -2,29 +2,44 @@
   <section id="about">
     <div class="container">
       <header class="section-header">
-        <h3>Welcome to History Day!</h3>
+        <h3>History Day</h3>
       </header>
       <div class="page-content">
+        <h2><b>Friday, September 22, 2023</b></h2>
         <p>
-          We here at the Illiana Antique Power Association are excited to present to you our first ever Virtual History Day!
-          We have created several online videos for you to watch at your own pace to learn about key
-          areas of our early ways of life, ranging from the Post Office and Sawmill to the Printing Press
-          and Blacksmithing.
-          Each video was filmed on location at the showgrounds by members of our club. If you enjoy what you see, come visit us at one of our
-          next events!
+          History Day is a living history presentation by the Illiana Antique Power Association for 4th grade students
+          in the West-Central Indiana region where children can have hands-on experience, as well as watch
+          demonstrations by club members.
+          This has been a very popular event for many years with an emphasis on Indiana history.
+        </p>
+        <p>
+          For those who cannot attend in-person, we have created several online videos for you to watch at your own pace
+          to learn about key areas of our early ways of life, ranging from the Post Office and Sawmill to the Printing
+          Press and Blacksmithing.
+          Each video was filmed on location at the showgrounds by members of our club. If you enjoy what you see, come
+          visit us at one of our next events!
         </p>
         <a *ngIf="firstVideo" [routerLink]="['/history-day/' + firstVideo.id]" class="my-btn">Watch Now</a>
         <p class="mt-3 mb-3 font-italic">
-          Also available on <a
-            href="https://www.youtube.com/playlist?list=PL0DiJlI4as94ji_U3NxdTst-fWTzpLwwG"
+          Also available on <a href="https://www.youtube.com/playlist?list=PL0DiJlI4as94ji_U3NxdTst-fWTzpLwwG"
             target="_blank">YouTube <i class="fa fa-youtube"></i></a>
         </p>
         <br>
         <br>
       </div>
-      <div class="page-content" *ngIf="videos">
-        <h3>History Day Photos</h3>
-        <br>
+      <div>
+        <h3>Activities</h3>
+        <div class="row activities">
+          <div class="col-lg-4 col-md-6 box" *ngFor="let showInfo of activities">
+            <h4 class="title">
+              <p>{{showInfo.title}}</p>
+            </h4>
+            <p class="description">{{showInfo.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="videos">
+        <h3>Photos</h3>
         <app-images [images]="images"></app-images>
       </div>
       <br>

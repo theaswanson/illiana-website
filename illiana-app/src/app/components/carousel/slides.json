@@ -1,19 +1,19 @@
 [
   {
-    "src": "/assets/img/history-day-2.jpg",
-    "header": "Virtual History Day is Live!",
-    "body": "Step back in time and learn about life during the early rural days. Learn about the post office, sawmill, printing press, and more in our interactive tour or on our YouTube channel.",
+    "src": "/assets/img/show/aerial.jpg",
+    "header": "41st Annual Antique Power Show: July 21 - 23",
+    "body": "We are excited to host our annual Antique Power Exhibition this year, featuring John Deere! Click the button below to learn more.",
     "link": {
-      "href": "/history-day",
-      "text": "Watch Now"
+      "href": "/show-info",
+      "text": "More Info"
     }
   },
   {
     "src": "/assets/img/about-plan.jpg",
-    "header": "View Announcements on our Blog",
+    "header": "View our Monthly Newsletters",
     "body": "Read the latest updates about our club, upcoming events, and more!",
     "link": {
-      "href": "/blog",
+      "href": "/newsletters",
       "text": "Read Now"
     }
   },

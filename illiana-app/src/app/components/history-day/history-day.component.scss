@@ -7,3 +7,27 @@
     width: 100%;
   }
 }
+
+.activities {
+  .box {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #111;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    color: #666;
+  }
+
+  p {
+    margin: 0;
+  }
+}
