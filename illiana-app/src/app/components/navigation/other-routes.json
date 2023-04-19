@@ -1,9 +1,5 @@
 [
   {
-    "label": "Grant Info",
-    "route": "/grant-info"
-  },
-  {
     "label": "Pictures",
     "route": "/pictures"
   },
@@ -12,15 +8,19 @@
     "route": "/assembly-hall"
   },
   {
-    "label": "Train Collectors",
-    "route": "/train"
-  },
-  {
     "label": "Ladies Activities",
     "route": "/ladies"
   },
   {
+    "label": "Train Collectors",
+    "route": "/train"
+  },
+  {
     "label": "Blacksmith Guild",
     "href": "http://www.rockyforge.org/"
+  },
+  {
+    "label": "Grant Info",
+    "route": "/grant-info"
   }
 ]
