@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     },
     {
       link: '/history-day',
-      img: 'assets/img/history-day/blacksmithing-2.jpg',
+      img: 'assets/img/history-day/2022/blacksmithing-2.jpg',
       title: 'History Day',
       description:
         'A living history presentation for students to learn and get hands-on experience.',
@@ -79,7 +79,8 @@ export class HomeComponent implements OnInit {
     },
     {
       title: 'Quilting',
-      description: 'Watch the Illiana Quilters create works of art, including quilts, home items, and more!'
+      description:
+        'Watch the Illiana Quilters create works of art, including quilts, home items, and more!',
     },
     {
       title: 'Flea Market',
