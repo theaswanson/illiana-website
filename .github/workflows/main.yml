@@ -1,30 +1,21 @@
-# This is a basic workflow to help you get started with Actions
+name: Production
 
-name: CI
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
+    name: Build & Publish
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v3
       
-      - uses: actions/setup-node@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
       
@@ -35,11 +26,11 @@ jobs:
       - name: Install Angular CLI
         run: sudo npm i -g @angular/cli@13.2.4 > /dev/null && ng version
   
-      - name: Build for production
+      - name: Build
         working-directory: ./illiana-app
         run: ng build --configuration production
       
-      - name: Deploy to S3
+      - name: Deploy
         uses: shallwefootball/s3-upload-action@v1.3.0
         with:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
