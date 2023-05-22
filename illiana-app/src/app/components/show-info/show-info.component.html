@@ -42,11 +42,6 @@
         <div class="pb-3">
           <h3>Gate Fee: $5</h3>
           <p class="font-italic">(Children 12 and under: FREE)</p>
-          <p>
-            For questions about the show, including vendor details and camping
-            details, please contact us!
-          </p>
-          <a routerLink="/contact" class="my-btn">Contact Us</a>
         </div>
       </div>
       <div>
@@ -152,12 +147,29 @@
           </div>
         </div> -->
       </div>
-      <div>
+      <div class="page-content">
+        <h3>Quilt Raffle</h3>
+        <img class="pb-3" src="assets/img/show/quilt-2023.jpg" style="max-width: 500px" />
+        <p>
+          Enter the raffle for a chance to win this beautiful quilt, made by the
+          Illiana Quilters! Tickets are $1 each or 6 for $5 and will be
+          available at the Quilter's Cottage. All proceeds go to support the
+          show!
+        </p>
+      </div>
+      <div class="pb-5">
         <h1>Photos</h1>
         <app-images [images]="images"></app-images>
         <div class="row justify-content-center pt-5">
           <a [routerLink]="['/pictures']" class="my-btn">View More Photos</a>
         </div>
+      </div>
+      <div class="page-content">
+        <p>
+          For questions about the show, including vendor details and camping
+          details, please contact us!
+        </p>
+        <a routerLink="/contact" class="my-btn">Contact Us</a>
       </div>
     </div>
   </section>

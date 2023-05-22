@@ -49,8 +49,6 @@ export class ShowInfoComponent implements OnInit {
       },
       {
         title: 'Quilters',
-        description:
-          "Tickets will be available in the Quilter's Cottage for the raffle quilt!",
       },
       { title: 'Steam & Gas Engines' },
       { title: 'Miniature Trains' },
