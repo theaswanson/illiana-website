@@ -8,10 +8,6 @@
     "route": "/newsletters"
   },
   {
-    "label": "Map",
-    "route": "/map"
-  },
-  {
     "label": "Blog",
     "route": "/blog"
   },

@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
       description: 'Click here to view our monthly newsletters.',
     },
     {
-      link: '/map',
+      link: '/contact',
       img: 'assets/img/map.jpg',
       icon: 'ion-map',
       title: 'Map',

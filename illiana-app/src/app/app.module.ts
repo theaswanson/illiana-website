@@ -13,7 +13,6 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
 import { ShowInfoComponent } from './components/show-info/show-info.component';
 import { NewslettersComponent } from './components/newsletters/newsletters.component';
 import { EventsComponent } from './components/events/events.component';
-import { MapComponent } from './components/map/map.component';
 import { GrantInfoComponent } from './components/grant-info/grant-info.component';
 import { PicturesComponent } from './components/pictures/pictures.component';
 import { LinksComponent } from './components/links/links.component';
@@ -41,7 +40,7 @@ const ROUTES = [
   { path: 'blog', component: BlogComponent },
   { path: 'newsletters', component: NewslettersComponent },
   { path: 'events', component: EventsComponent },
-  { path: 'map', component: MapComponent },
+  { path: 'map', redirectTo: '/contact' },
   { path: 'grant-info', component: GrantInfoComponent },
   { path: 'pictures', component: PicturesComponent },
   { path: 'links', component: LinksComponent },
@@ -81,7 +80,6 @@ const ROUTER_OPTIONS = {
     ShowInfoComponent,
     NewslettersComponent,
     EventsComponent,
-    MapComponent,
     GrantInfoComponent,
     PicturesComponent,
     LinksComponent,
