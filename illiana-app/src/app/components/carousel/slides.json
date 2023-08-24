@@ -1,10 +1,10 @@
 [
   {
-    "src": "/assets/img/show/aerial.jpg",
-    "header": "41st Annual Antique Power Show: July 21 - 23",
-    "body": "We are excited to host our annual Antique Power Exhibition this year, featuring John Deere! Click the button below to learn more.",
+    "src": "/assets/img/fall-festival/2022/2.jpg",
+    "header": "Fall Festival: Saturday, September 23",
+    "body": "Join us for a day of crafts, quilts, food, vendors, face painting, and so much more!",
     "link": {
-      "href": "/show-info",
+      "href": "/fall-festival",
       "text": "More Info"
     }
   },
