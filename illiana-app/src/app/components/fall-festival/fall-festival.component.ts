@@ -26,9 +26,10 @@ export class FallFestivalComponent implements OnInit {
       'assets/img/fall-festival/quilt.jpg',
       'assets/img/fall-festival/trains.jpg',
       'assets/img/fall-festival/1.jpg',
-      'assets/img/fall-festival/2.jpg',
+      'assets/img/fall-festival/wonky star (4 colors).jpg',
       'assets/img/fall-festival/3.jpg',
-      'assets/img/fall-festival/4.jpg',
+      'assets/img/fall-festival/FF wreath 1.jpg',
+      'assets/img/fall-festival/FF wreath 2.jpg',
     ];
   }
 
