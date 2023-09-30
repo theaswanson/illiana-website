@@ -1,41 +1,6 @@
 [
   {
     "year": 2023,
-    "title": "Illiana Quilters Meeting",
-    "date": "Monday, August 28",
-    "time": "9:00 AM",
-    "location": "Showgrounds"
-  },
-  {
-    "year": 2023,
-    "title": "Club Meeting",
-    "date": "Tuesday, September 19",
-    "time": "6:30 PM",
-    "location": "Showgrounds"
-  },
-  {
-    "year": 2023,
-    "title": "History Day",
-    "date": "Friday, September 22",
-    "location": "Showgrounds",
-    "special": true
-  },
-  {
-    "year": 2023,
-    "title": "Fall Festival",
-    "date": "Saturday, September 23",
-    "location": "Showgrounds",
-    "special": true
-  },
-  {
-    "year": 2023,
-    "title": "Illiana Quilters Meeting",
-    "date": "Monday, September 25",
-    "time": "9:00 AM",
-    "location": "Showgrounds"
-  },
-  {
-    "year": 2023,
     "title": "Club Meeting",
     "date": "Tuesday, October 17",
     "time": "6:30 PM",
@@ -75,5 +40,12 @@
     "date": "Tuesday, December 19",
     "time": "6:30 PM",
     "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
+    "title": "42nd Annual Power Show",
+    "date": "Friday, July 19 - Sunday, July 21",
+    "location": "Showgrounds",
+    "special": true
   }
 ]
