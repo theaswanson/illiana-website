@@ -1,10 +1,10 @@
 [
   {
-    "src": "/assets/img/fall-festival/2022/2.jpg",
-    "header": "Fall Festival: Saturday, September 23",
-    "body": "Join us for a day of crafts, quilts, food, vendors, face painting, and so much more!",
+    "src": "/assets/img/christmas/general-store.jpg",
+    "header": "Christmas in the Village, December 1-2",
+    "body": "Come join us for our annual Christmas tradition! We'll have toy trains, crafts, popcorn and cookies, Santa, and more!",
     "link": {
-      "href": "/fall-festival",
+      "href": "/christmas-in-the-village",
       "text": "More Info"
     }
   },
