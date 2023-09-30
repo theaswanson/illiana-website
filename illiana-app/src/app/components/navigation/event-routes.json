@@ -14,5 +14,9 @@
   {
     "label": "Christmas in the Village",
     "route": "/christmas"
+  },
+  {
+    "label": "Event Calendar",
+    "route": "/events"
   }
 ]
