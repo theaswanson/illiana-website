@@ -51,6 +51,7 @@ export class ShowInfoComponent implements OnInit {
         title: 'Quilters',
       },
       { title: 'Steam & Gas Engines' },
+      { title: 'Throttle Engines' },
       { title: 'Miniature Trains' },
       { title: 'Binding' },
       { title: 'Threshing' },
