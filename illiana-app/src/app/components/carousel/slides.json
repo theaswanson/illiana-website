@@ -1,11 +1,12 @@
 [
   {
-    "src": "/assets/img/christmas/general-store.jpg",
-    "header": "Christmas in the Village, December 1-2 from 5-8pm",
-    "body": "Come join us for our annual Christmas tradition! We'll have toy trains, crafts, popcorn and cookies, Santa, and more!",
+    "src": "/assets/img/intro-carousel/1.jpg",
+    "header": "Where the Past has a Future!",
+    "body": "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",
     "link": {
-      "href": "/christmas",
-      "text": "More Info"
+      "href": "/",
+      "fragment": "about",
+      "text": "Learn More"
     }
   },
   {
@@ -15,16 +16,6 @@
     "link": {
       "href": "/newsletters",
       "text": "Read Now"
-    }
-  },
-  {
-    "src": "/assets/img/intro-carousel/1.jpg",
-    "header": "Where the Past has a Future!",
-    "body": "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",
-    "link": {
-      "href": "/",
-      "fragment": "about",
-      "text": "Learn More"
     }
   }
 ]
