@@ -8,9 +8,23 @@
   },
   {
     "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, March 25",
+    "time": "9:00 AM",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
     "title": "Club Meeting",
     "date": "Tuesday, April 16",
     "time": "6:30 PM",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, April 22",
+    "time": "9:00 AM",
     "location": "Showgrounds"
   },
   {
@@ -22,9 +36,23 @@
   },
   {
     "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, May 27",
+    "time": "9:00 AM",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
     "title": "Club Meeting",
     "date": "Tuesday, June 18",
     "time": "6:30 PM",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, June 24",
+    "time": "9:00 AM",
     "location": "Showgrounds"
   },
   {
@@ -43,9 +71,23 @@
   },
   {
     "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, August 26",
+    "time": "9:00 AM",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
     "title": "Club Meeting",
     "date": "Tuesday, Sept. 17",
     "time": "6:30 PM",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, Sept. 23",
+    "time": "9:00 AM",
     "location": "Showgrounds"
   },
   {
@@ -57,9 +99,23 @@
   },
   {
     "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, Oct. 28",
+    "time": "9:00 AM",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
     "title": "Club Meeting",
     "date": "Tuesday, Nov. 19",
     "time": "6:30 PM",
+    "location": "Showgrounds"
+  },
+  {
+    "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "Monday, Nov. 25",
+    "time": "9:00 AM",
     "location": "Showgrounds"
   },
   {
@@ -68,5 +124,12 @@
     "date": "Friday, Dec. 6 - Saturday, Dec. 7",
     "location": "Showgrounds",
     "special": true
+  },
+  {
+    "year": 2024,
+    "title": "Illiana Quilters Meeting",
+    "date": "December (TBD)",
+    "time": "9:00 AM",
+    "location": "Showgrounds"
   }
 ]
