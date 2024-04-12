@@ -1,7 +1,6 @@
 $illiana-green: #18d26e;
 
 .show-info {
-
   ul {
     list-style: none;
     padding: 0;
@@ -10,7 +9,7 @@ $illiana-green: #18d26e;
 
   .showcase {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
     justify-items: center;
     width: fit-content;
