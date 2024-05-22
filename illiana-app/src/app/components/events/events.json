@@ -90,7 +90,8 @@
   {
     "title": "Christmas in the Village",
     "location": "Showgrounds",
-    "startDate": "2024-12-06",
+    "startDate": "2024-12-06T12:00:00.000Z",
+    "endDate": "2024-12-07T12:00:00.000Z",
     "special": true,
     "allDay": true
   }
