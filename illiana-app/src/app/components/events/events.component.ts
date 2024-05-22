@@ -31,6 +31,7 @@ export class EventsComponent implements OnInit {
     weekday: 'long',
     day: 'numeric',
     month: 'long',
+    year: 'numeric',
     timeZone: 'America/New_York',
   };
   timeOptions: Intl.DateTimeFormatOptions = {
