@@ -5,20 +5,32 @@
         <h3>Newsletters</h3>
       </header>
       <div class="page-content">
+        <p>
+          <b>Note:</b> due to an uptick in scam emails and a concern for safety,
+          our monthly newsletters are currently on pause. To stay up-to-date
+          with the latest club happenings, please check out our
+          <a
+            href="https://www.facebook.com/illianaantiquepower/"
+            target="_blank"
+          >Facebook page</a> and join us for our <a href="/events">monthly club meetings</a>!
+        </p>
         <p>Here are our past newsletters from over the years.</p>
-        <a [href]="getNewsletterHref(latestNewsletter)" class="my-btn">View our Latest Newsletter ({{monthNames[latestNewsletter.month - 1]}} {{latestNewsletter.year}})</a>
       </div>
 
       <div class="newsletters" *ngFor="let year of years">
-        <h1>{{year}}</h1>
+        <h1>{{ year }}</h1>
         <table [style.backgroundColor]="colorsByYear.get(year)">
           <tr *ngFor="let row of [1, 2, 3]">
             <td *ngFor="let column of [1, 2, 3, 4]">
               <div *ngIf="!getNewsletter(year, row, column)">
-                No {{monthNames[getMonth(row, column) - 1]}} letter
+                No {{ monthNames[getMonth(row, column) - 1] }} letter
               </div>
-              <a *ngIf="getNewsletter(year, row, column)" [href]="getNewsletterHref(getNewsletter(year, row, column))">
-                {{monthNames[getNewsletter(year, row, column).month - 1]}} {{year}}
+              <a
+                *ngIf="getNewsletter(year, row, column)"
+                [href]="getNewsletterHref(getNewsletter(year, row, column))"
+              >
+                {{ monthNames[getNewsletter(year, row, column).month - 1] }}
+                {{ year }}
               </a>
             </td>
           </tr>

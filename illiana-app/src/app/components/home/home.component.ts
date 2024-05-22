@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   aboutUsInfo = [
     {
-      link: '/newsletters',
-      img: 'assets/img/about-plan.jpg',
-      icon: 'ion-ios-list-outline',
-      title: 'Newsletters',
-      description: 'Click here to view our monthly newsletters.',
+      link: '/events',
+      img: 'assets/img/calendar.jpg',
+      icon: 'ion-calendar',
+      title: 'Event Calendar',
+      description: 'Click here to view all of our planned events for the year.',
     },
     {
       link: '/contact',

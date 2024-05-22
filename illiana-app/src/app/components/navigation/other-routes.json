@@ -20,6 +20,14 @@
     "href": "http://www.rockyforge.org/"
   },
   {
+    "label": "Newsletters",
+    "route": "/newsletters"
+  },
+  {
+    "label": "Blog",
+    "route": "/blog"
+  },
+  {
     "label": "Grant Info",
     "route": "/grant-info"
   }

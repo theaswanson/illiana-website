@@ -4,14 +4,6 @@
     "route": "/events"
   },
   {
-    "label": "Newsletters",
-    "route": "/newsletters"
-  },
-  {
-    "label": "Blog",
-    "route": "/blog"
-  },
-  {
     "label": "Donate",
     "route": "/donate"
   }

@@ -17,14 +17,5 @@
       "fragment": "about",
       "text": "Learn More"
     }
-  },
-  {
-    "src": "/assets/img/about-plan.jpg",
-    "header": "View our Monthly Newsletters",
-    "body": "Read the latest updates about our club, upcoming events, and more!",
-    "link": {
-      "href": "/newsletters",
-      "text": "Read Now"
-    }
   }
 ]
