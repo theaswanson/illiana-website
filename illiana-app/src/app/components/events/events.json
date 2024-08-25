@@ -63,6 +63,13 @@
     "startDate": "2024-09-17T22:30:00.000Z"
   },
   {
+    "title": "History Day",
+    "location": "Showgrounds",
+    "startDate": "2024-09-20:12:00.000Z",
+    "special": true,
+    "allDay": true
+  },
+  {
     "title": "Illiana Quilters Meeting",
     "location": "Showgrounds",
     "startDate": "2024-09-23T13:00:00.000Z"
