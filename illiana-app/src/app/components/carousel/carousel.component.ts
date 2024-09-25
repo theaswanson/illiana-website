@@ -1,5 +1,5 @@
+import { transition, trigger, useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { trigger, transition, useAnimation } from "@angular/animations";
 import { fadeIn, fadeOut } from './carousel.animations';
 import slides from './slides.json';
 
@@ -11,6 +11,7 @@ class Slide {
 }
 
 class Link {
+  external?: boolean = false;
   href: string;
   text: string;
 }
@@ -20,14 +21,17 @@ class Link {
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
   animations: [
-    trigger("carouselAnimation", [
-      transition("void => *", [useAnimation(fadeIn, { params: { time: '500ms' } })]),
-      transition("* => void", [useAnimation(fadeOut, { params: { time: '500ms' } })]),
-    ])
-  ]
+    trigger('carouselAnimation', [
+      transition('void => *', [
+        useAnimation(fadeIn, { params: { time: '500ms' } }),
+      ]),
+      transition('* => void', [
+        useAnimation(fadeOut, { params: { time: '500ms' } }),
+      ]),
+    ]),
+  ],
 })
 export class CarouselComponent implements OnInit {
-
   slides: Slide[];
   currentSlide = 0;
   skipThisCycle = true;
@@ -62,9 +66,13 @@ export class CarouselComponent implements OnInit {
     if (!this.skipThisCycle) {
       this.nextSlide();
     } else {
-      setTimeout(() => { this.skipThisCycle = false }, 1000);
+      setTimeout(() => {
+        this.skipThisCycle = false;
+      }, 1000);
     }
-    setTimeout(() => { this.autoScroll() }, this.autoscrollDelay);
+    setTimeout(() => {
+      this.autoScroll();
+    }, this.autoscrollDelay);
   }
 
   private previousSlide() {
@@ -76,5 +84,4 @@ export class CarouselComponent implements OnInit {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
   }
-
 }
