@@ -43,9 +43,9 @@ export class ShowInfoComponent implements OnInit {
           'A large flea market with antiques, tools, clothing, toys, and more!',
       },
       {
-        title: 'Train Station',
+        title: 'Learn about the Pine Creek and Western Railroad',
         description:
-          'Stop by one of the train stations to take a ride around the showgrounds!',
+          'Stop by one of the train stations on the grounds to see how a railroad is run!',
       },
       {
         title: 'Quilters',
