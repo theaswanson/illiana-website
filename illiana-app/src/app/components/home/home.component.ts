@@ -41,13 +41,6 @@ export class HomeComponent implements OnInit {
         'The Power Show is held every year during the 3rd weekend of July.',
     },
     {
-      link: '/fall-festival',
-      img: 'assets/img/fall-festival/crafts.jpg',
-      title: 'Fall Festival',
-      description:
-        "Vendors of arts, crafts, antiques, furniture, and more, with children's activities, painting classes, and decor workshops!",
-    },
-    {
       link: '/history-day',
       img: 'assets/img/history-day/2022/blacksmithing-2.jpg',
       title: 'History Day',

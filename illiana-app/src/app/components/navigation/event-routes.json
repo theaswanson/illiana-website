@@ -8,10 +8,6 @@
     "route": "/history-day"
   },
   {
-    "label": "Fall Festival",
-    "route": "/fall-festival"
-  },
-  {
     "label": "Christmas in the Village",
     "route": "/christmas"
   },
