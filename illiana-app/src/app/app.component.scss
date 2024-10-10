@@ -1,0 +1,14 @@
+// Added a layout to control the way
+// we want them to be displayed
+#layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 72px); // subtracted the height of the header(navigation)
+}
+
+// Added this flex grow to give the router outlet
+// a maximum of the view width
+#content {
+  flex-grow: 1;
+}
+
