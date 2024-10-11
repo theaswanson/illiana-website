@@ -106,7 +106,7 @@
   {
     "title": "History Day",
     "location": "Showgrounds",
-    "startDate": "2025-09-19:12:00.000Z",
+    "startDate": "2025-09-19T12:00:00.000Z",
     "special": true,
     "allDay": true
   },
