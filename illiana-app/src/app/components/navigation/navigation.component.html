@@ -10,18 +10,30 @@
 
     <nav #nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li routerLinkActive="menu-active" [routerLinkActiveOptions]="{ exact: true }">
+        <li
+          routerLinkActive="menu-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           <a [routerLink]="['/']">Home</a>
         </li>
         <li *ngFor="let route of routes" routerLinkActive="menu-active">
-          <a [routerLink]="[route.route]" [fragment]="route.fragment">{{route.label}}</a>
+          <a [routerLink]="[route.route]" [fragment]="route.fragment">{{
+            route.label
+          }}</a>
         </li>
         <li class="menu-has-children">
           <a [routerLink]="[]" class="sf-with-ul">Events</a>
           <ul>
             <li *ngFor="let route of eventRoutes">
-              <a *ngIf="route.route" [routerLink]="[route.route]" [fragment]="route.fragment">{{route.label}}</a>
-              <a *ngIf="route.href" [href]="route.href" target="_blank">{{route.label}}</a>
+              <a
+                *ngIf="route.route"
+                [routerLink]="[route.route]"
+                [fragment]="route.fragment"
+                >{{ route.label }}</a
+              >
+              <a *ngIf="route.href" [href]="route.href" target="_blank">{{
+                route.label
+              }}</a>
             </li>
           </ul>
         </li>
@@ -29,8 +41,15 @@
           <a [routerLink]="[]" class="sf-with-ul">Other</a>
           <ul>
             <li *ngFor="let route of otherRoutes">
-              <a *ngIf="route.route" [routerLink]="[route.route]" [fragment]="route.fragment">{{route.label}}</a>
-              <a *ngIf="route.href" [href]="route.href" target="_blank">{{route.label}} <i class="ion-android-open"></i></a>
+              <a
+                *ngIf="route.route"
+                [routerLink]="[route.route]"
+                [fragment]="route.fragment"
+                >{{ route.label }}</a
+              >
+              <a *ngIf="route.href" [href]="route.href" target="_blank"
+                >{{ route.label }} <i class="ion-android-open"></i
+              ></a>
             </li>
           </ul>
         </li>
@@ -46,16 +65,18 @@
           <a [routerLink]="['/']">Home</a>
         </li>
         <li *ngFor="let route of routes">
-          <a [routerLink]="[route.route]">{{route.label}}</a>
+          <a [routerLink]="[route.route]">{{ route.label }}</a>
         </li>
         <li class="menu-has-children">
           <a [routerLink]="[]">Events</a>
           <ul>
             <li *ngFor="let route of eventRoutes">
-              <a *ngIf="route.route" [routerLink]="[route.route]">{{route.label}}</a>
+              <a *ngIf="route.route" [routerLink]="[route.route]">{{
+                route.label
+              }}</a>
               <a *ngIf="route.href" [href]="route.href" target="_blank">
-                <div style="display: flex; align-items: center;">
-                  {{route.label}}
+                <div style="display: flex; align-items: center">
+                  {{ route.label }}
                   <i class="ion-android-open"></i>
                 </div>
               </a>
@@ -66,10 +87,12 @@
           <a [routerLink]="[]">Other</a>
           <ul>
             <li *ngFor="let route of otherRoutes">
-              <a *ngIf="route.route" [routerLink]="[route.route]">{{route.label}}</a>
+              <a *ngIf="route.route" [routerLink]="[route.route]">{{
+                route.label
+              }}</a>
               <a *ngIf="route.href" [href]="route.href" target="_blank">
-                <div style="display: flex; align-items: center;">
-                  {{route.label}}
+                <div style="display: flex; align-items: center">
+                  {{ route.label }}
                   <i class="ion-android-open"></i>
                 </div>
               </a>
@@ -81,7 +104,14 @@
         </li>
       </ul>
     </nav>
-    
-    <div id="mobile-body-overly" [style.display]="navOpen ? 'block' : 'none'"></div>
+
+    <!-- THe mobile nav always comes with this opverlay. -->
+    <!-- So to close it by tapping outside, we need to -->
+    <!-- call the toggleNav() whithin this div. -->
+    <div
+      id="mobile-body-overly"
+      [style.display]="navOpen ? 'block' : 'none'"
+      (click)="toggleNav()"
+    ></div>
   </div>
 </header>
