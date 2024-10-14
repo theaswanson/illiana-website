@@ -112,6 +112,8 @@
       id="mobile-body-overly"
       [style.display]="navOpen ? 'block' : 'none'"
       (click)="toggleNav()"
+      (keydown)="handleKeyDown($event)"
+      tabindex="0"
     ></div>
   </div>
 </header>
