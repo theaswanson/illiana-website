@@ -42,6 +42,12 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  handleKeyDown(event: KeyboardEvent): void {
+    if (event.key === 'Escape') {
+      this.toggleNav();
+    }
+  }
+
   toggleNav() {
     this.navOpen = !this.navOpen;
     if (this.navOpen) {
