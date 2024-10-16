@@ -105,11 +105,11 @@
       </ul>
     </nav>
 
-    <!-- THe mobile nav always comes with this opverlay. -->
+    <!-- The mobile nav always comes with this overlay. -->
     <!-- So to close it by tapping outside, we need to -->
     <!-- call the toggleNav() whithin this div. -->
     <div
-      id="mobile-body-overly"
+      id="mobile-body-overlay"
       [style.display]="navOpen ? 'block' : 'none'"
       (click)="toggleNav()"
       (keydown)="handleKeyDown($event)"
