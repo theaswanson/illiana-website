@@ -1,5 +1,14 @@
 [
   {
+    "src": "/assets/img/christmas/general-store.jpg",
+    "header": "Christmas in the Village, December 6-7",
+    "body": "Come join us for our annual Christmas tradition! We'll have toy trains, crafts, popcorn and cookies, Santa, and more!",
+    "link": {
+      "href": "/christmas",
+      "text": "More Info"
+    }
+  },
+  {
     "src": "/assets/img/intro-carousel/1.jpg",
     "header": "Where the Past has a Future!",
     "body": "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",
@@ -26,15 +35,6 @@
     "link": {
       "href": "/events",
       "text": "View Event Calendar"
-    }
-  },
-  {
-    "src": "/assets/img/christmas/general-store.jpg",
-    "header": "Christmas in the Village, December 5-6",
-    "body": "Come join us for our annual Christmas tradition! We'll have toy trains, crafts, popcorn and cookies, Santa, and more!",
-    "link": {
-      "href": "/christmas",
-      "text": "More Info"
     }
   }
 ]
