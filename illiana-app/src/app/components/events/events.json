@@ -1,36 +1,5 @@
 [
   {
-    "title": "Club Meeting",
-    "location": "Assembly Hall",
-    "startDate": "2024-10-15T22:30:00.000Z"
-  },
-  {
-    "title": "Illiana Quilters Meeting",
-    "location": "Assembly Hall",
-    "startDate": "2024-10-28T13:00:00.000Z"
-  },
-  {
-    "title": "Club Meeting",
-    "location": "Assembly Hall",
-    "startDate": "2024-11-19T23:30:00.000Z"
-  },
-  {
-    "title": "Illiana Quilters Meeting",
-    "location": "Assembly Hall",
-    "startDate": "2024-11-25T14:00:00.000Z"
-  },
-  {
-    "title": "Christmas in the Village",
-    "location": "Showgrounds",
-    "startDate": "2024-12-06T12:00:00.000Z",
-    "endDate": "2024-12-07T12:00:00.000Z",
-    "special": true,
-    "allDay": true
-  },
-
-
-
-  {
     "title": "Illiana Quilters Meeting",
     "location": "Assembly Hall",
     "startDate": "2025-01-27T14:00:00.000Z"
