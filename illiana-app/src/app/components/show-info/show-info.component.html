@@ -1,30 +1,413 @@
 <main id="main">
-  <section id="about">
+  <!-- Show Information -->
+  <section class="section">
     <div class="container">
       <header class="section-header">
         <h3>Show Information</h3>
       </header>
       <div class="page-content show-info">
-        <div class="pb-3">
+        <div>
           <h1>43rd Annual Antique Power Exhibition</h1>
           <h2><b>Friday, July 18 - Sunday, July 20, 2025</b></h2>
-          <h3 class="font-italic pb-4">
+          <h3 class="font-italic">
             Featuring: Allis Chalmers Tractors & Waterloo Contract Engines
           </h3>
+        </div>
+        <app-images [images]="headerImages"></app-images>
+      </div>
+    </div>
+  </section>
+
+  <!-- Directions -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h3>Directions</h3>
+      </header>
+      <div class="page-content show-info">
+        <div>
           <h3>GPS Address: 986 Briscoe Road, Williamsport, IN</h3>
           <h3>1 mile west of Rainsville, IN</h3>
-          <p class="mt-3 mb-3 font-italic">
-            For directions,
-            <a href="https://goo.gl/maps/A46wgG1Vz492" target="_blank"
-              >click here <i class="fa fa-map-marked-alt"></i
-            ></a>
-          </p>
-          <p>
+
+          <p class="mt-2">
             Notice for exhibitors: please avoid the Big Pine Creek Steel Bridge
             off of N Rocky Ford Rd. It has been repaired and is now too narrow
             for a trailer to cross.
           </p>
+
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3037.557931897944!2d-87.3399984!3d40.418643!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881291b5aedb5e63%3A0x499a29690b809bae!2sIlliana%20Antique%20Power%20Association!5e0!3m2!1sen!2sus!4v1751239885247!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New! -->
+  <section class="section new">
+    <div class="container">
+      <header class="section-header">
+        <h3>New this Year!</h3>
+      </header>
+      <div class="page-content show-info">
+        <p>
+          For the first time in the show's history, we will have the
+          <b>Indiana Fairs and Festival bus</b> on the grounds with music, a
+          bubble machine, handouts, and other prizes. The bus will also be in
+          the tractor parade for the time they are able to be on the grounds.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gate Fee -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h3>Gate Fee</h3>
+      </header>
+      <div class="page-content show-info">
+        <h3 class="mb-2">$7 per person (12 and up)</h3>
+        <p class="font-italic mb-1">(Cash or check only)</p>
+        <p class="font-italic">
+          (Members are free with membership card or paid membership on the
+          current list)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h3>Activities</h3>
+      </header>
+      <div class="page-content show-info">
+        <div class="row activities">
+          <div
+            class="col-lg-4 col-md-6 box"
+            *ngFor="let showInfo of aboutShowInfo"
+          >
+            <h4 class="title">
+              <p>{{ showInfo.title }}</p>
+            </h4>
+            <p class="description">{{ showInfo.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h3>Schedule</h3>
+      </header>
+
+      <div class="schedule">
+        <div>
+          <h2>Friday, July 18</h2>
+          <p>
+            Note: Silent auction items need to be brought to the Assembly Hall
+            by noon for display and for the bidding to begin.
+          </p>
+          <div class="events-table table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Time</th>
+                  <th scope="col">Event</th>
+                </tr>
+              </thead>
+              <tr>
+                <td>8:00 AM</td>
+                <td>Flag Raising & National Anthem</td>
+              </tr>
+              <tr>
+                <td>9:00 AM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Thrashing</td>
+              </tr>
+              <tr>
+                <td>1:00 PM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>1:00 PM</td>
+                <td>Thrashing</td>
+              </tr>
+              <tr>
+                <td><b>2:00 PM</b></td>
+                <td><b>Tractor Parade</b></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h2>Saturday, July 19</h2>
+          <div class="events-table table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Time</th>
+                  <th scope="col">Event</th>
+                </tr>
+              </thead>
+              <tr>
+                <td>8:00 AM</td>
+                <td>Flag Raising & National Anthem</td>
+              </tr>
+              <tr>
+                <td>9:00 AM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>10:00 AM</td>
+                <td>
+                  Kiddie Tractor Pull (toddlers and children up to age 10)
+                </td>
+              </tr>
+              <tr>
+                <td>11:00 AM (following the tractor pull)</td>
+                <td>Engine Drawing for children age 8-18</td>
+              </tr>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Thrashing</td>
+              </tr>
+              <tr>
+                <td>1:00 PM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>1:00 PM</td>
+                <td>Thrashing</td>
+              </tr>
+              <tr>
+                <td><b>2:00 PM</b></td>
+                <td><b>Tractor Parade</b></td>
+              </tr>
+              <tr>
+                <td>5:30 PM</td>
+                <td>Announement of Silent Auction Winners</td>
+              </tr>
+              <tr>
+                <td><b>6:00 - 8:00 PM</b></td>
+                <td>
+                  <p><b>Music by Coop & Company from Covington</b></p>
+                  <p class="mb-0">
+                    Bring your lawn chairs to the pavilion and enjoy the
+                    evening! Freewill offering will be requested.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h2>Sunday, July 20</h2>
+          <div class="events-table table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Time</th>
+                  <th scope="col">Event</th>
+                </tr>
+              </thead>
+              <tr>
+                <td>8:00 AM</td>
+                <td>Flag Raising & National Anthem</td>
+              </tr>
+              <tr>
+                <td>8:00 AM (following the Flag Raising & National Anthem)</td>
+                <td>Church Service</td>
+              </tr>
+              <tr>
+                <td>9:00 AM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Thrashing</td>
+              </tr>
+              <tr>
+                <td>1:00 PM</td>
+                <td>Sawmill Demonstration</td>
+              </tr>
+              <tr>
+                <td>1:00 PM</td>
+                <td>Thrashing</td>
+              </tr>
+              <tr>
+                <td>1:30 PM</td>
+                <td>Kiddie Tractor or Wagon Parade</td>
+              </tr>
+              <tr>
+                <td><b>2:00 PM</b></td>
+                <td><b>Tractor Parade</b></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h2>Daily Activities</h2>
+          <ul>
+            <li>Flag raising and National Anthem: 8am</li>
+            <li>Sawmill demonstrations: 9am-11am and 1pm</li>
+            <li>Thrashing: 11am & 1pm</li>
+            <li>Tractor Parade: 2pm</li>
+            <li>
+              Blacksmiths will be doing demonstrations throughout the day. Watch
+              the schedule of events board at the Assembly Hall for times of
+              other activities.
+            </li>
+            <li>Scavenger hunt for kids throughout the day.</li>
+            <li>
+              Sewing a 4 patch at the quilter cottage, anytime during the day.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h3>Rules</h3>
+      </header>
+      <div class="page-content show-info rules">
+        <p class="mb-0">
+          <b>
+            In June of 2025, the Board of Directors - in conjunction with our
+            insurance provider - approved and adopted these rules for the show
+            and show grounds:
+          </b>
+        </p>
+        <div>
+          <h3>IAPA Ground Rules</h3>
+          <ul>
+            <li>No alcohol</li>
+            <li>No firearms</li>
+            <li>No knives visible</li>
+          </ul>
+
+          <ul>
+            <li>
+              Dogs must be on a leash at all times. No dogs in hall near food
+              area
+            </li>
+            <li>No camping inside the showgrounds</li>
+            <li>Quiet time: 11pm-8am</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>
+            Rules for the use of motorized vehicles during the annual show
+          </h3>
+          <ol>
+            <li>
+              Only people with a valid driver's license can operate any
+              motorized vehicle on the showgrounds. No exceptions.
+            </li>
+            <li>
+              Anyone operating a motorized vehicle must have proof of insurance
+              or a signed liability waiver (available on the grounds).
+            </li>
+            <li>
+              Golf carts or side-by-sides are not allowed on the grounds during
+              show hours without special permission from the board of directors.
+            </li>
+            <li>
+              Handicap individuals may use a golf cart with proof of insurance
+              or a liability waiver, and an approved sticker displayed on the
+              vehicle (stickers available at the gate).
+            </li>
+            <li>
+              An approved IAPA sticker indicates that the golf cart is approved
+              for use on IAPA grounds.
+            </li>
+            <li>
+              Golf carts can only be used by Board of Directors or persons with
+              approval from the president.
+            </li>
+            <li>
+              Anyone not willing to abide by the above rules may be asked to
+              leave the showgrounds.
+            </li>
+          </ol>
+        </div>
+
+        <div>
+          <h3>Disclaimer</h3>
+          <p>
+            Illiana Antique Power Association (IAPA) does not accept any risk of
+            injury inherent to land, equipment or animal, as well as the
+            potential for you to act in a negligent manner that may contribute
+            to your injury or death, or for other participants to act in a
+            manner that may cause you injury or cause your death.
+          </p>
+          <p>
+            <b>
+              YOU ARE ASSUMING ALL RISK OF PARTICIPATING IN THIS IAPA ACTIVITY.
+            </b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photos -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h3>Photos</h3>
+      </header>
+      <div class="page-content show-info">
+        <app-images [images]="images"></app-images>
+        <div class="row justify-content-center pt-5">
+          <a [routerLink]="['/pictures']" class="my-btn">View More Photos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flyer -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h3>Flyer</h3>
+      </header>
+      <div class="page-content show-info">
         <div class="pb-3">
           <!-- <div class="showcase-img">
             <img class="box-shadow" src="assets/img/show/allis-chalmers.jpg" />
@@ -41,259 +424,22 @@
             </div>
           </a>
         </div>
-        <div class="row justify-content-center pb-5">
+        <div class="row justify-content-center">
           <a href="assets/flyers/Illiana-Power-Show-2025.pdf" class="my-btn"
             >View the Flyer</a
           >
         </div>
-        <div class="pb-3">
-          <h3 class="mb-2">Gate Fee: $7 per person (12 and up)</h3>
-          <p class="font-italic mb-1">(Cash or check only)</p>
-          <p class="font-italic">
-            (Members are free with membership card or paid membership on the
-            current list)
-          </p>
-        </div>
       </div>
-      <div>
-        <h1>Activities</h1>
-        <div class="row activities">
-          <div
-            class="col-lg-4 col-md-6 box"
-            *ngFor="let showInfo of aboutShowInfo"
-          >
-            <h4 class="title">
-              <p>{{ showInfo.title }}</p>
-            </h4>
-            <p class="description">{{ showInfo.description }}</p>
-          </div>
-        </div>
-        <div class="pb-5">
-          <a href="show-info#schedule">
-            <h1 id="schedule">Schedule</h1>
-          </a>
-          <h2>Friday, July 18</h2>
-          <div class="events-table table-responsive">
-            <table class="table table-striped">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col">Event</th>
-                  <th scope="col">Time</th>
-                </tr>
-              </thead>
-              <tr>
-                <td>Flag Raising & National Anthem</td>
-                <td>8:00 AM</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>9:00 AM</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>11:00 AM</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>1:00 PM</td>
-              </tr>
-              <tr>
-                <td>Tractor Parade</td>
-                <td>2:00 PM</td>
-              </tr>
-              <tr>
-                <td>Gates Close</td>
-                <td>6:00 PM</td>
-              </tr>
-            </table>
-          </div>
+    </div>
+  </section>
 
-          <h2>Saturday, July 19</h2>
-          <div class="events-table table-responsive">
-            <table class="table table-striped">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col">Event</th>
-                  <th scope="col">Time</th>
-                </tr>
-              </thead>
-              <tr>
-                <td>Flag Raising & National Anthem</td>
-                <td>8:00 AM</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>9:00 AM</td>
-              </tr>
-              <tr>
-                <td>
-                  Kiddie Tractor Pull (toddlers and children up to age 10)
-                </td>
-                <td>10:00 AM</td>
-              </tr>
-              <tr>
-                <td>Engine Drawing for children age 8-18</td>
-                <td>11:00 AM (following the tractor pull)</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>11:00 AM</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>1:00 PM</td>
-              </tr>
-              <tr>
-                <td>Tractor Parade</td>
-                <td>2:00 PM</td>
-              </tr>
-              <tr>
-                <td>Announement of Silent Auction Winners</td>
-                <td>5:30 PM</td>
-              </tr>
-              <tr>
-                <td>Music by Coop & Company from Covington</td>
-                <td>6:00 - 8:00 PM</td>
-              </tr>
-              <tr>
-                <td>Gates Close</td>
-                <td>8:00 PM</td>
-              </tr>
-            </table>
-          </div>
-
-          <h2>Sunday, July 20</h2>
-          <div class="events-table table-responsive">
-            <table class="table table-striped">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col">Event</th>
-                  <th scope="col">Time</th>
-                </tr>
-              </thead>
-              <tr>
-                <td>Flag Raising & National Anthem</td>
-                <td>8:00 AM</td>
-              </tr>
-              <tr>
-                <td>Church Service</td>
-                <td>8:00 AM (following the Flag Raising & National Anthem)</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>9:00 AM</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>11:00 AM</td>
-              </tr>
-              <tr>
-                <td>Sawmill Demonstration</td>
-                <td>1:00 PM</td>
-              </tr>
-              <tr>
-                <td>Kiddie Tractor or Wagon Parade</td>
-                <td>1:30 PM</td>
-              </tr>
-              <tr>
-                <td>Tractor Parade</td>
-                <td>2:00 PM</td>
-              </tr>
-              <tr>
-                <td>Gates Close</td>
-                <td>6:00 PM</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="page-content">
-        <h3>Quilt Raffle</h3>
-        <img class="pb-3" src="assets/img/show/quilt-2023.jpg" style="max-width: 500px" />
-        <p>
-          Enter the raffle for a chance to win this beautiful quilt, made by the
-          Illiana Quilters! Tickets are $1 each or 6 for $5 and will be
-          available at the Quilter's Cottage. All proceeds go to support the
-          show!
-        </p>
-      </div> -->
-
-      <div>
-        <h1>Rules for the use of motorized vehicles during the annual show</h1>
-        <ol>
-          <li>
-            Only people with a valid driver's license can operate any motorized
-            vehicle on the showgrounds. No exceptions.
-          </li>
-          <li>
-            Anyone operating a motorized vehicle must have proof of insurance or
-            a signed liability waiver (available on the grounds).
-          </li>
-          <li>
-            Golf carts or side-by-sides are not allowed on the grounds during
-            show hours without special permission from the board of directors.
-          </li>
-          <li>
-            Handicap individuals may use a golf cart with proof of insurance or
-            a liability waiver, and an approved sticker displayed on the vehicle
-            (stickers available at the gate).
-          </li>
-          <li>
-            An approved IAPA sticker indicates that the golf cart is approved
-            for use on IAPA grounds.
-          </li>
-          <li>
-            Golf carts can only be used by Board of Directors or persons with
-            approval from the president.
-          </li>
-          <li>
-            Anyone not willing to abide by the above rules may be asked to leave
-            the showgrounds.
-          </li>
-        </ol>
-      </div>
-
-      <div>
-        <h1>IAPA Ground Rules</h1>
-        <ul>
-          <li>No alcohol</li>
-          <li>No firearms</li>
-          <li>No knives visible</li>
-        </ul>
-
-        <ul>
-          <li>
-            Dogs must be on a leash at all times. No dogs in hall near food area
-          </li>
-          <li>No camping inside the showgrounds</li>
-          <li>Quiet time: 11pm-8am</li>
-        </ul>
-      </div>
-
-      <div>
-        <h1>Disclaimer</h1>
-        <p>
-          Illiana Antique Power Association (IAPA) does not accept any risk of
-          injury inherent to land, equipment or animal, as well as the potential
-          for you to act in a negligent manner that may contribute to your
-          injury or death, or for other participants to act in a manner that may
-          cause you injury or cause your death.
-        </p>
-        <p>
-          <b>
-            YOU ARE ASSUMING ALL RISK OF PARTICIPATING IN THIS IAPA ACTIVITY.
-          </b>
-        </p>
-      </div>
-
-      <div class="pb-5">
-        <h1>Photos</h1>
-        <app-images [images]="images"></app-images>
-        <div class="row justify-content-center pt-5">
-          <a [routerLink]="['/pictures']" class="my-btn">View More Photos</a>
-        </div>
-      </div>
-      <div class="page-content">
+  <!-- Contact -->
+  <section class="section contact">
+    <div class="container">
+      <header class="section-header">
+        <h3>Contact</h3>
+      </header>
+      <div class="page-content show-info">
         <p>
           For questions about the show, including vendor details and camping
           details, please contact us!

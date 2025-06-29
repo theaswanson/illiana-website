@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-info.component.scss'],
 })
 export class ShowInfoComponent implements OnInit {
+  headerImages: string[];
   images: string[];
   aboutShowInfo: any[];
 
   constructor() {
+    this.headerImages = [
+      'assets/img/show/show2019.jpg',
+      'assets/img/show/aerial.jpg',
+      'assets/img/show/1.jpg',
+      'assets/img/show/aerial-showgrounds-1.jpg',
+      'assets/img/show/plowing.jpg',
+      'assets/img/show/4.jpg',
+    ];
+
     this.images = [
       'assets/img/show/aerial.jpg',
       'assets/img/show/aerial-sawmill.jpg',
@@ -24,6 +34,7 @@ export class ShowInfoComponent implements OnInit {
       'assets/img/show/3.jpg',
       'assets/img/show/4.jpg',
     ];
+
     this.aboutShowInfo = [
       {
         title: 'Antique Tractors',
