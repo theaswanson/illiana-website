@@ -36,6 +36,13 @@ $illiana-green: #18d26e;
   }
 }
 
+.events-table {
+  .table td,
+  .table th {
+    padding: 0.25rem;
+  }
+}
+
 .activities {
   .box {
     margin-bottom: 30px;
