@@ -1,5 +1,14 @@
 [
   {
+    "src": "/assets/img/show/aerial.jpg",
+    "header": "43rd Annual Antique Power Show: July 18 - 20",
+    "body": "We are excited to host our annual Antique Power Exhibition this year, featuring Allis Chalmers Tractors & Waterloo Contract Engines! Enjoy a fun-filled weekend with antique tractors, engines, miniature trains, blacksmithing, sawmill & thrashing demonstrations, a bustling flea market, and much more! Click the button below to learn more.",
+    "link": {
+      "href": "/show-info",
+      "text": "More Info"
+    }
+  },
+  {
     "src": "/assets/img/intro-carousel/1.jpg",
     "header": "Where the Past has a Future!",
     "body": "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",
