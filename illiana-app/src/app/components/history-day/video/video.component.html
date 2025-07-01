@@ -13,8 +13,11 @@
           <a [routerLink]="['/history-day/' + nextVideo.id]" class="my-btn">{{nextVideo.title}} &gt;</a>
         </div>
         <div class="iframe-container">
-          <iframe class="responsive-iframe"
-            [src]="videoSafeUrl" frameborder="0"
+          <iframe
+            title="Video Player"
+            class="responsive-iframe"
+            [src]="videoSafeUrl"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
