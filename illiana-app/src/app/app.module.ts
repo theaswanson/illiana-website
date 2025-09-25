@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { LightboxModule } from 'ngx-lightbox';
-// import { MarkdownModule } from 'ngx-markdown';
 import { AppComponent } from './app.component';
 import { AssemblyHallComponent } from './assembly-hall/assembly-hall.component';
 import { BlogComponent } from './components/blog/blog.component';
@@ -31,6 +30,7 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
 import { ShowInfoComponent } from './components/show-info/show-info.component';
 import { TrainComponent } from './components/train/train.component';
 import { ContactComponent } from './contact/contact.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 const ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -95,6 +95,6 @@ const ROUTER_OPTIONS = {
     bootstrap: [AppComponent], imports: [BrowserModule,
         BrowserAnimationsModule,
         LightboxModule,
-        // MarkdownModule.forRoot({ loader: HttpClient }),
+        MarkdownModule.forRoot({ loader: HttpClient }),
         RouterModule.forRoot(ROUTES, ROUTER_OPTIONS)], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
