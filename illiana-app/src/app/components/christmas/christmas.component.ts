@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-christmas',
-  templateUrl: './christmas.component.html',
-  styleUrls: ['./christmas.component.scss']
+    selector: 'app-christmas',
+    templateUrl: './christmas.component.html',
+    styleUrls: ['./christmas.component.scss'],
+    standalone: false
 })
 export class ChristmasComponent implements OnInit {
 

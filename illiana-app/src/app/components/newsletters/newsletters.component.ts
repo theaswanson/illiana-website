@@ -8,9 +8,10 @@ class Newsletter {
 }
 
 @Component({
-  selector: 'app-newsletters',
-  templateUrl: './newsletters.component.html',
-  styleUrls: ['./newsletters.component.scss']
+    selector: 'app-newsletters',
+    templateUrl: './newsletters.component.html',
+    styleUrls: ['./newsletters.component.scss'],
+    standalone: false
 })
 export class NewslettersComponent implements OnInit {
 
