@@ -7,9 +7,10 @@ export class Credit {
 }
 
 @Component({
-  selector: 'app-history-day',
-  templateUrl: './history-day.component.html',
-  styleUrls: ['./history-day.component.scss'],
+    selector: 'app-history-day',
+    templateUrl: './history-day.component.html',
+    styleUrls: ['./history-day.component.scss'],
+    standalone: false
 })
 export class HistoryDayComponent implements OnInit {
   activities = [

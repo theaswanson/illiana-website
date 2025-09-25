@@ -17,19 +17,20 @@ class Link {
 }
 
 @Component({
-  selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'],
-  animations: [
-    trigger('carouselAnimation', [
-      transition('void => *', [
-        useAnimation(fadeIn, { params: { time: '500ms' } }),
-      ]),
-      transition('* => void', [
-        useAnimation(fadeOut, { params: { time: '500ms' } }),
-      ]),
-    ]),
-  ],
+    selector: 'app-carousel',
+    templateUrl: './carousel.component.html',
+    styleUrls: ['./carousel.component.scss'],
+    animations: [
+        trigger('carouselAnimation', [
+            transition('void => *', [
+                useAnimation(fadeIn, { params: { time: '500ms' } }),
+            ]),
+            transition('* => void', [
+                useAnimation(fadeOut, { params: { time: '500ms' } }),
+            ]),
+        ]),
+    ],
+    standalone: false
 })
 export class CarouselComponent implements OnInit {
   slides: Slide[];

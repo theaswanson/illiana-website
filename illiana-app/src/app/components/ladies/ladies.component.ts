@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ladies',
-  templateUrl: './ladies.component.html',
-  styleUrls: ['./ladies.component.scss'],
+    selector: 'app-ladies',
+    templateUrl: './ladies.component.html',
+    styleUrls: ['./ladies.component.scss'],
+    standalone: false
 })
 export class LadiesComponent implements OnInit {
   images: string[];

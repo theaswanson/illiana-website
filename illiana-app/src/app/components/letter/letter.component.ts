@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-letter',
-  templateUrl: './letter.component.html',
-  styleUrls: ['./letter.component.scss']
+    selector: 'app-letter',
+    templateUrl: './letter.component.html',
+    styleUrls: ['./letter.component.scss'],
+    standalone: false
 })
 export class LetterComponent implements OnInit {
 

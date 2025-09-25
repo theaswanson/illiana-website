@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-show-info',
-  templateUrl: './show-info.component.html',
-  styleUrls: ['./show-info.component.scss'],
+    selector: 'app-show-info',
+    templateUrl: './show-info.component.html',
+    styleUrls: ['./show-info.component.scss'],
+    standalone: false
 })
 export class ShowInfoComponent implements OnInit {
   headerImages: string[];

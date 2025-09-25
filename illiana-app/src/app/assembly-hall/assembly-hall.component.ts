@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-assembly-hall',
-  templateUrl: './assembly-hall.component.html',
-  styleUrls: ['./assembly-hall.component.scss'],
+    selector: 'app-assembly-hall',
+    templateUrl: './assembly-hall.component.html',
+    styleUrls: ['./assembly-hall.component.scss'],
+    standalone: false
 })
 export class AssemblyHallComponent implements OnInit {
   images = [
