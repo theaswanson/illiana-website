@@ -15,30 +15,33 @@
         <p><b>Christmas in the Village</b> is held on the Friday and Saturday of the first full weekend in December.</p>
       </div>
 
-      <div class="events" *ngFor="let events of eventsByYear | keyvalue">
-        <h1>{{ events.key }}</h1>
-        <div class="events-table table-responsive">
-          <table class="table table-striped">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">Event</th>
-                <th scope="col">Date</th>
-                <th scope="col">Time</th>
-                <th scope="col">Location</th>
-              </tr>
-            </thead>
-            <tr
-              *ngFor="let event of events.value"
-              [style]="event.special ? 'font-weight: bold' : ''"
-            >
-              <td>{{ event.title }}</td>
-              <td>{{ toDateRangeString(event) }}</td>
-              <td>{{ !event.allDay ? toTimeString(event.startDate) : '' }}</td>
-              <td>{{ event.location }}</td>
-            </tr>
-          </table>
+      @for (events of eventsByYear | keyvalue; track events) {
+        <div class="events">
+          <h1>{{ events.key }}</h1>
+          <div class="events-table table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Event</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Location</th>
+                </tr>
+              </thead>
+              @for (event of events.value; track event) {
+                <tr
+                  [style]="event.special ? 'font-weight: bold' : ''"
+                  >
+                  <td>{{ event.title }}</td>
+                  <td>{{ toDateRangeString(event) }}</td>
+                  <td>{{ !event.allDay ? toTimeString(event.startDate) : '' }}</td>
+                  <td>{{ event.location }}</td>
+                </tr>
+              }
+            </table>
+          </div>
         </div>
-      </div>
+      }
     </div>
   </section>
 </main>
