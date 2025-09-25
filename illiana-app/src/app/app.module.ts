@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { LightboxModule } from 'ngx-lightbox';
 // import { MarkdownModule } from 'ngx-markdown';
@@ -65,43 +65,36 @@ const ROUTER_OPTIONS = {
     scrollPositionRestoration: 'enabled'
 } as ExtraOptions;
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    NavigationComponent,
-    OfficersComponent,
-    FooterComponent,
-    CarouselComponent,
-    ScrollToTopComponent,
-    ShowInfoComponent,
-    NewslettersComponent,
-    EventsComponent,
-    GrantInfoComponent,
-    PicturesComponent,
-    LinksComponent,
-    TrainComponent,
-    LadiesComponent,
-    LetterComponent,
-    ChristmasComponent,
-    NotFoundComponent,
-    HistoryDayComponent,
-    VideoComponent,
-    ImagesComponent,
-    BlogComponent,
-    DonateComponent,
-    ContactComponent,
-    AssemblyHallComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    LightboxModule,
-    HttpClientModule,
-    // MarkdownModule.forRoot({ loader: HttpClient }),
-    RouterModule.forRoot(ROUTES, ROUTER_OPTIONS),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        NavigationComponent,
+        OfficersComponent,
+        FooterComponent,
+        CarouselComponent,
+        ScrollToTopComponent,
+        ShowInfoComponent,
+        NewslettersComponent,
+        EventsComponent,
+        GrantInfoComponent,
+        PicturesComponent,
+        LinksComponent,
+        TrainComponent,
+        LadiesComponent,
+        LetterComponent,
+        ChristmasComponent,
+        NotFoundComponent,
+        HistoryDayComponent,
+        VideoComponent,
+        ImagesComponent,
+        BlogComponent,
+        DonateComponent,
+        ContactComponent,
+        AssemblyHallComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        LightboxModule,
+        // MarkdownModule.forRoot({ loader: HttpClient }),
+        RouterModule.forRoot(ROUTES, ROUTER_OPTIONS)], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
