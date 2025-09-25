@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { LightboxModule } from 'ngx-lightbox';
-import { MarkdownModule } from 'ngx-markdown';
+// import { MarkdownModule } from 'ngx-markdown';
 import { AppComponent } from './app.component';
 import { AssemblyHallComponent } from './assembly-hall/assembly-hall.component';
 import { BlogComponent } from './components/blog/blog.component';
@@ -98,7 +98,7 @@ const ROUTER_OPTIONS = {
     BrowserAnimationsModule,
     LightboxModule,
     HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    // MarkdownModule.forRoot({ loader: HttpClient }),
     RouterModule.forRoot(ROUTES, ROUTER_OPTIONS),
   ],
   providers: [],
