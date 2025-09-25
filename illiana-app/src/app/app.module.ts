@@ -32,7 +32,7 @@ import { ShowInfoComponent } from './components/show-info/show-info.component';
 import { TrainComponent } from './components/train/train.component';
 import { ContactComponent } from './contact/contact.component';
 
-const ROUTES = [
+const ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'show-info', component: ShowInfoComponent },
   { path: 'blog', component: BlogComponent },

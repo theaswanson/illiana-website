@@ -125,7 +125,6 @@
       }
     }
   },
-  "defaultProject": "illiana-app",
   "cli": {
     "analytics": "e1120c18-ddb1-4958-8741-566ddd2a6784"
   }
