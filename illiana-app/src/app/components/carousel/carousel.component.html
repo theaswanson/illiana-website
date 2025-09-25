@@ -1,11 +1,11 @@
 <div class="carousel-container">
   <div class="carousel">
-    <ng-container *ngFor="let slide of slides; let i = index">
+    @for (slide of slides; track slide; let i = $index) {
       <div class="the-div">
-        <div
-          @carouselAnimation
-          class="carousel-content slide"
-          *ngIf="i === currentSlide"
+        @if (i === currentSlide) {
+          <div
+            @carouselAnimation
+            class="carousel-content slide"
           [ngStyle]="{
             background:
               'linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(' +
@@ -14,34 +14,39 @@
             'background-size': 'cover',
             'background-position': 'center'
           }"
-        >
-          <h3 class="text-illiana-green">Illiana Antique Power Association</h3>
-          <h2>{{ slide.header }}</h2>
-          <p *ngIf="slide.body">{{ slide.body }}</p>
-          <ng-container *ngIf="slide.link">
-            <a
-              *ngIf="!slide.link.external"
-              [routerLink]="[slide.link.href]"
-              [fragment]="slide.link.fragment"
-              class="btn-get-started scrollto"
-              >{{ slide.link.text }}</a
             >
-            <a
-              *ngIf="slide.link.external"
-              [href]="[slide.link.href]"
-              target="_blank"
-              class="btn-get-started scrollto"
-              >{{ slide.link.text }} <i class="ion-android-open"></i
-            ></a>
-          </ng-container>
+            <h3 class="text-illiana-green">Illiana Antique Power Association</h3>
+            <h2>{{ slide.header }}</h2>
+            @if (slide.body) {
+              <p>{{ slide.body }}</p>
+            }
+            @if (slide.link) {
+              @if (!slide.link.external) {
+                <a
+                  [routerLink]="[slide.link.href]"
+                  [fragment]="slide.link.fragment"
+                  class="btn-get-started scrollto"
+                  >{{ slide.link.text }}</a
+                  >
+                }
+                @if (slide.link.external) {
+                  <a
+                    [href]="[slide.link.href]"
+                    target="_blank"
+                    class="btn-get-started scrollto"
+                    >{{ slide.link.text }} <i class="ion-android-open"></i
+                  ></a>
+                }
+              }
+            </div>
+          }
         </div>
-      </div>
-    </ng-container>
-    <button class="control prev" (click)="onPreviousClick()">
-      <span class="arrow left"></span>
-    </button>
-    <button class="control next" (click)="onNextClick()">
-      <span class="arrow right"></span>
-    </button>
+      }
+      <button class="control prev" (click)="onPreviousClick()">
+        <span class="arrow left"></span>
+      </button>
+      <button class="control next" (click)="onNextClick()">
+        <span class="arrow right"></span>
+      </button>
+    </div>
   </div>
-</div>

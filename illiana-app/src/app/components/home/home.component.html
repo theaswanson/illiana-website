@@ -11,23 +11,25 @@
       <header class="section-header">
         <h3>About Us</h3>
         <p>The Illiana Antique Power Association is a non-profit organization dedicated to the preservation
-          of our early rural way of life and the mechanical marvels that changed farming forever.</p>
+        of our early rural way of life and the mechanical marvels that changed farming forever.</p>
       </header>
       <div class="row about-cols">
-        <div class="col-lg-4" *ngFor="let usInfo of aboutUsInfo">
-          <a [routerLink]="usInfo.link">
-            <div class="about-col">
-              <div class="img">
-                <img [attr.src]="usInfo.img" alt="" class="img-fluid">
-                <div class="icon"><i [ngClass]="usInfo.icon"></i></div>
+        @for (usInfo of aboutUsInfo; track usInfo) {
+          <div class="col-lg-4">
+            <a [routerLink]="usInfo.link">
+              <div class="about-col">
+                <div class="img">
+                  <img [attr.src]="usInfo.img" alt="" class="img-fluid">
+                  <div class="icon"><i [ngClass]="usInfo.icon"></i></div>
+                </div>
+                <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
+                <p>
+                  {{usInfo.description}}
+                </p>
               </div>
-              <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
-              <p>
-                {{usInfo.description}}
-              </p>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+        }
       </div>
     </div>
   </section>
@@ -39,19 +41,21 @@
         <p>We host a variety of events and activities every year! Click on each event to learn more.</p>
       </header>
       <div class="row about-cols">
-        <div class="col-lg-6" *ngFor="let usInfo of eventInfo">
-          <a [routerLink]="usInfo.link">
-            <div class="about-col">
-              <div class="img">
-                <img [attr.src]="usInfo.img" alt="" class="img-fluid">
+        @for (usInfo of eventInfo; track usInfo) {
+          <div class="col-lg-6">
+            <a [routerLink]="usInfo.link">
+              <div class="about-col">
+                <div class="img">
+                  <img [attr.src]="usInfo.img" alt="" class="img-fluid">
+                </div>
+                <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
+                <p>
+                  {{usInfo.description}}
+                </p>
               </div>
-              <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
-              <p>
-                {{usInfo.description}}
-              </p>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+        }
       </div>
     </div>
   </section>
@@ -83,10 +87,12 @@
         </div>
       </header>
       <div class="row">
-        <div class="col-lg-3 col-md-6 box" *ngFor="let showInfo of aboutShowInfo">
-          <h4 class="title"><a [routerLink]="['/show-info']">{{showInfo.title}}</a></h4>
-          <p class="description">{{showInfo.description}}</p>
-        </div>
+        @for (showInfo of aboutShowInfo; track showInfo) {
+          <div class="col-lg-3 col-md-6 box">
+            <h4 class="title"><a [routerLink]="['/show-info']">{{showInfo.title}}</a></h4>
+            <p class="description">{{showInfo.description}}</p>
+          </div>
+        }
       </div>
     </div>
   </section>
@@ -107,12 +113,12 @@
         <p class="p-0">
           Interested in preserving the history of farming, machinery, engines, and more? Become a member
           today and be a part of a group that's passionate about doing this work. <a [routerLink]="['/contact']">Contact
-            us</a> or join us at our next club meeting and
-          let us know of your interest in membership!
-        </p>
-      </div>
+        us</a> or join us at our next club meeting and
+        let us know of your interest in membership!
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 

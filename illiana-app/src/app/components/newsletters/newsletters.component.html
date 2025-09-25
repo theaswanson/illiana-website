@@ -12,31 +12,40 @@
           <a
             href="https://www.facebook.com/illianaantiquepower/"
             target="_blank"
-          >Facebook page</a> and join us for our <a href="/events">monthly club meetings</a>!
-        </p>
-        <p>Here are our past newsletters from over the years.</p>
-      </div>
+            >Facebook page</a> and join us for our <a href="/events">monthly club meetings</a>!
+          </p>
+          <p>Here are our past newsletters from over the years.</p>
+        </div>
 
-      <div class="newsletters" *ngFor="let year of years">
-        <h1>{{ year }}</h1>
-        <table [style.backgroundColor]="colorsByYear.get(year)">
-          <tr *ngFor="let row of [1, 2, 3]">
-            <td *ngFor="let column of [1, 2, 3, 4]">
-              <div *ngIf="!getNewsletter(year, row, column)">
-                No {{ monthNames[getMonth(row, column) - 1] }} letter
-              </div>
-              <a
-                *ngIf="getNewsletter(year, row, column)"
-                [href]="getNewsletterHref(getNewsletter(year, row, column))"
-              >
-                {{ monthNames[getNewsletter(year, row, column).month - 1] }}
-                {{ year }}
-              </a>
-            </td>
-          </tr>
-        </table>
-        <br />
+        @for (year of years; track year) {
+          <div class="newsletters">
+            <h1>{{ year }}</h1>
+            <table [style.backgroundColor]="colorsByYear.get(year)">
+              @for (row of [1, 2, 3]; track row) {
+                <tr>
+                  @for (column of [1, 2, 3, 4]; track column) {
+                    <td>
+                      @if (!getNewsletter(year, row, column)) {
+                        <div>
+                          No {{ monthNames[getMonth(row, column) - 1] }} letter
+                        </div>
+                      }
+                      @if (getNewsletter(year, row, column)) {
+                        <a
+                          [href]="getNewsletterHref(getNewsletter(year, row, column))"
+                          >
+                          {{ monthNames[getNewsletter(year, row, column).month - 1] }}
+                          {{ year }}
+                        </a>
+                      }
+                    </td>
+                  }
+                </tr>
+              }
+            </table>
+            <br />
+          </div>
+        }
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>

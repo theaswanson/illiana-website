@@ -7,10 +7,12 @@
       </header>
       <div class="page-content">
         <div style="text-align: left;">
-          <div *ngFor="let post of posts">
-            <!-- <markdown [src]="post.filePath"></markdown> -->
-            <div class="gap"></div>
-          </div>
+          @for (post of posts; track post) {
+            <div>
+              <!-- <markdown [src]="post.filePath"></markdown> -->
+              <div class="gap"></div>
+            </div>
+          }
         </div>
       </div>
     </div>

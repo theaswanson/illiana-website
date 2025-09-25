@@ -93,15 +93,16 @@
       </header>
       <div class="page-content show-info">
         <div class="row activities">
-          <div
-            class="col-lg-4 col-md-6 box"
-            *ngFor="let showInfo of aboutShowInfo"
-          >
-            <h4 class="title">
-              <p>{{ showInfo.title }}</p>
-            </h4>
-            <p class="description">{{ showInfo.description }}</p>
-          </div>
+          @for (showInfo of aboutShowInfo; track showInfo) {
+            <div
+              class="col-lg-4 col-md-6 box"
+              >
+              <h4 class="title">
+                <p>{{ showInfo.title }}</p>
+              </h4>
+              <p class="description">{{ showInfo.description }}</p>
+            </div>
+          }
         </div>
       </div>
     </div>
@@ -429,23 +430,23 @@
       <div class="page-content show-info">
         <div class="pb-3">
           <!-- <div class="showcase-img">
-            <img class="box-shadow" src="assets/img/show/allis-chalmers.jpg" />
-          </div> -->
-          <a
-            href="assets/flyers/Illiana-Power-Show-2025.pdf"
-            style="margin-left: 0"
+          <img class="box-shadow" src="assets/img/show/allis-chalmers.jpg" />
+        </div> -->
+        <a
+          href="assets/flyers/Illiana-Power-Show-2025.pdf"
+          style="margin-left: 0"
           >
-            <div class="showcase-img">
-              <img
-                class="box-shadow"
-                src="assets/flyers/Illiana-Power-Show-2025.jpg"
+          <div class="showcase-img">
+            <img
+              class="box-shadow"
+              src="assets/flyers/Illiana-Power-Show-2025.jpg"
               />
-            </div>
-          </a>
-        </div>
-        <div class="row justify-content-center">
-          <a href="assets/flyers/Illiana-Power-Show-2025.pdf" class="my-btn"
-            >View the Flyer</a
+          </div>
+        </a>
+      </div>
+      <div class="row justify-content-center">
+        <a href="assets/flyers/Illiana-Power-Show-2025.pdf" class="my-btn"
+          >View the Flyer</a
           >
         </div>
       </div>
