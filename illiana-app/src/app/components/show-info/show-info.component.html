@@ -7,10 +7,10 @@
       </header>
       <div class="page-content show-info">
         <div>
-          <h1>43rd Annual Antique Power Exhibition</h1>
-          <h2><b>Friday, July 18 - Sunday, July 20, 2025</b></h2>
+          <h1>44th Annual Antique Power Exhibition</h1>
+          <h2><b>Friday, July 17 - Sunday, July 19, 2026</b></h2>
           <h3 class="font-italic">
-            Featuring: Allis Chalmers Tractors & Waterloo Contract Engines
+            Featuring: Ford Tractors & Evansville Built Engines
           </h3>
         </div>
         <app-images [images]="headerImages"></app-images>
@@ -51,23 +51,6 @@
     </div>
   </section>
 
-  <!-- New! -->
-  <section class="section new">
-    <div class="container">
-      <header class="section-header">
-        <h3>New this Year!</h3>
-      </header>
-      <div class="page-content show-info">
-        <p>
-          For the first time in the show's history, we will have the
-          <b>Indiana Fairs and Festival bus</b> on the grounds with music, a
-          bubble machine, handouts, and other prizes. The bus will also be in
-          the tractor parade for the time they are able to be on the grounds.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <!-- Gate Fee -->
   <section class="section">
     <div class="container">
@@ -94,14 +77,12 @@
       <div class="page-content show-info">
         <div class="row activities">
           @for (showInfo of aboutShowInfo; track showInfo) {
-            <div
-              class="col-lg-4 col-md-6 box"
-              >
-              <h4 class="title">
-                <p>{{ showInfo.title }}</p>
-              </h4>
-              <p class="description">{{ showInfo.description }}</p>
-            </div>
+          <div class="col-lg-4 col-md-6 box">
+            <h4 class="title">
+              <p>{{ showInfo.title }}</p>
+            </h4>
+            <p class="description">{{ showInfo.description }}</p>
+          </div>
           }
         </div>
       </div>
@@ -109,7 +90,7 @@
   </section>
 
   <!-- Schedule -->
-  <section class="section">
+  <!-- <section class="section">
     <div class="container">
       <header class="section-header">
         <h3>Schedule</h3>
@@ -316,7 +297,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Rules -->
   <section class="section">
@@ -422,36 +403,36 @@
   </section>
 
   <!-- Flyer -->
-  <section class="section">
+  <!-- <section class="section">
     <div class="container">
       <header class="section-header">
         <h3>Flyer</h3>
       </header>
       <div class="page-content show-info">
         <div class="pb-3">
-          <!-- <div class="showcase-img">
-          <img class="box-shadow" src="assets/img/show/allis-chalmers.jpg" />
-        </div> -->
-        <a
-          href="assets/flyers/Illiana-Power-Show-2025.pdf"
-          style="margin-left: 0"
-          >
           <div class="showcase-img">
-            <img
-              class="box-shadow"
-              src="assets/flyers/Illiana-Power-Show-2025.jpg"
-              />
+            <img class="box-shadow" src="assets/img/show/allis-chalmers.jpg" />
           </div>
-        </a>
-      </div>
-      <div class="row justify-content-center">
-        <a href="assets/flyers/Illiana-Power-Show-2025.pdf" class="my-btn"
-          >View the Flyer</a
+          <a
+            href="assets/flyers/Illiana-Power-Show-2025.pdf"
+            style="margin-left: 0"
+          >
+            <div class="showcase-img">
+              <img
+                class="box-shadow"
+                src="assets/flyers/Illiana-Power-Show-2025.jpg"
+              />
+            </div>
+          </a>
+        </div>
+        <div class="row justify-content-center">
+          <a href="assets/flyers/Illiana-Power-Show-2025.pdf" class="my-btn"
+            >View the Flyer</a
           >
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Contact -->
   <section class="section contact">
