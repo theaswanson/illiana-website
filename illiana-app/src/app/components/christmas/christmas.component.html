@@ -1,9 +1,10 @@
 <main id="main">
-  <section id="about">
+  <section class="section">
     <div class="container">
       <header class="section-header">
         <h3>Christmas in the Village</h3>
       </header>
+      
       <div class="page-content">
         <h2><b>Friday, December 5 - Saturday, December 6, 2025</b></h2>
         <h2><b>5-8pm daily</b></h2>
@@ -43,6 +44,45 @@
           Village a family tradition.
         </p>
 
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Directions -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h3>Directions</h3>
+      </header>
+      <div class="page-content show-info">
+        <div>
+          <h3>GPS Address: 986 Briscoe Road, Williamsport, IN</h3>
+          <h3>1 mile west of Rainsville, IN</h3>
+
+          <div class="iframe-wrapper">
+            <iframe
+              title="Google Maps Viewer"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3037.557931897944!2d-87.3399984!3d40.418643!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881291b5aedb5e63%3A0x499a29690b809bae!2sIlliana%20Antique%20Power%20Association!5e0!3m2!1sen!2sus!4v1751239885247!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Photos -->
+  <section class="section mb-5">
+    <div class="container">
+      <header class="section-header">
+        <h3>Photos</h3>
+      </header>
+      <div class="page-content show-info">
         <app-images [images]="images"></app-images>
       </div>
     </div>

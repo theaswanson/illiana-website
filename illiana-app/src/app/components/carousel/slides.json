@@ -1,10 +1,10 @@
 [
   {
-    "src": "/assets/img/show/aerial.jpg",
-    "header": "43rd Annual Antique Power Show: July 18 - 20",
-    "body": "We are excited to host our annual Antique Power Exhibition this year, featuring Allis Chalmers Tractors & Waterloo Contract Engines! Enjoy a fun-filled weekend with antique tractors, engines, miniature trains, blacksmithing, sawmill & threshing demonstrations, a bustling flea market, and much more! Click the button below to learn more.",
+    "src": "/assets/img/christmas/general-store.jpg",
+    "header": "Christmas in the Village, December 5-6",
+    "body": "Come join us for our annual Christmas tradition! We'll have toy trains, crafts, popcorn and cookies, Santa, and more!",
     "link": {
-      "href": "/show-info",
+      "href": "/christmas",
       "text": "More Info"
     }
   },
