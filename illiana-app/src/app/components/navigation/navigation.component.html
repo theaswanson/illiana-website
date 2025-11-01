@@ -5,7 +5,12 @@
 <header id="header">
   <div class="container-fluid">
     <div id="logo" class="pull-left">
-      <h1><a [routerLink]="['/']" class="scrollto">Illiana</a></h1>
+      <a [routerLink]="['/']" class="scrollto">
+        <div class="logo-content">
+          <h1>IAPA</h1>
+          <span>Illiana Antique Power Association</span>
+        </div>
+      </a>
     </div>
 
     <nav #nav id="nav-menu-container">
@@ -13,133 +18,119 @@
         <li
           routerLinkActive="menu-active"
           [routerLinkActiveOptions]="{ exact: true }"
-          >
+        >
           <a [routerLink]="['/']">Home</a>
         </li>
         @for (route of routes; track route) {
-          <li routerLinkActive="menu-active">
-            <a [routerLink]="[route.route]" [fragment]="route.fragment">{{
-              route.label
-            }}</a>
-          </li>
+        <li routerLinkActive="menu-active">
+          <a [routerLink]="[route.route]" [fragment]="route.fragment">{{
+            route.label
+          }}</a>
+        </li>
         }
         <li class="menu-has-children">
           <a [routerLink]="[]" class="sf-with-ul">Events</a>
           <ul>
             @for (route of eventRoutes; track route) {
-              <li>
-                @if (route.route) {
-                  <a
-                    [routerLink]="[route.route]"
-                    [fragment]="route.fragment"
-                    >{{ route.label }}</a
-                    >
-                  }
-                  @if (route.href) {
-                    <a [href]="route.href" target="_blank">{{
-                      route.label
-                    }}</a>
-                  }
-                </li>
+            <li>
+              @if (route.route) {
+              <a [routerLink]="[route.route]" [fragment]="route.fragment">{{
+                route.label
+              }}</a>
+              } @if (route.href) {
+              <a [href]="route.href" target="_blank">{{ route.label }}</a>
               }
-            </ul>
-          </li>
-          <li class="menu-has-children">
-            <a [routerLink]="[]" class="sf-with-ul">Other</a>
-            <ul>
-              @for (route of otherRoutes; track route) {
-                <li>
-                  @if (route.route) {
-                    <a
-                      [routerLink]="[route.route]"
-                      [fragment]="route.fragment"
-                      >{{ route.label }}</a
-                      >
-                    }
-                    @if (route.href) {
-                      <a [href]="route.href" target="_blank"
-                        >{{ route.label }} <i class="ion-android-open"></i
-                      ></a>
-                    }
-                  </li>
-                }
-              </ul>
             </li>
-            <li routerLinkActive="menu-active">
-              <a [routerLink]="['/contact']">Contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <nav id="mobile-nav" (click)="toggleNav()">
-          <ul>
-            <li>
-              <a [routerLink]="['/']">Home</a>
-            </li>
-            @for (route of routes; track route) {
-              <li>
-                <a [routerLink]="[route.route]">{{ route.label }}</a>
-              </li>
             }
-            <li class="menu-has-children">
-              <a [routerLink]="[]">Events</a>
-              <ul>
-                @for (route of eventRoutes; track route) {
-                  <li>
-                    @if (route.route) {
-                      <a [routerLink]="[route.route]">{{
-                        route.label
-                      }}</a>
-                    }
-                    @if (route.href) {
-                      <a [href]="route.href" target="_blank">
-                        <div style="display: flex; align-items: center">
-                          {{ route.label }}
-                          <i class="ion-android-open"></i>
-                        </div>
-                      </a>
-                    }
-                  </li>
-                }
-              </ul>
-            </li>
-            <li class="menu-has-children">
-              <a [routerLink]="[]">Other</a>
-              <ul>
-                @for (route of otherRoutes; track route) {
-                  <li>
-                    @if (route.route) {
-                      <a [routerLink]="[route.route]">{{
-                        route.label
-                      }}</a>
-                    }
-                    @if (route.href) {
-                      <a [href]="route.href" target="_blank">
-                        <div style="display: flex; align-items: center">
-                          {{ route.label }}
-                          <i class="ion-android-open"></i>
-                        </div>
-                      </a>
-                    }
-                  </li>
-                }
-              </ul>
-            </li>
-            <li>
-              <a [routerLink]="['/contact']">Contact</a>
-            </li>
           </ul>
-        </nav>
+        </li>
+        <li class="menu-has-children">
+          <a [routerLink]="[]" class="sf-with-ul">Other</a>
+          <ul>
+            @for (route of otherRoutes; track route) {
+            <li>
+              @if (route.route) {
+              <a [routerLink]="[route.route]" [fragment]="route.fragment">{{
+                route.label
+              }}</a>
+              } @if (route.href) {
+              <a [href]="route.href" target="_blank"
+                >{{ route.label }} <i class="ion-android-open"></i
+              ></a>
+              }
+            </li>
+            }
+          </ul>
+        </li>
+        <li routerLinkActive="menu-active">
+          <a [routerLink]="['/contact']">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
-        <!-- The mobile nav always comes with this overlay. -->
-        <!-- So to close it by tapping outside, we need to -->
-        <!-- call the toggleNav() whithin this div. -->
-        <div
-          id="mobile-body-overlay"
-          [style.display]="navOpen ? 'block' : 'none'"
-          (click)="toggleNav()"
-          (keydown)="handleKeyDown($event)"
-          tabindex="0"
-        ></div>
-      </div>
-    </header>
+    <nav id="mobile-nav" (click)="toggleNav()">
+      <ul>
+        <li>
+          <a [routerLink]="['/']">Home</a>
+        </li>
+        @for (route of routes; track route) {
+        <li>
+          <a [routerLink]="[route.route]">{{ route.label }}</a>
+        </li>
+        }
+        <li class="menu-has-children">
+          <a [routerLink]="[]">Events</a>
+          <ul>
+            @for (route of eventRoutes; track route) {
+            <li>
+              @if (route.route) {
+              <a [routerLink]="[route.route]">{{ route.label }}</a>
+              } @if (route.href) {
+              <a [href]="route.href" target="_blank">
+                <div style="display: flex; align-items: center">
+                  {{ route.label }}
+                  <i class="ion-android-open"></i>
+                </div>
+              </a>
+              }
+            </li>
+            }
+          </ul>
+        </li>
+        <li class="menu-has-children">
+          <a [routerLink]="[]">Other</a>
+          <ul>
+            @for (route of otherRoutes; track route) {
+            <li>
+              @if (route.route) {
+              <a [routerLink]="[route.route]">{{ route.label }}</a>
+              } @if (route.href) {
+              <a [href]="route.href" target="_blank">
+                <div style="display: flex; align-items: center">
+                  {{ route.label }}
+                  <i class="ion-android-open"></i>
+                </div>
+              </a>
+              }
+            </li>
+            }
+          </ul>
+        </li>
+        <li>
+          <a [routerLink]="['/contact']">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- The mobile nav always comes with this overlay. -->
+    <!-- So to close it by tapping outside, we need to -->
+    <!-- call the toggleNav() whithin this div. -->
+    <div
+      id="mobile-body-overlay"
+      [style.display]="navOpen ? 'block' : 'none'"
+      (click)="toggleNav()"
+      (keydown)="handleKeyDown($event)"
+      tabindex="0"
+    ></div>
+  </div>
+</header>

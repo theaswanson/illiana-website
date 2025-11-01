@@ -6,7 +6,7 @@
   License: https://bootstrapmade.com/license/
 */
 
-@import './assets/lib/bootstrap/css/bootstrap.min.css';
+@import "./assets/lib/bootstrap/css/bootstrap.min.css";
 
 /* Custom */
 $illiana-green: #18d26e;
@@ -177,7 +177,7 @@ h6 {
   z-index: 997;
   display: flex;
 
-  >.container-fluid {
+  > .container-fluid {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -188,31 +188,35 @@ h6 {
   #logo {
     float: left;
 
+    a {
+      color: #fff;
+    }
+
+    img {
+      padding: 0;
+      margin: 0;
+    }
+
+    .logo-content {
+      display: flex;
+      flex-direction: column;
+      border-left: 4px solid $illiana-green;
+      padding-left: 10px;
+
+      span {
+        color: gray;
+        font-size: 13px;
+      }
+    }
+
     h1 {
-      font-size: 34px;
+      font-size: 28px;
       margin: 0;
       padding: 0;
       line-height: 1;
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
       letter-spacing: 3px;
-
-      a {
-        color: #fff;
-        padding-left: 10px;
-        border-left: 4px solid $illiana-green;
-
-        &:hover {
-          color: #fff;
-          padding-left: 10px;
-          border-left: 4px solid $illiana-green;
-        }
-      }
-    }
-
-    img {
-      padding: 0;
-      margin: 0;
     }
   }
 }
@@ -235,7 +239,7 @@ h6 {
     background-repeat: no-repeat;
 
     &::before {
-      content: '';
+      content: "";
       background-color: rgba(0, 0, 0, 0.7);
       position: absolute;
       height: 100%;
@@ -308,7 +312,6 @@ h6 {
       }
 
       .active {
-
         &.carousel-item-left,
         &.carousel-item-right {
           opacity: 0;
@@ -332,7 +335,6 @@ h6 {
       }
 
       .active {
-
         &.carousel-item-left,
         &.carousel-item-right {
           left: 0;
@@ -436,15 +438,15 @@ h6 {
     position: relative;
     white-space: nowrap;
 
-    &:hover>ul,
-    &.sfHover>ul {
+    &:hover > ul,
+    &.sfHover > ul {
       /* display: block; */
       visibility: visible;
       transition: 0s;
     }
   }
 
-  >li {
+  > li {
     float: left;
   }
 
@@ -459,8 +461,6 @@ h6 {
     }
   }
 }
-
-
 
 /* Nav Meu Container */
 
@@ -490,12 +490,12 @@ h6 {
     align-items: center;
   }
 
-  li:hover>a {
+  li:hover > a {
     color: $illiana-green;
   }
 
   > {
-    .menu-active>a {
+    .menu-active > a {
       color: $illiana-green;
     }
 
@@ -525,7 +525,7 @@ h6 {
         text-transform: none;
       }
 
-      &:hover>a {
+      &:hover > a {
         color: $illiana-green;
       }
     }
@@ -695,7 +695,6 @@ body.mobile-nav-active {
   --------------------------------*/
 
 .section-header {
-
   h3,
   h4 {
     color: #111;
@@ -710,7 +709,7 @@ body.mobile-nav-active {
     font-size: 32px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       width: 120px;
@@ -721,7 +720,7 @@ body.mobile-nav-active {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       width: 40px;
@@ -736,7 +735,6 @@ body.mobile-nav-active {
     font-size: 20px;
     margin: 0;
   }
-
 
   p {
     text-align: center;
@@ -763,7 +761,12 @@ body.mobile-nav-active {
   }
 
   .box-bg {
-    background-image: linear-gradient(0deg, #000000 0%, #242323 50%, #000000 100%);
+    background-image: linear-gradient(
+      0deg,
+      #000000 0%,
+      #242323 50%,
+      #000000 100%
+    );
   }
 
   i {
@@ -805,7 +808,7 @@ body.mobile-nav-active {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -943,7 +946,8 @@ body.mobile-nav-active {
   --------------------------------*/
 
 #call-to-action {
-  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(assets/img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)),
+    url(assets/img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;
 
@@ -1006,7 +1010,7 @@ body.mobile-nav-active {
   .progress-bar {
     width: 1px;
     text-align: left;
-    transition: .9s;
+    transition: 0.9s;
   }
 }
 
@@ -1020,7 +1024,7 @@ body.mobile-nav-active {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -1569,7 +1573,7 @@ body.mobile-nav-active {
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 0;
@@ -1673,7 +1677,6 @@ body.mobile-nav-active {
 
 @media (min-width: 992px) {
   #contact {
-
     .contact-address,
     .contact-phone,
     .contact-email {
