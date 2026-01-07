@@ -5,47 +5,43 @@
         <h3>Newsletters</h3>
       </header>
       <div class="page-content">
+        <p>Here are our past newsletters from over the years.</p>
         <p>
-          <b>Note:</b> due to an uptick in scam emails and a concern for safety,
-          our monthly newsletters are currently on pause. To stay up-to-date
-          with the latest club happenings, please check out our
+          To stay up-to-date with the latest club happenings, please check out
+          our
           <a
             href="https://www.facebook.com/illianaantiquepower/"
             target="_blank"
-            >Facebook page</a> and join us for our <a href="/events">monthly club meetings</a>!
-          </p>
-          <p>Here are our past newsletters from over the years.</p>
-        </div>
-
-        @for (year of years; track year) {
-          <div class="newsletters">
-            <h1>{{ year }}</h1>
-            <table [style.backgroundColor]="colorsByYear.get(year)">
-              @for (row of [1, 2, 3]; track row) {
-                <tr>
-                  @for (column of [1, 2, 3, 4]; track column) {
-                    <td>
-                      @if (!getNewsletter(year, row, column)) {
-                        <div>
-                          No {{ monthNames[getMonth(row, column) - 1] }} letter
-                        </div>
-                      }
-                      @if (getNewsletter(year, row, column)) {
-                        <a
-                          [href]="getNewsletterHref(getNewsletter(year, row, column))"
-                          >
-                          {{ monthNames[getNewsletter(year, row, column).month - 1] }}
-                          {{ year }}
-                        </a>
-                      }
-                    </td>
-                  }
-                </tr>
-              }
-            </table>
-            <br />
-          </div>
-        }
+            >Facebook page</a
+          >
+          and join us for our <a href="/events">monthly club meetings</a>!
+        </p>
       </div>
-    </section>
-  </main>
+
+      @for (year of years; track year) {
+      <div class="newsletters">
+        <h1>{{ year }}</h1>
+        <table [style.backgroundColor]="colorsByYear.get(year)">
+          @for (row of [1, 2, 3]; track row) {
+          <tr>
+            @for (column of [1, 2, 3, 4]; track column) {
+            <td>
+              @if (!getNewsletter(year, row, column)) {
+              <div>No {{ monthNames[getMonth(row, column) - 1] }} letter</div>
+              } @else {
+              <a [href]="getNewsletterHref(getNewsletter(year, row, column))" target="_blank">
+                {{ monthNames[getNewsletter(year, row, column).month - 1] }}
+                {{ year }}
+              </a>
+              }
+            </td>
+            }
+          </tr>
+          }
+        </table>
+        <br />
+      </div>
+      }
+    </div>
+  </section>
+</main>
