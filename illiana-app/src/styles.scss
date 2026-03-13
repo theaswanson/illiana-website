@@ -539,12 +539,12 @@ h6 {
 /* Nav Menu Arrows */
 
 .sf-with-ul {
-  padding-right: 30px !important;
+  padding-right: 15px !important;
 
   &:after {
     content: "\f107";
     position: absolute;
-    right: 15px;
+    right: 0;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
@@ -946,7 +946,8 @@ body.mobile-nav-active {
   --------------------------------*/
 
 #call-to-action {
-  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)),
+  background:
+    linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)),
     url(assets/img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;

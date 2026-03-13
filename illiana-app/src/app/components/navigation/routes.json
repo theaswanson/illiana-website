@@ -1,9 +1,5 @@
 [
   {
-    "label": "Event Calendar",
-    "route": "/events"
-  },
-  {
     "label": "Donate",
     "route": "/donate"
   }

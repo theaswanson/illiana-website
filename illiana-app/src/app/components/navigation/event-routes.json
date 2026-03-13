@@ -1,5 +1,9 @@
 [
   {
+    "label": "Event Calendar",
+    "route": "/events"
+  },
+  {
     "label": "Annual Power Show",
     "route": "/show-info"
   },
@@ -10,9 +14,5 @@
   {
     "label": "Christmas in the Village",
     "route": "/christmas"
-  },
-  {
-    "label": "Event Calendar",
-    "route": "/events"
   }
 ]
