@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    standalone: false
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  standalone: false,
 })
 export class HomeComponent implements OnInit {
   aboutUsInfo = [
@@ -35,21 +35,21 @@ export class HomeComponent implements OnInit {
 
   eventInfo = [
     {
-      link: '/show-info',
+      link: '/events/power-show',
       img: 'assets/img/about-mission.jpg',
       title: 'Annual Power Show',
       description:
         'The Power Show is held every year during the 3rd weekend of July.',
     },
     {
-      link: '/history-day',
+      link: '/events/history-day',
       img: 'assets/img/history-day/2022/blacksmithing-2.jpg',
       title: 'History Day',
       description:
         'A living history presentation for students to learn and get hands-on experience.',
     },
     {
-      link: '/christmas',
+      link: '/events/christmas-in-the-village',
       img: 'assets/img/christmas/tractor.jpg',
       title: 'Christmas in the Village',
       description:

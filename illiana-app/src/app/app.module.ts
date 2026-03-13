@@ -2,9 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  HttpClient,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { LightboxModule } from 'ngx-lightbox';
+import { MarkdownModule } from 'ngx-markdown';
 import { AppComponent } from './app.component';
 import { AssemblyHallComponent } from './assembly-hall/assembly-hall.component';
 import { BlogComponent } from './components/blog/blog.component';
@@ -30,71 +35,87 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
 import { ShowInfoComponent } from './components/show-info/show-info.component';
 import { TrainComponent } from './components/train/train.component';
 import { ContactComponent } from './contact/contact.component';
-import { MarkdownModule } from 'ngx-markdown';
 
 const ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'show-info', component: ShowInfoComponent },
+
+  // Events
+  { path: 'events', component: EventsComponent },
+  { path: 'events/power-show', component: ShowInfoComponent },
+  {
+    path: 'events/history-day',
+    children: [
+      { path: '', component: HistoryDayComponent, pathMatch: 'full' },
+      { path: ':id', component: VideoComponent },
+    ],
+  },
+  { path: 'events/christmas-in-the-village', component: ChristmasComponent },
+  { path: 'show-info', redirectTo: 'events/power-show' }, // show-info is used by the QR code on the flyer. Don't break this!
+  { path: 'history-day', redirectTo: 'events/history-day' },
+  { path: 'christmas', redirectTo: 'events/christmas-in-the-village' },
+
+  { path: 'donate', component: DonateComponent },
+
+  // Other
+  { path: 'map', redirectTo: '/contact' },
+  { path: 'contact', component: ContactComponent },
+
   { path: 'blog', component: BlogComponent },
   { path: 'newsletters', component: NewslettersComponent },
-  { path: 'events', component: EventsComponent },
-  { path: 'map', redirectTo: '/contact' },
+
   { path: 'grant-info', component: GrantInfoComponent },
   { path: 'pictures', component: PicturesComponent },
   { path: 'links', component: LinksComponent },
   { path: 'train', component: TrainComponent },
   { path: 'ladies', component: LadiesComponent },
   { path: 'letter/:id', component: LetterComponent },
-  { path: 'christmas', component: ChristmasComponent },
-  { path: 'donate', component: DonateComponent },
-  { path: 'contact', component: ContactComponent },
   { path: 'assembly-hall', component: AssemblyHallComponent },
-  {
-    path: 'history-day',
-    children: [
-      { path: '', component: HistoryDayComponent, pathMatch: 'full' },
-      { path: ':id', component: VideoComponent },
-    ],
-  },
+
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' },
 ] as Routes;
 
 const ROUTER_OPTIONS = {
-    anchorScrolling: 'enabled',
-    scrollPositionRestoration: 'enabled'
+  anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled',
 } as ExtraOptions;
 
-@NgModule({ declarations: [
-        AppComponent,
-        HomeComponent,
-        NavigationComponent,
-        OfficersComponent,
-        FooterComponent,
-        CarouselComponent,
-        ScrollToTopComponent,
-        ShowInfoComponent,
-        NewslettersComponent,
-        EventsComponent,
-        GrantInfoComponent,
-        PicturesComponent,
-        LinksComponent,
-        TrainComponent,
-        LadiesComponent,
-        LetterComponent,
-        ChristmasComponent,
-        NotFoundComponent,
-        HistoryDayComponent,
-        VideoComponent,
-        ImagesComponent,
-        BlogComponent,
-        DonateComponent,
-        ContactComponent,
-        AssemblyHallComponent,
-    ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        BrowserAnimationsModule,
-        LightboxModule,
-        MarkdownModule.forRoot({ loader: HttpClient }),
-        RouterModule.forRoot(ROUTES, ROUTER_OPTIONS)], providers: [provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NavigationComponent,
+    OfficersComponent,
+    FooterComponent,
+    CarouselComponent,
+    ScrollToTopComponent,
+    ShowInfoComponent,
+    NewslettersComponent,
+    EventsComponent,
+    GrantInfoComponent,
+    PicturesComponent,
+    LinksComponent,
+    TrainComponent,
+    LadiesComponent,
+    LetterComponent,
+    ChristmasComponent,
+    NotFoundComponent,
+    HistoryDayComponent,
+    VideoComponent,
+    ImagesComponent,
+    BlogComponent,
+    DonateComponent,
+    ContactComponent,
+    AssemblyHallComponent,
+  ],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    LightboxModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
+    RouterModule.forRoot(ROUTES, ROUTER_OPTIONS),
+  ],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
+})
 export class AppModule {}

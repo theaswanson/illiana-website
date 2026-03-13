@@ -5,13 +5,15 @@
 </section>
 
 <main id="main">
-
   <section id="about">
     <div class="container">
       <header class="section-header">
         <h3>About Us</h3>
-        <p>The Illiana Antique Power Association is a non-profit organization dedicated to the preservation
-        of our early rural way of life and the mechanical marvels that changed farming forever.</p>
+        <p>
+          The Illiana Antique Power Association is a non-profit organization
+          dedicated to the preservation of our early rural way of life and the
+          mechanical marvels that changed farming forever.
+        </p>
       </header>
       <div class="row about-cols">
         @for (usInfo of aboutUsInfo; track usInfo) {
@@ -19,12 +21,14 @@
             <a [routerLink]="usInfo.link">
               <div class="about-col">
                 <div class="img">
-                  <img [attr.src]="usInfo.img" alt="" class="img-fluid">
+                  <img [attr.src]="usInfo.img" alt="" class="img-fluid" />
                   <div class="icon"><i [ngClass]="usInfo.icon"></i></div>
                 </div>
-                <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
+                <h2 class="title">
+                  <a [routerLink]="usInfo.link">{{ usInfo.title }}</a>
+                </h2>
                 <p>
-                  {{usInfo.description}}
+                  {{ usInfo.description }}
                 </p>
               </div>
             </a>
@@ -38,7 +42,10 @@
     <div class="container">
       <header class="section-header">
         <h3>What do we do?</h3>
-        <p>We host a variety of events and activities every year! Click on each event to learn more.</p>
+        <p>
+          We host a variety of events and activities every year! Click on each
+          event to learn more.
+        </p>
       </header>
       <div class="row about-cols">
         @for (usInfo of eventInfo; track usInfo) {
@@ -46,11 +53,13 @@
             <a [routerLink]="usInfo.link">
               <div class="about-col">
                 <div class="img">
-                  <img [attr.src]="usInfo.img" alt="" class="img-fluid">
+                  <img [attr.src]="usInfo.img" alt="" class="img-fluid" />
                 </div>
-                <h2 class="title"><a [routerLink]="usInfo.link">{{usInfo.title}}</a></h2>
+                <h2 class="title">
+                  <a [routerLink]="usInfo.link">{{ usInfo.title }}</a>
+                </h2>
                 <p>
-                  {{usInfo.description}}
+                  {{ usInfo.description }}
                 </p>
               </div>
             </a>
@@ -66,7 +75,9 @@
       <p>
         Receive monthly newletters via email by subscribing to our mailing list.
       </p>
-      <a class="cta-btn" href="http://eepurl.com/hgJBeP" target="_blank">Subscribe</a>
+      <a class="cta-btn" href="http://eepurl.com/hgJBeP" target="_blank"
+        >Subscribe</a
+      >
     </div>
   </section>
 
@@ -75,13 +86,14 @@
       <header class="about-the-show section-header">
         <h3>About our Annual Show</h3>
         <p>
-          Every year, we have exhibitors from around the area come to show their antique farm equipment,
-          ranging from tractors and mowers to threshers and steam engines.
-          There's also several activites to watch like blacksmithing, corn shelling, a running sawmill,
-          binding, threshing, and so much more!
+          Every year, we have exhibitors from around the area come to show their
+          antique farm equipment, ranging from tractors and mowers to threshers
+          and steam engines. There's also several activites to watch like
+          blacksmithing, corn shelling, a running sawmill, binding, threshing,
+          and so much more!
         </p>
         <div class="learn-more text-center">
-          <a [routerLink]="['/show-info']" class="my-btn">
+          <a [routerLink]="['/events/power-show']" class="my-btn">
             Learn More
           </a>
         </div>
@@ -89,8 +101,10 @@
       <div class="row">
         @for (showInfo of aboutShowInfo; track showInfo) {
           <div class="col-lg-3 col-md-6 box">
-            <h4 class="title"><a [routerLink]="['/show-info']">{{showInfo.title}}</a></h4>
-            <p class="description">{{showInfo.description}}</p>
+            <h4 class="title">
+              <a [routerLink]="['/events/power-show']">{{ showInfo.title }}</a>
+            </h4>
+            <p class="description">{{ showInfo.description }}</p>
           </div>
         }
       </div>
@@ -100,9 +114,16 @@
   <section id="call-to-action">
     <div class="container text-center">
       <h3>Follow us on Facebook!</h3>
-      <p>Stay up to date with news from our Facebook page. Photos, announcements, monthly meetings, and more!
+      <p>
+        Stay up to date with news from our Facebook page. Photos, announcements,
+        monthly meetings, and more!
       </p>
-      <a class="cta-btn" href="https://www.facebook.com/illianaantiquepower/" target="_blank">Follow Us</a>
+      <a
+        class="cta-btn"
+        href="https://www.facebook.com/illianaantiquepower/"
+        target="_blank"
+        >Follow Us</a
+      >
     </div>
   </section>
 
@@ -111,15 +132,15 @@
       <div class="section-header">
         <h3>Club Membership</h3>
         <p class="p-0">
-          Interested in preserving the history of farming, machinery, engines, and more? Become a member
-          today and be a part of a group that's passionate about doing this work. <a [routerLink]="['/contact']">Contact
-        us</a> or join us at our next club meeting and
-        let us know of your interest in membership!
-      </p>
+          Interested in preserving the history of farming, machinery, engines,
+          and more? Become a member today and be a part of a group that's
+          passionate about doing this work.
+          <a [routerLink]="['/contact']">Contact us</a> or join us at our next
+          club meeting and let us know of your interest in membership!
+        </p>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 </main>
 
 <app-officers></app-officers>
