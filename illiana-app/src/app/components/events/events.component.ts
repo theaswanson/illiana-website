@@ -8,6 +8,7 @@ interface EventJson {
   location: string;
   special?: boolean;
   allDay?: boolean;
+  route?: string;
 }
 
 interface Event {
@@ -17,13 +18,14 @@ interface Event {
   location: string;
   special?: boolean;
   allDay?: boolean;
+  route?: string;
 }
 
 @Component({
-    selector: 'app-events',
-    templateUrl: './events.component.html',
-    styleUrls: ['./events.component.scss'],
-    standalone: false
+  selector: 'app-events',
+  templateUrl: './events.component.html',
+  styleUrls: ['./events.component.scss'],
+  standalone: false,
 })
 export class EventsComponent implements OnInit {
   events: Event[];
@@ -73,6 +75,7 @@ export class EventsComponent implements OnInit {
       location: event.location,
       special: event.special,
       allDay: event.allDay,
+      route: event.route,
     }));
   }
 
@@ -96,12 +99,12 @@ export class EventsComponent implements OnInit {
   private populateEventsMap(
     years: number[],
     eventsByYear: Map<number, Event[]>,
-    events: Event[]
+    events: Event[],
   ) {
     years.map((year) => {
       eventsByYear.set(
         year,
-        events.filter((event) => event.startDate.getFullYear() === year)
+        events.filter((event) => event.startDate.getFullYear() === year),
       );
     });
   }

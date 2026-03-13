@@ -40,7 +40,6 @@
     "startDate": "2026-11-17T23:30:00.000Z"
   },
 
-
   {
     "title": "Illiana Quilters Meeting",
     "location": "Assembly Hall",
@@ -103,14 +102,16 @@
     "startDate": "2026-07-17T13:00:00.000Z",
     "endDate": "2026-07-19T18:00:00.000Z",
     "special": true,
-    "allDay": true
+    "allDay": true,
+    "route": "/events/power-show"
   },
   {
     "title": "History Day",
     "location": "Showgrounds",
     "startDate": "2026-09-18T12:00:00.000Z",
     "special": true,
-    "allDay": true
+    "allDay": true,
+    "route": "/events/history-day"
   },
   {
     "title": "Christmas in the Village",
@@ -118,6 +119,7 @@
     "startDate": "2026-12-04T12:00:00.000Z",
     "endDate": "2026-12-05T12:00:00.000Z",
     "special": true,
-    "allDay": true
+    "allDay": true,
+    "route": "/events/christmas-in-the-village"
   }
 ]
