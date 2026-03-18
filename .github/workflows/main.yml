@@ -1,4 +1,4 @@
-name: Production
+name: Deploy
 
 on:
   push:
@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
       
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
       
       - name: Install npm packages
         working-directory: ./illiana-app
@@ -31,7 +31,7 @@ jobs:
         run: ng build --configuration production
       
       - name: Deploy
-        uses: shallwefootball/s3-upload-action@v1.3.0
+        uses: shallwefootball/s3-upload-action@v1.3.3
         with:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
