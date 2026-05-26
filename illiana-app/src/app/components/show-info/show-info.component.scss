@@ -98,6 +98,13 @@ $illiana-green: #18d26e;
     margin-bottom: 30px;
   }
 
+  img {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
   .icon {
     float: left;
 
