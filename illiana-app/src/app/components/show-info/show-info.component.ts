@@ -90,6 +90,7 @@ export class ShowInfoComponent implements OnInit {
       {
         title: 'Canvas Painting',
         description: 'Saturday @ 3pm ($25 per person, includes all materials)',
+        imgUrl: 'assets/img/show/canvas-painting.jpg',
       },
       {
         title: 'Homemade Pies for Sale',
@@ -100,17 +101,19 @@ export class ShowInfoComponent implements OnInit {
         title: 'Food Vendors',
         description:
           'A variety of food options will be available from our five vendors on the grounds.',
+        imgUrl: 'assets/img/show/food-vendors.jpg',
       },
       {
         title: 'Indiana Fairs and Festival Bus',
         description: 'Friday only!',
+        imgUrl: 'assets/img/show/indiana-fairs-and-festivals-bus.jpg',
       },
       {
         title: 'Steam, Gas, and Throttle Engines',
         imgUrl: 'assets/img/show/gas-engines.jpg',
       },
       { title: 'Miniature Trains', imgUrl: 'assets/img/railroad4.jpg' },
-      { title: 'Binding' },
+      { title: 'Binding', imgUrl: 'assets/img/show/reaper-binder.jpg' },
       {
         title: 'LakeLand Jr. College Driving Simulator',
         description: 'Open Friday and Saturday',
@@ -125,11 +128,15 @@ export class ShowInfoComponent implements OnInit {
         title: 'Corn Shelling',
         imgUrl: 'assets/img/history-day/shelling-corn.jpg',
       },
-      { title: 'Model/Scale Engines' },
+      {
+        title: 'Model/Scale Engines',
+        imgUrl: 'assets/img/show/collectible-model-gas-engine.jpg',
+      },
       {
         title: 'Kids Games',
         description:
           'Tons of activities will be available for kids, including a corn pit w/ toys, a picture area w/ cutout, sack races, and corn husking races!',
+        imgUrl: 'assets/img/show/kiddie-tractor.jpg',
       },
       {
         title: 'Kiddie Tractor Pull',
