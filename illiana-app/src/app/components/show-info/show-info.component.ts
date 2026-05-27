@@ -139,6 +139,11 @@ export class ShowInfoComponent implements OnInit {
         imgUrl: 'assets/img/show/kiddie-tractor.jpg',
       },
       {
+        title: 'RC Tractor Pull',
+        description: 'Saturday and Sunday (times TBD)',
+        imgUrl: 'assets/img/show/rc-pull.jpg',
+      },
+      {
         title: 'Kiddie Tractor Pull',
         description: 'Saturday @ 11am in front of the Assembly Hall',
         imgUrl: 'assets/img/show/kiddie-tractor-pull.jpg',
