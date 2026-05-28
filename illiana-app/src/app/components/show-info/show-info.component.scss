@@ -80,6 +80,13 @@ $illiana-green: #18d26e;
   }
 }
 
+.table-of-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+}
+
 .events-table {
   .table td,
   .table th {
