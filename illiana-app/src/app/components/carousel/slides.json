@@ -1,5 +1,14 @@
 [
   {
+    "src": "/assets/img/show/aerial.jpg",
+    "header": "44th Annual Antique Power Show: July 17 - 19",
+    "body": "Celebrating America 250! Our annual Antique Power Exhibition features Ford Tractors & Evansville Built Engines! Enjoy a fun-filled weekend with antique tractors, engines, miniature trains, blacksmithing, sawmill & thrashing demonstrations, a bustling flea market, and much more! Click the button below to learn more.",
+    "link": {
+      "href": "/events/power-show",
+      "text": "More Info"
+    }
+  },
+  {
     "src": "/assets/img/intro-carousel/1.jpg",
     "header": "Where the Past has a Future!",
     "body": "The Illiana Antique Power Association is a non-profit organization dedicated to the preservation of our early rural way of life and the mechanical marvels that changed farming forever.",

@@ -13,13 +13,55 @@
             Featuring: Ford Tractors & Evansville Built Engines
           </h3>
         </div>
-        <app-images [images]="headerImages"></app-images>
+        <!-- <app-images [images]="headerImages"></app-images> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="section" style="padding: 30px 0 0 0">
+    <div class="container">
+      <header class="section-header">
+        <h4>Table of Contents</h4>
+      </header>
+      <div class="page-content show-info">
+        <div class="table-of-contents">
+          <span><a routerLink="." fragment="activities">Activities</a></span>
+          <span><a routerLink="." fragment="directions">Directions</a></span>
+          <span><a routerLink="." fragment="map">Map</a></span>
+          <span><a routerLink="." fragment="gate-fee">Gate Fee</a></span>
+          <span><a routerLink="." fragment="rules">Rules</a></span>
+          <span><a routerLink="." fragment="photos">Photos</a></span>
+          <span><a routerLink="." fragment="contact">Contact</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section class="section" id="activities">
+    <div class="container">
+      <header class="section-header">
+        <h3>Activities</h3>
+      </header>
+      <div class="page-content show-info">
+        <div class="row activities">
+          @for (showInfo of aboutShowInfo; track showInfo) {
+            <div class="col-lg-4 col-md-6 box">
+              <img src="{{ showInfo.imgUrl }}" />
+              <h4 class="title">
+                <p>{{ showInfo.title }}</p>
+              </h4>
+              <p class="description">{{ showInfo.description }}</p>
+            </div>
+          }
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Directions -->
-  <section class="section">
+  <section class="section" id="directions">
     <div class="container">
       <header class="section-header">
         <h3>Directions</h3>
@@ -52,7 +94,7 @@
   </section>
 
   <!-- Showgrounds Map -->
-  <section class="section">
+  <section class="section" id="map">
     <div class="container">
       <header class="section-header">
         <h3>Map</h3>
@@ -66,7 +108,7 @@
   </section>
 
   <!-- Gate Fee -->
-  <section class="section">
+  <section class="section" id="gate-fee">
     <div class="container">
       <header class="section-header">
         <h3>Gate Fee</h3>
@@ -78,27 +120,6 @@
           Members are free with membership card or paid membership on the
           current list.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Activities -->
-  <section class="section">
-    <div class="container">
-      <header class="section-header">
-        <h3>Activities</h3>
-      </header>
-      <div class="page-content show-info">
-        <div class="row activities">
-          @for (showInfo of aboutShowInfo; track showInfo) {
-            <div class="col-lg-4 col-md-6 box">
-              <h4 class="title">
-                <p>{{ showInfo.title }}</p>
-              </h4>
-              <p class="description">{{ showInfo.description }}</p>
-            </div>
-          }
-        </div>
       </div>
     </div>
   </section>
@@ -314,7 +335,7 @@
   </section> -->
 
   <!-- Rules -->
-  <section class="section">
+  <section class="section" id="rules">
     <div class="container">
       <header class="section-header">
         <h3>Rules</h3>
@@ -402,7 +423,7 @@
   </section>
 
   <!-- Photos -->
-  <section class="section">
+  <section class="section" id="photos">
     <div class="container">
       <header class="section-header">
         <h3>Photos</h3>
@@ -449,7 +470,7 @@
   </section> -->
 
   <!-- Contact -->
-  <section class="section contact">
+  <section class="section contact" id="contact">
     <div class="container">
       <header class="section-header">
         <h3>Contact</h3>

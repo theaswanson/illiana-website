@@ -8,13 +8,12 @@ class LightboxImage {
 }
 
 @Component({
-    selector: 'app-images',
-    templateUrl: './images.component.html',
-    styleUrls: ['./images.component.scss'],
-    standalone: false
+  selector: 'app-images',
+  templateUrl: './images.component.html',
+  styleUrls: ['./images.component.scss'],
+  standalone: false,
 })
 export class ImagesComponent implements OnInit {
-
   _images: string[];
   albums: IAlbum[];
 
@@ -27,19 +26,17 @@ export class ImagesComponent implements OnInit {
     this.albums = this.createAlbums();
   }
 
-  constructor(private lightbox: Lightbox) { }
+  constructor(private lightbox: Lightbox) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   createAlbums(): IAlbum[] {
-    return this.albums = this.images.map(i => {
-      return { src: i, thumb: i } as IAlbum
-    });
+    return (this.albums = this.images.map(
+      (i) => ({ src: i, thumb: i }) as IAlbum,
+    ));
   }
 
   open(index: number): void {
     this.lightbox.open(this.albums, index);
   }
-
 }

@@ -80,6 +80,16 @@ $illiana-green: #18d26e;
   }
 }
 
+.table-of-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 1.5rem;
+  column-gap: 3rem;
+  font-size: 1.25rem;
+  flex-wrap: wrap;
+}
+
 .events-table {
   .table td,
   .table th {
@@ -96,6 +106,13 @@ $illiana-green: #18d26e;
 .activities {
   .box {
     margin-bottom: 30px;
+  }
+
+  img {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
   .icon {
