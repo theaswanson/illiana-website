@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 type ShowInfoItem = {
   title: string;
   description?: string;
-  imgUrl?: string;
+  imgUrl: string;
 };
 
 @Component({
@@ -117,6 +117,7 @@ export class ShowInfoComponent implements OnInit {
       {
         title: 'LakeLand Jr. College Driving Simulator',
         description: 'Open Friday and Saturday',
+        imgUrl: 'assets/img/show/farm-simulator.jpg',
       },
       {
         title: 'Threshing',
