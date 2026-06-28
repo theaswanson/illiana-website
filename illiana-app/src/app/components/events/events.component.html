@@ -22,39 +22,15 @@
         </p>
       </div>
 
-      @for (events of eventsByYear | keyvalue; track events) {
-        <div class="events">
-          <h1>{{ events.key }}</h1>
-          <div class="events-table table-responsive">
-            <table class="table table-striped">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col">Event</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Time</th>
-                  <th scope="col">Location</th>
-                </tr>
-              </thead>
-              @for (event of events.value; track event) {
-                <tr [style]="event.special ? 'font-weight: bold' : ''">
-                  <td>
-                    @if (event.route) {
-                      <a [routerLink]="[event.route]">{{ event.title }}</a>
-                    } @else {
-                      {{ event.title }}
-                    }
-                  </td>
-                  <td>{{ toDateRangeString(event) }}</td>
-                  <td>
-                    {{ !event.allDay ? toTimeString(event.startDate) : "" }}
-                  </td>
-                  <td>{{ event.location }}</td>
-                </tr>
-              }
-            </table>
-          </div>
-        </div>
-      }
+      <div>
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FIndiana%2FIndianapolis&mode=MONTH&title=Illiana%20Antique%20Power%20Association%20-%20All%20Events&showPrint=0&src=Y19jOGM0MzQxYjJlMjEyMmFlYzYwM2VlMDY1MTdlYmZmZDQzOTA0NzE3ZWJhZjlmNzE2N2I4MjgwMTk4NjQ1YTY0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180Nzk3NzQ4MTZjYTU2ODg3MzE5YWRmNmY4ODhhOGIxMGZmMGVlNDEzODhkNmE5NGQ3ZGE1YjJkZWJmZWQwMTU5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180NGJhZjgzZmNiYWY5NGI2NTA0ZDA4ODNkYjlhNDEzOWE2MjI0NWQzOTZiNTQzZGJmYWUwMTcxYjQ5YWRlZDIxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23e4c441&color=%239e69af&color=%237986cb"
+          title="Google Calendar showing IAPA events"
+          class="events-iframe"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
     </div>
   </section>
 </main>
