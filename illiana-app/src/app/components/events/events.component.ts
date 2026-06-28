@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import 'add-to-calendar-button';
 
 @Component({
   selector: 'app-events',
