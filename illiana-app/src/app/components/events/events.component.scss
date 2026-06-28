@@ -1,5 +1,10 @@
-.events-table {
-  table {
-    width: 100%;
+.events-iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+  aspect-ratio: 1 / 1;
+
+  @media screen and (min-width: 1050px) {
+    aspect-ratio: 4 / 3;
   }
 }
