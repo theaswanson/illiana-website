@@ -89,7 +89,7 @@ export class ShowInfoComponent implements OnInit {
       },
       {
         title: 'Canvas Painting',
-        description: 'Saturday @ 3pm ($25 per person, includes all materials)',
+        description: 'Saturday, July 18 @ 3pm in the Assembly Hall ($25 per person, includes all materials)',
         imgUrl: 'assets/img/show/canvas-painting.jpg',
       },
       {
