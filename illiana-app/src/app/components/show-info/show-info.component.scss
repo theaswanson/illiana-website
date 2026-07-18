@@ -2,9 +2,13 @@ $illiana-green: #18d26e;
 
 .iframe-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
+  max-height: 75vh;
+  aspect-ratio: 3 / 4;
+  margin: auto;
+
+  @media (min-width: 992px) {
+    aspect-ratio: 16 / 9;
+  }
 
   iframe {
     position: absolute;
