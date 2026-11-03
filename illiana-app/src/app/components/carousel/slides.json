@@ -1,10 +1,10 @@
 [
   {
-    "src": "/assets/img/show/aerial.jpg",
-    "header": "44th Annual Antique Power Show: July 17 - 19",
-    "body": "Celebrating America 250! Our annual Antique Power Exhibition features Ford Tractors & Evansville Built Engines! Enjoy a fun-filled weekend with antique tractors, engines, miniature trains, blacksmithing, sawmill & thrashing demonstrations, a bustling flea market, and much more! Click the button below to learn more.",
+    "src": "/assets/img/christmas/general-store.jpg",
+    "header": "Christmas in the Village, December 4-5",
+    "body": "Come join us for our annual Christmas tradition! We'll have toy trains, crafts, popcorn and cookies, Santa, and more!",
     "link": {
-      "href": "/events/power-show",
+      "href": "/events/christmas-in-the-village",
       "text": "More Info"
     }
   },
