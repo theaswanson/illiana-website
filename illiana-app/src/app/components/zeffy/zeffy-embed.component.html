@@ -1,0 +1,29 @@
+<div class="zeffy-wrapper">
+  <!-- Primary Zeffy target container -->
+  <div data-zeffy-embed [attr.data-form-url]="'/embed/donation-form/donate-to-iapa'"></div>
+
+  <!-- Fallback iframe if script fails to load -->
+   @if (scriptFailed) {
+       <div
+         style="position: relative; overflow: hidden; height: 600px; width: 100%"
+       >
+         <iframe
+           title="Donation form powered by Zeffy"
+           style="
+             position: absolute;
+             border: 0;
+             top: 0;
+             left: 0;
+             bottom: 0;
+             right: 0;
+             width: 100%;
+             height: 100%;
+           "
+           [src]="safeFallbackUrl"
+           allowpaymentrequest
+           allowTransparency="true"
+         >
+         </iframe>
+       </div>
+   }
+</div>

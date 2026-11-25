@@ -35,6 +35,7 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
 import { ShowInfoComponent } from './components/show-info/show-info.component';
 import { TrainComponent } from './components/train/train.component';
 import { ContactComponent } from './contact/contact.component';
+import { ZeffyEmbedComponent } from './components/zeffy/zeffy-embed.component';
 
 const ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -116,6 +117,7 @@ const ROUTER_OPTIONS = {
     LightboxModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
     RouterModule.forRoot(ROUTES, ROUTER_OPTIONS),
+    ZeffyEmbedComponent,
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
 })
